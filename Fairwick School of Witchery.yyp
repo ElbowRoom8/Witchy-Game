@@ -4,6 +4,7 @@
     {"id":{"name":"spr_temp_background","path":"sprites/spr_temp_background/spr_temp_background.yy",},"order":0,},
     {"id":{"name":"spr_testcharacter","path":"sprites/spr_testcharacter/spr_testcharacter.yy",},"order":2,},
     {"id":{"name":"obj_temp_player","path":"objects/obj_temp_player/obj_temp_player.yy",},"order":0,},
+    {"id":{"name":"spr_amber_walkleft","path":"sprites/spr_amber_walkleft/spr_amber_walkleft.yy",},"order":3,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

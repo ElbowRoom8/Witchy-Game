@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Fairwick School of Witchery",
-    "path": "Fairwick School of Witchery.yyp",
+    "name": "Iglet_Shroom",
+    "path": "folders/Sprites/Iglet_Shroom.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_iglet_shroom_walkup",

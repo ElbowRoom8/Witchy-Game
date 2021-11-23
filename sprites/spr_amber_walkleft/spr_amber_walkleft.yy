@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Amber Sprites",
+    "path": "folders/Sprites/Amber Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_amber_walkleft",

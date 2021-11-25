@@ -6,6 +6,7 @@ var leftSpd = 0;
 var rightSpd = 0;
 var upSpd = 0;
 var downSpd = 0;
+var walkSpd = 2;
 
 //sets directional spped and sprites
 if keyboard_check(ord("A")){
@@ -30,8 +31,8 @@ if keyboard_check(ord("S")){
 }
 
 //calculates horizonatal and vertical speed
-var hSpd = 2 * (rightSpd - leftSpd);
-var vSpd = 2 * (downSpd - upSpd);
+hSpd = walkSpd * (rightSpd - leftSpd);
+vSpd = walkSpd * (downSpd - upSpd);
 
 //adjusts for diagonal movement
 if (hSpd != 0) and (vSpd != 0) {
@@ -39,9 +40,17 @@ if (hSpd != 0) and (vSpd != 0) {
 	vSpd *= 0.71;
 }
 
-//moves player
-obj_temp_player.x = obj_temp_player.x + hSpd;
-obj_temp_player.y = obj_temp_player.y + vSpd;
+//moves player and checks collisions
+if(!place_meeting(x + hSpd, y, obj_wall)){
+	obj_temp_player.x = obj_temp_player.x + hSpd;
+} else if (!place_meeting(x + sign(hSpd), y, obj_wall)){
+	obj_temp_player.x = obj_temp_player.x + sign(hSpd);
+}
+if(!place_meeting(x, y + vSpd, obj_wall)){
+	obj_temp_player.y = obj_temp_player.y + vSpd;
+} else if (!place_meeting(x, y + sign(vSpd), obj_wall)){
+	obj_temp_player.y = obj_temp_player.y + sign(vSpd);
+}
 
 //stops sprite animation if player stopped
 if hSpd == 0 and vSpd == 0 {

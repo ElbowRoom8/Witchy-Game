@@ -11,3 +11,5 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 #endregion
 
 image_speed = 0;
+globalvar hSpd;
+globalvar vSpd;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-#region Setup camers clamp variables
+#region Setup cameras clamp variables
 
 min_view_x = 0;
 min_view_y = 0;

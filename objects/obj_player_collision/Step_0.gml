@@ -6,35 +6,38 @@ var downSpd = 0;
 var walkSpd = 2;
 var animationSpd = 1.2;
 
-//controls sprinting
-if keyboard_check(vk_shift){
-	walkSpd = 3.5;
-	animationSpd = 2;
-} else {
-	walkSpd = 2;
-	animationSpd = 1.2;
-}
+//checks for cutscene
+if(canMove){
+	//controls sprinting
+	if keyboard_check(vk_shift){
+		walkSpd = 3.5;
+		animationSpd = 2;
+	} else {
+		walkSpd = 2;
+		animationSpd = 1.2;
+	}
 
-//sets directional spped and sprites
-if keyboard_check(ord("A")){
-	leftSpd = 1;
-	obj_player.sprite_index = spr_amber_walkleft;
-	obj_player.image_speed = animationSpd;
-}
-if keyboard_check(ord("D")){
-	rightSpd = 1;
-	obj_player.sprite_index = spr_amber_walkright;
-	obj_player.image_speed = animationSpd;
-}
-if keyboard_check(ord("W")){
-	upSpd = 1;
-	obj_player.sprite_index = spr_amber_walkup;
-	obj_player.image_speed = animationSpd;
-}
-if keyboard_check(ord("S")){
-	downSpd = 1;
-	obj_player.sprite_index = spr_amber_walkdown;
-	obj_player.image_speed = animationSpd;
+	//sets directional spped and sprites
+	if keyboard_check(ord("A")){
+		leftSpd = 1;
+		obj_player.sprite_index = spr_amber_walkleft;
+		obj_player.image_speed = animationSpd;
+	}
+	if keyboard_check(ord("D")){
+		rightSpd = 1;
+		obj_player.sprite_index = spr_amber_walkright;
+		obj_player.image_speed = animationSpd;
+	}
+	if keyboard_check(ord("W")){
+		upSpd = 1;
+		obj_player.sprite_index = spr_amber_walkup;
+		obj_player.image_speed = animationSpd;
+	}
+	if keyboard_check(ord("S")){
+		downSpd = 1;
+		obj_player.sprite_index = spr_amber_walkdown;
+		obj_player.image_speed = animationSpd;
+	}
 }
 
 //calculates horizonatal and vertical speed

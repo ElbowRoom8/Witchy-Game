@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_door3",
-    "path": "sprites/spr_door3/spr_door3.yy",
+    "name": "spr_pixel",
+    "path": "sprites/spr_pixel/spr_pixel.yy",
   },
   "solid": false,
   "visible": true,
@@ -20,17 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player_collision","path":"objects/obj_player_collision/obj_player_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Doors",
-    "path": "folders/Objects/Doors.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_door3",
+  "name": "obj_pinger",
   "tags": [],
   "resourceType": "GMObject",
 }

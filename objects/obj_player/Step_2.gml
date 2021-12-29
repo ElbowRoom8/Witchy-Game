@@ -1,4 +1,4 @@
-/// @description move the view
+/// @description Move the view
 
 #region Move the view
 
@@ -14,3 +14,5 @@ cy = clamp(cy, min_view_y, max_view_y);
 camera_set_view_pos(view_camera[0], cx, cy);
 
 #endregion
+
+instance_destroy(obj_pinger);

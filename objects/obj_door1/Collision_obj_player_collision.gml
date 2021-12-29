@@ -1,4 +1,4 @@
-/// @description moves to given room
+/// @description Moves to given room
 if(room = rm_mainhall){
 	room_goto(rm_westhall);
 	obj_player.x = 32;

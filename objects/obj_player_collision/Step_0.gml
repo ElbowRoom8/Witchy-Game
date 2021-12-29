@@ -1,7 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-//makes directional speed variables
+/// @description Move player
 var leftSpd = 0;
 var rightSpd = 0;
 var upSpd = 0;
@@ -21,23 +18,23 @@ if keyboard_check(vk_shift){
 //sets directional spped and sprites
 if keyboard_check(ord("A")){
 	leftSpd = 1;
-	sprite_index = spr_amber_walkleft;
-	image_speed = animationSpd;
+	obj_player.sprite_index = spr_amber_walkleft;
+	obj_player.image_speed = animationSpd;
 }
 if keyboard_check(ord("D")){
 	rightSpd = 1;
-	sprite_index = spr_amber_walkright;
-	image_speed = animationSpd;
+	obj_player.sprite_index = spr_amber_walkright;
+	obj_player.image_speed = animationSpd;
 }
 if keyboard_check(ord("W")){
 	upSpd = 1;
-	sprite_index = spr_amber_walkup;
-	image_speed = animationSpd;
+	obj_player.sprite_index = spr_amber_walkup;
+	obj_player.image_speed = animationSpd;
 }
 if keyboard_check(ord("S")){
 	downSpd = 1;
-	sprite_index = spr_amber_walkdown;
-	image_speed = animationSpd;
+	obj_player.sprite_index = spr_amber_walkdown;
+	obj_player.image_speed = animationSpd;
 }
 
 //calculates horizonatal and vertical speed
@@ -51,15 +48,19 @@ if (hSpd != 0) and (vSpd != 0) {
 }
 
 //moves player and checks collisions
-if(!place_meeting(x + hSpd + sign(hSpd), y, obj_wall)){
+if(!place_meeting(x + hSpd, y, obj_wall)){
 	obj_player.x = obj_player.x + hSpd;
 }
-if(!place_meeting(x, y + vSpd + sign(vSpd), obj_wall)){
+if(!place_meeting(x, y + vSpd, obj_wall)){
 	obj_player.y = obj_player.y + vSpd;
 }
 
 //stops sprite animation if player stopped
 if hSpd == 0 and vSpd == 0 {
-	image_speed = 0;
-	image_index = 0;
+	obj_player.image_speed = 0;
+	obj_player.image_index = 0;
 }
+
+//moves to players feet
+x = obj_player.x + 3;
+y = obj_player.y + 49;

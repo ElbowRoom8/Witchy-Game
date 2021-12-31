@@ -1,9 +1,14 @@
 /// @description Move player
+//We control movement here so that colisions with walls work properly
+
+//directional speeds
 var leftSpd = 0;
 var rightSpd = 0;
 var upSpd = 0;
 var downSpd = 0;
+//movement speed, varies for sprinting
 var walkSpd = 2;
+//speed of walking animation, varies for sprinting
 var animationSpd = 1.2;
 
 //checks for cutscene
@@ -17,7 +22,7 @@ if(canMove){
 		animationSpd = 1.2;
 	}
 
-	//sets directional spped and sprites
+	//sets directional speed and sprites
 	if keyboard_check(ord("A")){
 		leftSpd = 1;
 		obj_player.sprite_index = spr_amber_walkleft;

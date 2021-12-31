@@ -1,7 +1,11 @@
 /// Begins interaction
-framex = obj_player.x - camera_get_view_width(view_camera[0]) / 2;
-framey = obj_player.y - camera_get_view_height(view_camera[0]) / 2;
-//instance_create_depth(framex, framey + 232, -99, obj_textbox);
-
-//canMove = false;
-interaction = true;
+if(!interaction){
+	interaction = true;
+	canMove = false;
+	i = 0; //dialogue line counter
+	dialogue = d_intro; //only line that needs to change to switc hout a dialogue
+	text = dialogue[0];
+	letter = "";
+	j = 1; //line letter counter
+	alarm[0] = 3; //loops each letter
+}

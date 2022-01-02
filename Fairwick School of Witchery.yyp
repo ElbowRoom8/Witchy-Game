@@ -17,6 +17,7 @@
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":7,},
     {"id":{"name":"rm_westhall","path":"rooms/rm_westhall/rm_westhall.yy",},"order":2,},
     {"id":{"name":"spr_defense_potion","path":"sprites/spr_defense_potion/spr_defense_potion.yy",},"order":2,},
+    {"id":{"name":"spr_placelight","path":"sprites/spr_placelight/spr_placelight.yy",},"order":15,},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":11,},
     {"id":{"name":"spr_iglet_walkup","path":"sprites/spr_iglet_walkup/spr_iglet_walkup.yy",},"order":0,},
     {"id":{"name":"spr_sleep_potion","path":"sprites/spr_sleep_potion/spr_sleep_potion.yy",},"order":6,},
@@ -55,6 +56,7 @@
     {"id":{"name":"spr_iglet_shroom_walkleft","path":"sprites/spr_iglet_shroom_walkleft/spr_iglet_shroom_walkleft.yy",},"order":1,},
     {"id":{"name":"obj_door4","path":"objects/obj_door4/obj_door4.yy",},"order":3,},
     {"id":{"name":"spr_iglet_shroom_walkdown","path":"sprites/spr_iglet_shroom_walkdown/spr_iglet_shroom_walkdown.yy",},"order":0,},
+    {"id":{"name":"spr_highlight","path":"sprites/spr_highlight/spr_highlight.yy",},"order":14,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [

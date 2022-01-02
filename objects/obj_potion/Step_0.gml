@@ -7,3 +7,17 @@ if(touchingMouse){
 	    y = mouse_y - 16;
 	}
 }
+//fades empty potions
+if (stored == "inventory"){
+	if(inventory[val].num == 0){
+		image_alpha = 0.35;
+	} else {
+		image_alpha = 1;
+	}
+} else if (stored == "potions"){
+	if(potions[val].num == 0){
+		image_alpha = 0.35;
+	} else {
+		image_alpha = 1;
+	}
+}

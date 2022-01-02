@@ -1,2 +1,3 @@
 /// @description 
 occupied = false;
+stored = "";

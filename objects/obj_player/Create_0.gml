@@ -18,7 +18,8 @@ inInventory = false;
 
 globalvar playerName;
 playerName = "rawr xd"; //will change how is set later
-
+globalvar maxPotions; //maximum number of each potion type you can have on quests
+maxPotions = 3; 
 
 inventory = array_create(9, -1);
 globalvar inventory;

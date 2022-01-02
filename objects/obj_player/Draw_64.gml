@@ -1,4 +1,5 @@
 /// @description Draws inventory numbers
+/*
 if(inInventory){
 	draw_set_font(fnt_2);
 	for(i = 0; i < 9; i++){

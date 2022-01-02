@@ -11,8 +11,16 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
 image_speed = 0;
 
-globalvar canMove; //allows for cutscenes and dialogue
-canMove = true; 
+globalvar inDialogue; //allows for cutscenes and dialogue
+inDialogue = false; 
+globalvar inInventory; //allows for inventory
+inInventory = false;
 
 globalvar playerName;
-playerName = "ur mom"; //will change how is set later
+playerName = "rawr xd"; //will change how is set later
+
+inventory = array_create(9, -1);
+inventory[0] = spr_health_potion;
+inventory[1] = spr_light_potion;
+inventory[2] = spr_acid_potion;
+inventory[3] = spr_fire_potion;

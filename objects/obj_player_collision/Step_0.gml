@@ -12,7 +12,7 @@ var walkSpd = 2;
 var animationSpd = 1.2;
 
 //checks for cutscene
-if(canMove){
+if(!inDialogue and !inInventory){
 	//controls sprinting
 	if keyboard_check(vk_shift){
 		walkSpd = 3.5;
@@ -23,22 +23,22 @@ if(canMove){
 	}
 
 	//sets directional speed and sprites
-	if keyboard_check(ord("A")){
+	if keyboard_check(ord("A")) or keyboard_check(vk_left){
 		leftSpd = 1;
 		obj_player.sprite_index = spr_amber_walkleft;
 		obj_player.image_speed = animationSpd;
 	}
-	if keyboard_check(ord("D")){
+	if keyboard_check(ord("D")) or keyboard_check(vk_right){
 		rightSpd = 1;
 		obj_player.sprite_index = spr_amber_walkright;
 		obj_player.image_speed = animationSpd;
 	}
-	if keyboard_check(ord("W")){
+	if keyboard_check(ord("W")) or keyboard_check(vk_up){
 		upSpd = 1;
 		obj_player.sprite_index = spr_amber_walkup;
 		obj_player.image_speed = animationSpd;
 	}
-	if keyboard_check(ord("S")){
+	if keyboard_check(ord("S")) or keyboard_check(vk_down){
 		downSpd = 1;
 		obj_player.sprite_index = spr_amber_walkdown;
 		obj_player.image_speed = animationSpd;

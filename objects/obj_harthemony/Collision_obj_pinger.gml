@@ -1,7 +1,7 @@
 /// Begins interaction
 if(!interaction){
 	interaction = true;
-	canMove = false;
+	inDialogue = true;
 	i = 0; //dialogue line counter
 	dialogue = d_intro; //only line that needs to change to switc hout a dialogue
 	text = dialogue[0];

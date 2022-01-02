@@ -11,8 +11,8 @@ if(interaction){
 			alarm[0] = 3;
 		} else {
 		//ends interaction
-			canMove = true;
-			alarm[1] = 3 // this delay fixes an issue of looping dialogue
+			interaction = false;
+			alarm[1] = 3;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_textbox",
-    "path": "sprites/spr_textbox/spr_textbox.yy",
+    "name": "spr_health_potion",
+    "path": "sprites/spr_health_potion/spr_health_potion.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_textbox",
+  "name": "obj_potion",
   "tags": [],
   "resourceType": "GMObject",
 }

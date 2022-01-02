@@ -1,2 +1,2 @@
-/// @description Delayed reaction for ending dialogue
-interaction = false;
+/// @description Prevents looping dialogue
+inDialogue = false;

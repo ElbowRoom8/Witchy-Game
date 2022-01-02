@@ -8,6 +8,7 @@
     {"id":{"name":"obj_door1","path":"objects/obj_door1/obj_door1.yy",},"order":0,},
     {"id":{"name":"spr_iglet_walkdown","path":"sprites/spr_iglet_walkdown/spr_iglet_walkdown.yy",},"order":1,},
     {"id":{"name":"spr_fire_potion","path":"sprites/spr_fire_potion/spr_fire_potion.yy",},"order":4,},
+    {"id":{"name":"fnt_2","path":"fonts/fnt_2/fnt_2.yy",},"order":1,},
     {"id":{"name":"spr_stone_potion","path":"sprites/spr_stone_potion/spr_stone_potion.yy",},"order":8,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":6,},
     {"id":{"name":"spr_amber_walkup","path":"sprites/spr_amber_walkup/spr_amber_walkup.yy",},"order":2,},

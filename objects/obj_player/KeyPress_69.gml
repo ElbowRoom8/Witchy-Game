@@ -36,11 +36,11 @@ if(inInventory){
 	newObj = instance_create_depth(cx + 56, cy + 136, -1, obj_refill_button);
 	newObj.image_xscale = 0.45;
 	newObj.image_yscale = 0.45;
-	newObj.sprite_index = spr_refill_button2;
 	
 	newObj = instance_create_depth(cx + 89, cy + 136, -1, obj_refill_button);
 	newObj.image_xscale = 0.45;
 	newObj.image_yscale = 0.45;
+	newObj.sprite_index = spr_refill_button2;
 } else {
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);

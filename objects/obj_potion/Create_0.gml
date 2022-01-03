@@ -1,6 +1,7 @@
 /// @description Sets default values
 val = 0;
 stored = "";
+objOther = self;
 highlightNum = -1;
 
 touchingMouse = false;

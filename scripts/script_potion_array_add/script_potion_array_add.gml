@@ -13,11 +13,12 @@ function potion_array_add(_val, _stored){
 		for(var i = 0; i < array_length(inventory); i++){
 			if (inventory[i] != -1) {
 				if (inventory[i].pot = potions[_val].pot){
+					var temp = inventory[i].num;
 					inventory[i].num += _stored;
 					if (inventory[i].num > maxPotions){
-						potions[_val].num += inventory[i].num - maxPotions;
 						inventory[i].num = maxPotions;
 					}
+					potions[_val].num -= (inventory[i].num - temp);
 					return true;
 				}
 			}

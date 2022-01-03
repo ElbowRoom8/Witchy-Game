@@ -50,16 +50,13 @@ if (stored = "inventory"){
 					val = inst.slotNum;
 					stored = "inventory";
 				} else {
-					potions[val].num += stored;
 					instance_destroy(self);
 				}
 			}
 		} else {
-			potions[val].num += stored;
 			instance_destroy(self);
 		}
 	} else {
-		potions[val].num += stored;
 		instance_destroy(self);
 	}
 }

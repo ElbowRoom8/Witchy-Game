@@ -10,7 +10,6 @@ if(touchingMouse and !mouseUsed){
 		for(var i = 0; i < array_length(potions); i++){
 			if(potions[i] != -1){
 				var temp = potions[i].num;
-				potions[i].num = 0;
 				if (!potion_array_add(i, temp)){
 					potions[i].num = temp;
 				}

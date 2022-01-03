@@ -3,6 +3,7 @@
     {"id":{"name":"spr_iglet_portrait","path":"sprites/spr_iglet_portrait/spr_iglet_portrait.yy",},"order":4,},
     {"id":{"name":"spr_amber_portrait","path":"sprites/spr_amber_portrait/spr_amber_portrait.yy",},"order":4,},
     {"id":{"name":"spr_regen_potion","path":"sprites/spr_regen_potion/spr_regen_potion.yy",},"order":1,},
+    {"id":{"name":"script_potion_array_add","path":"scripts/script_potion_array_add/script_potion_array_add.yy",},"order":0,},
     {"id":{"name":"spr_door1","path":"sprites/spr_door1/spr_door1.yy",},"order":0,},
     {"id":{"name":"spr_door4","path":"sprites/spr_door4/spr_door4.yy",},"order":3,},
     {"id":{"name":"obj_door1","path":"objects/obj_door1/obj_door1.yy",},"order":0,},

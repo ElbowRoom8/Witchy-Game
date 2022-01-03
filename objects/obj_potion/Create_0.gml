@@ -1,7 +1,7 @@
 /// @description Sets default values
 val = 0;
 stored = "";
-homeObj = other;
+highlightNum = -1;
 
 touchingMouse = false;
 globalvar mouseUsed;

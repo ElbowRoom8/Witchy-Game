@@ -8,12 +8,13 @@ if(inInventory){
 		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -1, obj_inventory);
 		newObj.image_alpha = 0.85
 		newObj.stored = "inventory";
+		newObj.slotNum = i;
 		
 		if(inventory[i] != -1){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
 			newObj.val = i;
 			newObj.stored = "inventory";
-			newObj.sprite_index = inventory[i].type;
+			newObj.sprite_index = inventory[i].pot;
 		}
 	}
 	
@@ -28,7 +29,7 @@ if(inInventory){
 				newObj = instance_create_depth(cx + 56 + 35 * i, cy + 171 + 35 * j, -2, obj_potion);
 				newObj.val = potNum;
 				newObj.stored = "potions";
-				newObj.sprite_index = potions[potNum].type;
+				newObj.sprite_index = potions[potNum].pot;
 			}
 		}
 	}

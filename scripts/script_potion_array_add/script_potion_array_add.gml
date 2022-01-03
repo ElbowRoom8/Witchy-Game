@@ -1,8 +1,6 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function potion_array_add(_val, _stored){
 	if (_stored == "inventory") {
-		for(i = 0; i < array_length(potions); i++){
+		for(var i = 0; i < array_length(potions); i++){
 			if (potions[i] == -1) {
 				return false;
 			} else if(potions[i].pot = inventory[_val].pot){
@@ -12,7 +10,7 @@ function potion_array_add(_val, _stored){
 			}
 		}
 	} else {
-		for(i = 0; i < array_length(inventory); i++){
+		for(var i = 0; i < array_length(inventory); i++){
 			if (inventory[i] != -1) {
 				if (inventory[i].pot = potions[_val].pot){
 					inventory[i].num += _stored;

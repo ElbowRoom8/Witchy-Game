@@ -4,6 +4,8 @@ stored = "";
 highlightNum = -1;
 
 touchingMouse = false;
+rightClick = false;
+gap = false;
 globalvar mouseUsed;
 mouseUsed = false;
 //sets default snap values

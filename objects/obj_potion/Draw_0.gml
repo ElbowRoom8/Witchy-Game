@@ -30,13 +30,26 @@ if(touchingMouse){
 			draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
 		}
 	} else {
+		if (highlightNum == -1){
+			for(i = 0; i < array_length(inventory); i++){
+				if(inventory[i] != -1){
+					if(inventory[i].pot = sprite_index){
+						highlightNum = i;
+					}
+				}
+			}
+		}	
 		if (collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
 			var inst = instance_position(mouse_x, mouse_y, obj_inventory);
 			if(inst.stored == "inventory") {
-				if(!inst.occupied){
-					draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
+				if (highlightNum == -1){
+					if(!inst.occupied){
+						draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
+					} else {
+						draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+					}
 				} else {
-					draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+					draw_sprite(spr_placelight, 0, obj_player.cx + 6, obj_player.cy + 4 + 4 * (highlightNum + 1) + 35 * highlightNum);
 				}
 			} else {
 				draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);

@@ -61,5 +61,6 @@ if (stored = "inventory"){
 	}
 }
 rightClick = false;
+depth = -2;
 x = snapX;
 y = snapY;

@@ -38,6 +38,7 @@ if (stored == "potions"){
 		} else {
 			touchingMouse = true;
 			rightClick = true;
+			depth = -3;
 		}
 	}
 } else if (rightClick & gap){

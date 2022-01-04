@@ -21,15 +21,17 @@ playerName = "rawr xd"; //will change how is set later
 globalvar maxPotions; //maximum number of each potion type you can have on quests
 maxPotions = 3; 
 
-inventory = array_create(9, -1);
-globalvar inventory;
+inventory = array_create(9, -1); //-1 is default value
+globalvar inventory; //nine slots for potions you can bring on quests
+//each slot holds a sprite value, and a number value
 inventory[0] = {pot : spr_health_potion, num : 2};
 inventory[1] = {pot : spr_light_potion, num : 1};
 inventory[2] = {pot : spr_acid_potion, num : 2};
 inventory[3] = {pot : spr_fire_potion, num : 2};
 
-potions = array_create(50, -1);
-globalvar potions;
+potions = array_create(50, -1); //-1 is default value
+globalvar potions; //storage for all potions you have
+//each slot holds a sprite value, and a number value
 potions[0] = {pot : spr_health_potion, num : 8};
 potions[1] = {pot : spr_defense_potion, num : 3};
 potions[2] = {pot : spr_regen_potion, num : 2};

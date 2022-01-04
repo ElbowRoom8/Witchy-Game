@@ -10,6 +10,7 @@ if (stored == "inventory"){
 		newObj.stored = potions[val].num;
 		newObj.sprite_index = sprite_index;
 		newObj.touchingMouse = true;
+		newObj.highlightNum2 = val
 		potions[val].num = 0;
 	}
 }

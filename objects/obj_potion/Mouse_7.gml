@@ -60,5 +60,6 @@ if (stored = "inventory"){
 		instance_destroy(self);
 	}
 }
+rightClick = false;
 x = snapX;
 y = snapY;

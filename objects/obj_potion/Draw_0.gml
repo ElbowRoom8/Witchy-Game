@@ -3,7 +3,7 @@ if(touchingMouse){
 	draw_set_alpha(0.5);
 	if (stored == "inventory"){
 		if (highlightNum == -1){
-			for(i = 0; i < array_length(potions); i++){
+			for(var i = 0; i < array_length(potions); i++){
 				if(potions[i] != -1){
 					if(potions[i].pot = sprite_index){
 						highlightNum = i;
@@ -12,9 +12,9 @@ if(touchingMouse){
 					break;
 				}
 			}
-			hx = highlightNum mod 10;
-			hy = highlightNum div 10;
 		}
+		hx = highlightNum mod 10;
+		hy = highlightNum div 10;
 		if (collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
 			var inst = instance_position(mouse_x, mouse_y, obj_inventory);
 			if(inst.stored == "inventory") {
@@ -31,14 +31,27 @@ if(touchingMouse){
 		}
 	} else {
 		if (highlightNum == -1){
-			for(i = 0; i < array_length(inventory); i++){
+			for(var i = 0; i < array_length(inventory); i++){
 				if(inventory[i] != -1){
 					if(inventory[i].pot = sprite_index){
 						highlightNum = i;
 					}
 				}
 			}
+		}
+		if (highlightNum2 == -1){
+			for(var i = 0; i < array_length(potions); i++){
+				if(potions[i] != -1){
+					if(potions[i].pot = sprite_index){
+						highlightNum2 = i;
+					}
+				} else {
+					break;
+				}
+			}
 		}	
+		hx = highlightNum2 mod 10;
+		hy = highlightNum2 div 10;
 		if (collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
 			var inst = instance_position(mouse_x, mouse_y, obj_inventory);
 			if(inst.stored == "inventory") {
@@ -46,16 +59,16 @@ if(touchingMouse){
 					if(!inst.occupied){
 						draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
 					} else {
-						draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+						draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
 					}
 				} else {
 					draw_sprite(spr_placelight, 0, obj_player.cx + 6, obj_player.cy + 4 + 4 * (highlightNum + 1) + 35 * highlightNum);
 				}
 			} else {
-				draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
 			}
 		} else {
-			draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+			draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
 		}
 	}
 }

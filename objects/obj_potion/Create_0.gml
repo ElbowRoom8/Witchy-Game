@@ -3,6 +3,7 @@ val = 0;
 stored = "";
 objOther = self;
 highlightNum = -1;
+highlightNum2 = -1;
 
 touchingMouse = false;
 rightClick = false;

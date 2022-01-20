@@ -5,6 +5,6 @@ if(room = rm_mainhall){
 	obj_player.y = 128;
 } else if(room = rm_westhall){
 	room_goto(rm_mainhall);
-	obj_player.x = 30;
-	obj_player.y = 106;
+	obj_player.x = 106;
+	obj_player.y = 30;
 }

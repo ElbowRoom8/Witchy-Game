@@ -1,0 +1,1 @@
+/// @description moves to given room

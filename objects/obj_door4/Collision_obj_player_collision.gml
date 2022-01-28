@@ -1,6 +1,21 @@
 /// @description moves to given room
 if(room = rm_mainhall){
-	room_goto(rm_westhall);
-} else if(room = rm_westhall){
+	room_goto(rm_laboratory);
+} else if(room = rm_laboratory){
 	room_goto(rm_mainhall);	
+	
+} else if(room = rm_westhall){
+	room_goto(rm_classroom2);
+} else if(room = rm_classroom2){
+	room_goto(rm_westhall);
+
+} else if(room = rm_courtyard){
+	room_goto(rm_cafeteria);
+} else if(room = rm_cafeteria){
+	room_goto(rm_courtyard);
+
+} else if(room = rm_easthall){
+	room_goto(rm_classroom5);
+} else if(room = rm_classroom5){
+	room_goto(rm_easthall);
 }

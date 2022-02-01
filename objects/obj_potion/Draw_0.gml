@@ -12,7 +12,7 @@ if(touchingMouse){
 			for(var i = 0; i < array_length(potions); i++){
 				if(potions[i] != -1){
 					//find matching potion, and sets highlightNum to the index
-					if(potions[i].pot = sprite_index){
+					if(potions[i].type = sprite_index){
 						highlightNum = i;
 					}
 				} else {
@@ -56,7 +56,7 @@ if(touchingMouse){
 			for(var i = 0; i < array_length(inventory); i++){
 				if(inventory[i] != -1){
 					//searches for matching inventory slot
-					if(inventory[i].pot = sprite_index){
+					if(inventory[i].type = sprite_index){
 						highlightNum = i;
 					}
 				}

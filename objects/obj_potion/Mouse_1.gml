@@ -29,7 +29,7 @@ if (stored == "potions"){
 			for(var i = 0; i < array_length(potions); i++){
 				if(potions[i] != -1){
 					//if match, grab index
-					if(potions[i].pot = sprite_index){
+					if(potions[i].type = sprite_index){
 						temp = i;
 					}
 				} else {

@@ -18,7 +18,7 @@ if(inInventory){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
 			newObj.val = i;
 			newObj.stored = "inventory";
-			newObj.sprite_index = inventory[i].pot;
+			newObj.sprite_index = inventory[i].type;
 		}
 	}
 	//loops through 50 potion storage slots
@@ -35,7 +35,7 @@ if(inInventory){
 				newObj = instance_create_depth(cx + 56 + 35 * i, cy + 171 + 35 * j, -2, obj_potion);
 				newObj.val = potNum;
 				newObj.stored = "potions";
-				newObj.sprite_index = potions[potNum].pot;
+				newObj.sprite_index = potions[potNum].type;
 			}
 		}
 	}
@@ -49,9 +49,14 @@ if(inInventory){
 	newObj.image_yscale = 0.45;
 	newObj.sprite_index = spr_refill_button2;
 	
+	//adds fade to background
+	newObj = instance_create_depth(0, 0, -1, obj_dim);
+	newObj.image_alpha = 0.6;
+	
 //deletes all of the inventory objects if inventory is closed
 } else {
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 	instance_destroy(obj_refill_button);
+	instance_destroy(obj_dim);
 }

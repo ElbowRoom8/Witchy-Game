@@ -1,6 +1,8 @@
 /// @description moves to given room
 if(room = rm_mainhall){
-	
+	room_goto(rm_forest);
+}else if(room= rm_forest){
+	room_goto(rm_mainhall);
 } else if(room = rm_westhall){
 	room_goto(rm_classroom3);
 } else if(room = rm_classroom3){

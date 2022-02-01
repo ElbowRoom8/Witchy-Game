@@ -24,20 +24,25 @@ maxPotions = 3;
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //each slot holds a sprite value, and a number value
-inventory[0] = {pot : spr_health_potion, num : 2};
-inventory[1] = {pot : spr_light_potion, num : 1};
-inventory[2] = {pot : spr_acid_potion, num : 2};
-inventory[3] = {pot : spr_fire_potion, num : 2};
+inventory[0] = {type : spr_health_potion, num : 2};
+inventory[1] = {type : spr_light_potion, num : 1};
+inventory[2] = {type : spr_acid_potion, num : 2};
+inventory[3] = {type : spr_fire_potion, num : 2};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have
 //each slot holds a sprite value, and a number value
-potions[0] = {pot : spr_health_potion, num : 8};
-potions[1] = {pot : spr_defense_potion, num : 3};
-potions[2] = {pot : spr_regen_potion, num : 2};
-potions[3] = {pot : spr_fire_potion, num : 1};
-potions[4] = {pot : spr_ice_potion, num : 0};
-potions[5] = {pot : spr_acid_potion, num : 2};
-potions[6] = {pot : spr_light_potion, num : 1};
-potions[7] = {pot : spr_sleep_potion, num : 6};
-potions[8] = {pot : spr_stone_potion, num : 0};
+potions[0] = {type : spr_health_potion, num : 8};
+potions[1] = {type : spr_defense_potion, num : 3};
+potions[2] = {type : spr_regen_potion, num : 2};
+potions[3] = {type : spr_fire_potion, num : 1};
+potions[4] = {type : spr_ice_potion, num : 0};
+potions[5] = {type : spr_acid_potion, num : 2};
+potions[6] = {type : spr_light_potion, num : 1};
+potions[7] = {type : spr_sleep_potion, num : 6};
+potions[8] = {type : spr_stone_potion, num : 0};
+
+items = array_create(100, -1); //-1 is default value
+globalvar items; //bulk storage of all items you have
+//each slot holds a sprite value and a number value
+items[0] = {type : spr_door1, num : 2};

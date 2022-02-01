@@ -21,7 +21,7 @@ if (stored = "inventory"){
 				//updates inventory array to match changes
 				if (inst.slotNum != val) {
 					//new spot (based on inventory objects slotNum) is filled
-					inventory[inst.slotNum] = {pot : sprite_index, num : inventory[val].num};
+					inventory[inst.slotNum] = {type : sprite_index, num : inventory[val].num};
 					//old spot is emptied
 					inventory[val] = -1;
 					val = inst.slotNum;
@@ -59,11 +59,11 @@ potion is destroyed)*/
 					//correct the counts
 					if (stored > maxPotions){
 						//if above maxPotions limit, then update both arrays to fix this
-						inventory[inst.slotNum] = {pot : sprite_index, num : maxPotions};
+						inventory[inst.slotNum] = {type : sprite_index, num : maxPotions};
 						potions[val].num += (stored - maxPotions);
 					} else {
 						//if not above max potions, only update inventory array
-						inventory[inst.slotNum] = {pot : sprite_index, num : stored};
+						inventory[inst.slotNum] = {type : sprite_index, num : stored};
 					}
 					//sets new snap coords, and sets slot to occupied
 					snapX = inst.x + 1;

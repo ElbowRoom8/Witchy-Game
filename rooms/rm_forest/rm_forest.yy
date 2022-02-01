@@ -14,9 +14,8 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_door3","path":"objects/obj_door3/obj_door3.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":13.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":713.0,"resourceVersion":"1.0","name":"inst_1D7338F0","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_door4","path":"objects/obj_door4/obj_door4.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":15.75,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":0.0,"resourceVersion":"1.0","name":"inst_1D7D2117","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_door5","path":"objects/obj_door5/obj_door5.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":20.125,"scaleY":0.875,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":0.0,"resourceVersion":"1.0","name":"inst_7894828D","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_item1","path":"objects/obj_item1/obj_item1.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":288.0,"y":32.0,"resourceVersion":"1.0","name":"inst_BD1789","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_item2","path":"objects/obj_item2/obj_item2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":160.0,"resourceVersion":"1.0","name":"inst_43464356","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":null,"colour":4278190080,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":15.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -24,16 +23,15 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_1D7338F0","path":"rooms/rm_courtyard/rm_courtyard.yy",},
-    {"name":"inst_1D7D2117","path":"rooms/rm_courtyard/rm_courtyard.yy",},
-    {"name":"inst_7894828D","path":"rooms/rm_courtyard/rm_courtyard.yy",},
+    {"name":"inst_BD1789","path":"rooms/rm_forest/rm_forest.yy",},
+    {"name":"inst_43464356","path":"rooms/rm_forest/rm_forest.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
   "roomSettings": {
     "inheritRoomSettings": false,
-    "Width": 960,
-    "Height": 720,
+    "Width": 640,
+    "Height": 360,
     "persistent": false,
   },
   "viewSettings": {
@@ -50,11 +48,11 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "School",
-    "path": "folders/Rooms/School.yy",
+    "name": "Rooms",
+    "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rm_courtyard",
+  "name": "rm_forest",
   "tags": [],
   "resourceType": "GMRoom",
 }

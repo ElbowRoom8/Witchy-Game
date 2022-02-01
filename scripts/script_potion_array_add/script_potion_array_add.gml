@@ -5,7 +5,7 @@ function potion_array_add(_val, _stored){
 		for(var i = 0; i < array_length(potions); i++){
 			if (potions[i] == -1) {
 				return false; //we've reached the end of the potions array
-			} else if(potions[i].pot = inventory[_val].pot){
+			} else if(potions[i].type = inventory[_val].type){
 				//move everything from inventory location to potions index
 				potions[i].num += inventory[_val].num;
 				inventory[_val] = -1; //empty inventory slot
@@ -16,7 +16,7 @@ function potion_array_add(_val, _stored){
 	} else {
 		for(var i = 0; i < array_length(inventory); i++){
 			if (inventory[i] != -1) {
-				if (inventory[i].pot = potions[_val].pot){
+				if (inventory[i].type = potions[_val].type){
 					var temp = inventory[i].num;
 					inventory[i].num += _stored;
 					//makes sure we haven't overadded to inventory

@@ -1,6 +1,6 @@
 /// @description Opens inventory
 //inverts inInventory if not in dialouge;
-if(!inDialogue){
+if(!inDialogue & !inQuest){
 	inInventory = !inInventory;
 }
 

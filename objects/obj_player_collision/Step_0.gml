@@ -56,8 +56,10 @@ if (hSpd != 0) and (vSpd != 0) {
 }
 
 //moves player and checks collisions
-if(!place_meeting(x + hSpd, y, obj_wall)){
-	obj_player.x = obj_player.x + hSpd;
+if(!inQuest){
+	if(!place_meeting(x + hSpd, y, obj_wall)){
+		obj_player.x = obj_player.x + hSpd;
+	}
 }
 if(!place_meeting(x, y + vSpd, obj_wall)){
 	obj_player.y = obj_player.y + vSpd;

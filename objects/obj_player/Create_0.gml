@@ -15,6 +15,8 @@ globalvar inDialogue; //allows for cutscenes and dialogue
 inDialogue = false; 
 globalvar inInventory; //allows for inventory
 inInventory = false;
+globalvar inQuest; //allows for quests
+inQuest = false;
 
 globalvar playerName;
 playerName = "rawr xd"; //will change how is set later

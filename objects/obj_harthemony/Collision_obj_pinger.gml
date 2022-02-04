@@ -1,5 +1,5 @@
 /// Begins interaction
-if(!interaction){
+if(!interaction & !inQuest){
 	interaction = true;
 	inDialogue = true;
 	i = 0; //dialogue line counter

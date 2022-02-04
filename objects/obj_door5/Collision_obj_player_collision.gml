@@ -1,6 +1,9 @@
 /// @description moves to given room
 if(room = rm_mainhall){
 	room_goto(rm_forest);
+	obj_player.x = 64;
+	obj_player.y = 160;
+	inQuest = true;
 }else if(room= rm_forest){
 	room_goto(rm_mainhall);
 } else if(room = rm_westhall){

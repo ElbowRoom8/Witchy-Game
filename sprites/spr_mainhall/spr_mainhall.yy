@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 407,
+  "bbox_left": 40,
+  "bbox_right": 4149,
   "bbox_top": 0,
-  "bbox_bottom": 335,
+  "bbox_bottom": 3519,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 408,
-  "height": 336,
+  "width": 4160,
+  "height": 3520,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e006a6e7-3505-43bf-ab44-edc149b58d46","path":"sprites/spr_mainhall/spr_mainhall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e006a6e7-3505-43bf-ab44-edc149b58d46","path":"sprites/spr_mainhall/spr_mainhall.yy",},"LayerId":{"name":"6c70328c-3ac2-4091-95a2-13356e27c497","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_mainhall","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","name":"e006a6e7-3505-43bf-ab44-edc149b58d46","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"05245dd7-ccc1-4ca7-bc69-ea195ac386e3","path":"sprites/spr_mainhall/spr_mainhall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"05245dd7-ccc1-4ca7-bc69-ea195ac386e3","path":"sprites/spr_mainhall/spr_mainhall.yy",},"LayerId":{"name":"563d0d11-5c1d-42f1-b5a3-f2fe53857646","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_mainhall","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","name":"05245dd7-ccc1-4ca7-bc69-ea195ac386e3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_mainhall","path":"sprites/spr_mainhall/spr_mainhall.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fe1a6e5d-fea5-4543-8bad-22e81e6e8a38","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e006a6e7-3505-43bf-ab44-edc149b58d46","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7f4197ae-982b-4f5b-a4d7-5d134976ec8e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"05245dd7-ccc1-4ca7-bc69-ea195ac386e3","path":"sprites/spr_mainhall/spr_mainhall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6c70328c-3ac2-4091-95a2-13356e27c497","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"563d0d11-5c1d-42f1-b5a3-f2fe53857646","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Sprites/Backgrounds.yy",
+    "name": "Main Hall",
+    "path": "folders/Sprites/Backgrounds/Main Hall.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mainhall",

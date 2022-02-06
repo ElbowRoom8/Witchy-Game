@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 407,
-  "bbox_top": 181,
-  "bbox_bottom": 335,
+  "bbox_left": 160,
+  "bbox_right": 3988,
+  "bbox_top": 1930,
+  "bbox_bottom": 3519,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 408,
-  "height": 336,
+  "width": 4160,
+  "height": 3520,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"78056f27-ac60-4b9d-9421-3952ef4fb5a4","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78056f27-ac60-4b9d-9421-3952ef4fb5a4","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"LayerId":{"name":"4d514efb-52a0-4e0e-bcc1-e1099988b75a","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_mainhall_walls","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","name":"78056f27-ac60-4b9d-9421-3952ef4fb5a4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d4d25e66-bb89-49e1-a825-b77ee889e1de","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d4d25e66-bb89-49e1-a825-b77ee889e1de","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"LayerId":{"name":"9877d70b-9c83-4b33-80c2-6ae46f79c08d","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_mainhall_walls","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","name":"d4d25e66-bb89-49e1-a825-b77ee889e1de","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_mainhall_walls","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"122a0535-a99e-45f0-8257-733449dd970c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"78056f27-ac60-4b9d-9421-3952ef4fb5a4","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"10c3eaff-8226-490d-87c9-1aa9b35134e5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d4d25e66-bb89-49e1-a825-b77ee889e1de","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4d514efb-52a0-4e0e-bcc1-e1099988b75a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9877d70b-9c83-4b33-80c2-6ae46f79c08d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Sprites/Backgrounds.yy",
+    "name": "Main Hall",
+    "path": "folders/Sprites/Backgrounds/Main Hall.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mainhall_walls",

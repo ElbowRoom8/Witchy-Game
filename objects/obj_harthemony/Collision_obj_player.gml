@@ -1,6 +1,6 @@
 /// @description Controls depth
 // moves in front or beind player
-if(obj_player.y > y){
+if(obj_player.y > y - 20){
 	depth = 1;
 	obj_player.depth = 0;
 } else {

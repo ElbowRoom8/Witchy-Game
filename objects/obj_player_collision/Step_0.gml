@@ -72,5 +72,5 @@ if hSpd == 0 and vSpd == 0 {
 }
 
 //moves to players feet
-x = obj_player.x + 3;
-y = obj_player.y + 49;
+x = obj_player.x + 1;
+y = obj_player.y + 69;

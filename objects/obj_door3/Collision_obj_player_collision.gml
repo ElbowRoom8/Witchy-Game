@@ -3,14 +3,22 @@ if(room = rm_mainhall){
 	room_goto(rm_courtyard);
 } else if(room = rm_courtyard){
 	room_goto(rm_mainhall);	
-	
+	obj_player.x = 644;
+	obj_player.y = 50;
 } else if(room = rm_westhall){
 	room_goto(rm_classroom1);
+	obj_player.x = 166;
+	obj_player.y = 424;
 } else if(room = rm_classroom1){
 	room_goto(rm_westhall);
-
+	obj_player.x = 325;
+	obj_player.y = 50;
 } else if(room = rm_easthall){
-	room_goto(rm_classroom6);
-} else if(room = rm_classroom6){
+	room_goto(rm_classroom7);
+	obj_player.x = 166;
+	obj_player.y = 424;
+} else if(room = rm_classroom7){
 	room_goto(rm_easthall);
+	obj_player.x = 549;
+	obj_player.y = 50;
 }

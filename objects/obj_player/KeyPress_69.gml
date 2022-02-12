@@ -54,7 +54,7 @@ if(inInventory){
 	newObj.image_alpha = 0.6;
 	
 //deletes all of the inventory objects if inventory is closed
-} else {
+} else if (!inQuest){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 	instance_destroy(obj_refill_button);

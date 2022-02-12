@@ -2,7 +2,7 @@
 ///this code is a mess
 
 //checks if this potion is being moved
-if(touchingMouse){
+if(touchingMouse & !inQuest){
 	draw_set_alpha(0.5);
 	/*if inventory type potion, it will highlight other inventory slots 
 	it's above, otherwise just highlight the corresponding spot on the

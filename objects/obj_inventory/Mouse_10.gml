@@ -1,2 +1,4 @@
 /// @description
-touchingMouse = true;
+if(!inQuest){
+	touchingMouse = true;
+}

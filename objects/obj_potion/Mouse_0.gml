@@ -1,7 +1,7 @@
 /// @description Picks up stack of potions
 if (stored == "inventory"){
 //if inventory array, just grab object
-	if(!mouseUsed){
+	if(!mouseUsed & !inQuest){
 		touchingMouse = true;
 		depth = -3;
 	}

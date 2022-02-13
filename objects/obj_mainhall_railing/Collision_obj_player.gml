@@ -1,9 +1,7 @@
 /// @description Controls depth
 // moves in front or beind player
-if(obj_player.y > (y + sprite_height / 2)){
-	depth = 1;
-	obj_player.depth = 0;
+if(obj_player.y > y + 50){
+	depth = 75;
 } else {
-	depth = 0;
-	obj_player.depth = 1;
+	depth = 25;
 }

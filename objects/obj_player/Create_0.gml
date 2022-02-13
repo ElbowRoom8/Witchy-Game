@@ -10,6 +10,7 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 #endregion
 
 image_speed = 0;
+depth = 50;
 
 //used to pick the correct spot in inventory
 selNum = 0;

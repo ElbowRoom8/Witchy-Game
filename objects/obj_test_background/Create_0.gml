@@ -1,3 +1,3 @@
 /// @description 
 tiled = false;
-depth = 5;
+depth = 200;

@@ -1,5 +1,6 @@
 /// @descriptiona Sets room camera
 //sets camera variables for new room
+
 max_view_x = room_width - camera_get_view_width(view_camera[0]);
 max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
@@ -18,12 +19,14 @@ if(inQuest){
 	for(i = 0; i < 9; i++){
 		//creates inventory objects
 		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -1, obj_inventory);
-		newObj.image_alpha = 0.85
+		newObj.image_alpha = 0.85;
+		newObj.depth = -1;
 		newObj.stored = "inventory";
 		newObj.slotNum = i; //sets slotnum
 		//reads inventory array and adds potions accordingly
 		if(inventory[i] != -1){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
+			newObj.depth = -2;
 			newObj.val = i;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;

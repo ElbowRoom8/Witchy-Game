@@ -12,6 +12,10 @@ if (stored == "inventory"){
 	//destroys object if inventory slot is emptied
 	if(inventory[val] == -1){
 		instance_destroy(self);
+	} else if(inventory[val].num == 0){
+		//removes slot if num drops to 0
+		inventory[val] = -1;
+		instance_destroy(self);
 	}
 //fades empty potions
 } else if (stored == "potions"){

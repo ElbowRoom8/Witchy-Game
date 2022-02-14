@@ -1,5 +1,4 @@
 /// @description Checks for interactions
-
 //checks diraction facing, and creates a pinger object in that direction
 if(!inDialogue & !inInventory){
 	if(sprite_index = spr_amber_walkleft){

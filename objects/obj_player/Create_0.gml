@@ -12,10 +12,10 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 image_speed = 0;
 depth = 50;
 
-//used to pick the correct spot in inventory
-selNum = 0;
-//used to prevent holding of potions
-gap = true;
+health = 10; //holds player health
+
+selNum = 0; //used to pick the correct spot in inventory
+gap = true; //used to prevent holding of potions
 
 globalvar inDialogue; //allows for cutscenes and dialogue
 inDialogue = false; 

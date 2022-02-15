@@ -1,4 +1,5 @@
 /// @description Opens inventory
+health--;
 //inverts inInventory if not in dialouge;
 if(!inDialogue & !inQuest){
 	inInventory = !inInventory;

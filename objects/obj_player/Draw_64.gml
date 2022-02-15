@@ -13,4 +13,8 @@ if (inQuest){
 		}
 	}
 	
+	if(fireBreath > 0){
+		draw_healthbar(1255, 60, 1270, 710, fireBreath, c_black, c_red, c_orange, 3, true, true);
+	}
+	
 }

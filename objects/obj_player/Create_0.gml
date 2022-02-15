@@ -17,6 +17,8 @@ health = 10; //holds player health
 selNum = 0; //used to pick the correct spot in inventory
 gap = true; //used to prevent holding of potions
 
+fireBreath = 0; //used to count amount of firebreath left
+
 globalvar inDialogue; //allows for cutscenes and dialogue
 inDialogue = false; 
 globalvar inInventory; //allows for inventory
@@ -35,7 +37,7 @@ globalvar inventory; //nine slots for potions you can bring on quests
 inventory[0] = {type : spr_health_potion, num : 2};
 inventory[1] = {type : spr_light_potion, num : 1};
 inventory[2] = {type : spr_acid_potion, num : 2};
-inventory[3] = {type : spr_fire_potion, num : 2};
+inventory[3] = {type : spr_fire_potion, num : 12};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have

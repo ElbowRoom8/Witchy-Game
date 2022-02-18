@@ -1,3 +1,2 @@
-/// @description movement delay
+/// @description animation delay
 ani_delay = true;
-jump_delay = true;

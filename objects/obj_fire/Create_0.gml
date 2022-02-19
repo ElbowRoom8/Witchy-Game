@@ -1,14 +1,8 @@
 /// @description
-direction = point_direction(x, y, mouse_x + random_range(-15, 15), mouse_y + random_range(-15, 15));
-
-speed = 1;
-hypot = sqrt(power(hSpd, 2) + power(vSpd, 2));
-speed *= (hypot + 1);
-/*
+randomize();
 hypot = sqrt( power((mouse_x - x), 2) + power((mouse_y - y), 2));
-hspeed = (mouse_x - x)/hypot;
-vspeed = (mouse_y - y)/hypot;
+hspeed = 1.6 * (mouse_x - x)/hypot;
+vspeed = 1.6 * (mouse_y - y)/hypot;
 
-hspeed *= (hSpd + 1);
-vspeed *= (vSpd + 1);
-*/
+hspeed += (hSpd + random_range(-0.2, 0.2));
+vspeed += (vSpd + random_range(-0.2, 0.2));

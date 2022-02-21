@@ -14,7 +14,7 @@ if ((x < 3) & (!tiled)){
 	instance_create_depth(640 + irandom_range(500, 600), irandom_range(0, 20), 190, obj_tree);
 	
 	//creates enemies
-	for (var i = 0; i < irandom_range(0, counter); i++){
+	for (var i = 0; i <= irandom_range(0, counter); i++){
 		newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(50, 300), 100, obj_slime);
 		newObj.image_xscale = random_range(1.75, 3);
 		newObj.image_yscale = newObj.image_xscale;

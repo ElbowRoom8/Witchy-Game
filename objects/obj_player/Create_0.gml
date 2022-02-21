@@ -9,6 +9,8 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
 #endregion
 
+audio_play_sound(snd_main_theme, 1, false);
+
 image_speed = 0;
 depth = 50;
 

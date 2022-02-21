@@ -31,7 +31,7 @@
     "path": "folders/Objects/Background.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_test_background",
+  "name": "obj_background1",
   "tags": [],
   "resourceType": "GMObject",
 }

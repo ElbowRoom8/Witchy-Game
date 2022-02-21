@@ -1,9 +1,9 @@
 /// @description Moves slime
-randomize();
+
+script_object_movement();
 
 if ((distance_to_object(obj_player) < 200) & jump_delay){
 	jump_delay = false;
-	
 	slimePath = path_add();
 	start_x = x;
 	start_y = y;
@@ -33,7 +33,8 @@ if ((distance_to_object(obj_player) < 200) & jump_delay){
 	path_set_closed(slimePath, false);
 	image_speed = 1;
 	alarm[1] = 250;
-	path_start(slimePath, 1, path_action_stop, false);
+	path_start(slimePath, 1, path_action_stop, true);
+	
 } else {
 	if((irandom_range(1, 200) == 1) & ani_delay){
 		image_speed = 1;
@@ -42,7 +43,6 @@ if ((distance_to_object(obj_player) < 200) & jump_delay){
 	}
 }
 
-script_object_movement();
 if(slimeHealth <= 0) {
 	instance_destroy();
 }

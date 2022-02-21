@@ -99,6 +99,7 @@ draw_self();
 
 //draws numbers
 draw_set_font(fnt_2);
+draw_set_color(c_white);
 if (stored == "inventory"){
 	//if type "inventory", reference inventory array
 	var i = inventory[val].num;

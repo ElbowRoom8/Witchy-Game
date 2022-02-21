@@ -16,6 +16,8 @@ health = 10; //holds player health
 
 selNum = 0; //used to pick the correct spot in inventory
 gap = true; //used to prevent holding of potions
+throw_x = 0; //used for throwing potions
+throw_y = 0;
 
 fireBreath = 0; //used to count amount of firebreath left
 
@@ -29,7 +31,7 @@ inQuest = false;
 globalvar playerName;
 playerName = "rawr xd"; //will change how is set later
 globalvar maxPotions; //maximum number of each potion type you can have on quests
-maxPotions = 3; 
+maxPotions = 7; 
 
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests

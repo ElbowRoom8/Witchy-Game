@@ -10,7 +10,6 @@ var downSpd = 0;
 var walkSpd = 2;
 //speed of walking animation, varies for sprinting
 var animationSpd = 1.2;
-
 //checks for cutscene
 if(!inDialogue and !inInventory){
 	//controls sprinting

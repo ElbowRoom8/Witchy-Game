@@ -39,7 +39,7 @@ if ((distance_to_object(obj_player) < 200) & jump_delay){
 	if((irandom_range(1, 200) == 1) & ani_delay){
 		image_speed = 1;
 		ani_delay = false;
-		alarm[0] = irandom_range(50, 100);
+		alarm[0] = irandom_range(25, 50);
 	}
 }
 

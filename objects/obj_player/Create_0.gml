@@ -38,10 +38,10 @@ maxPotions = 7;
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //each slot holds a sprite value, and a number value
-inventory[0] = {type : spr_health_potion, num : 2};
-inventory[1] = {type : spr_light_potion, num : 1};
-inventory[2] = {type : spr_acid_potion, num : 2};
-inventory[3] = {type : spr_fire_potion, num : 12};
+inventory[0] = {type : spr_health_potion, num : 7};
+inventory[1] = {type : spr_oil, num : 3};
+inventory[2] = {type : spr_acid_potion, num : 7};
+inventory[3] = {type : spr_fire_potion, num : 7};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have

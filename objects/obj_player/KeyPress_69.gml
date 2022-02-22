@@ -22,6 +22,10 @@ if(inInventory){
 			newObj.val = i;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;
+			if(inventory[i].type == spr_oil){
+				newObj.image_xscale = 2/3;
+				newObj.image_yscale = 2/3;
+			}
 		}
 	}
 	//loops through 50 potion storage slots

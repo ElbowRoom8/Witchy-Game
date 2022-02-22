@@ -9,9 +9,20 @@ if ((x < 3) & (!tiled)){
 	newObj.counter = counter + 1;
 	
 	//adds trees
-	instance_create_depth(640 + irandom_range(0, 150), irandom_range(0, 20), 190, obj_tree);
-	instance_create_depth(640 + irandom_range(200, 450), irandom_range(0, 20), 190, obj_tree);
-	instance_create_depth(640 + irandom_range(500, 600), irandom_range(0, 20), 190, obj_tree);
+	newObj = instance_create_depth(640 + irandom_range(0, 150), irandom_range(0, 20), 190, obj_tree);
+	newObj.sprite_index = spr_tree2;
+	newObj = instance_create_depth(640 + irandom_range(200, 450), irandom_range(0, 20), 190, obj_tree);
+	newObj.sprite_index = spr_tree3;
+	newObj = instance_create_depth(640 + irandom_range(500, 600), irandom_range(0, 20), 190, obj_tree);
+	newObj.sprite_index = spr_tree4;
+	newObj = instance_create_depth(640 + irandom_range(0, 150), irandom_range(0, 20), 190, obj_tree);
+	newObj = instance_create_depth(640 + irandom_range(200, 450), irandom_range(0, 20), 190, obj_tree);
+	newObj.sprite_index = spr_tree2
+	newObj = instance_create_depth(640 + irandom_range(500, 600), irandom_range(0, 20), 190, obj_tree);
+	newObj = instance_create_depth(640 + irandom_range(0, 150), irandom_range(0, 20), 190, obj_tree);
+	newObj = instance_create_depth(640 + irandom_range(200, 450), irandom_range(0, 20), 190, obj_tree);
+	newObj = instance_create_depth(640 + irandom_range(500, 600), irandom_range(0, 20), 190, obj_tree);
+	newObj.sprite_index = spr_tree3
 	
 	//creates enemies
 	for (var i = 0; i <= irandom_range(0, counter); i++){

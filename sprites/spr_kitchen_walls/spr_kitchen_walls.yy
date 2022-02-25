@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_kitchen_walls","path":"sprites/spr_kitchen_walls/spr_kitchen_walls.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_kitchen_walls",
     "tags": [],
     "resourceType": "GMSequence",

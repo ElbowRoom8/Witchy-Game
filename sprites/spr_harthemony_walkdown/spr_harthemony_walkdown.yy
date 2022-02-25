@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_harthemony_walkdown","path":"sprites/spr_harthemony_walkdown/spr_harthemony_walkdown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_harthemony_walkdown",
     "tags": [],
     "resourceType": "GMSequence",

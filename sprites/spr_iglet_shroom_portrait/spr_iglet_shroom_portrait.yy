@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_shroom_portrait","path":"sprites/spr_iglet_shroom_portrait/spr_iglet_shroom_portrait.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_shroom_portrait",
     "tags": [],
     "resourceType": "GMSequence",

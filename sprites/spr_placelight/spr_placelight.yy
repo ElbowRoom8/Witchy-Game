@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_placelight","path":"sprites/spr_placelight/spr_placelight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_placelight",
     "tags": [],
     "resourceType": "GMSequence",

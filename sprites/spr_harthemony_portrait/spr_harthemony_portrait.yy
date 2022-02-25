@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_harthemony_portrait","path":"sprites/spr_harthemony_portrait/spr_harthemony_portrait.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_harthemony_portrait",
     "tags": [],
     "resourceType": "GMSequence",

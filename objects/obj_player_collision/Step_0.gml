@@ -54,15 +54,19 @@ if (hSpd != 0) and (vSpd != 0) {
 	vSpd *= 0.71;
 }
 
-//moves player and checks collisions
+//checks collisions
+if(place_meeting(x + hSpd, y, obj_wall)){
+	hSpd = 0;
+}
+if(place_meeting(x, y + vSpd, obj_wall)){
+	vSpd = 0;
+}
+
+//moves player
 if(!inQuest){
-	if(!place_meeting(x + hSpd, y, obj_wall)){
-		obj_player.x = obj_player.x + hSpd;
-	}
+	obj_player.x = obj_player.x + hSpd;
 }
-if(!place_meeting(x, y + vSpd, obj_wall)){
-	obj_player.y = obj_player.y + vSpd;
-}
+obj_player.y = obj_player.y + vSpd;
 
 //stops sprite animation if player stopped
 if hSpd == 0 and vSpd == 0 {

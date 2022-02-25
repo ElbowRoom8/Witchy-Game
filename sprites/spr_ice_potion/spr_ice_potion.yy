@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_ice_potion","path":"sprites/spr_ice_potion/spr_ice_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_ice_potion",
     "tags": [],
     "resourceType": "GMSequence",

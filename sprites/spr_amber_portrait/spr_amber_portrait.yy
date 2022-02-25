@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_amber_portrait","path":"sprites/spr_amber_portrait/spr_amber_portrait.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_amber_portrait",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_sleep_potion","path":"sprites/spr_sleep_potion/spr_sleep_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_sleep_potion",
     "tags": [],
     "resourceType": "GMSequence",

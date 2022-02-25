@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_cafeteria_walls","path":"sprites/spr_cafeteria_walls/spr_cafeteria_walls.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_cafeteria_walls",
     "tags": [],
     "resourceType": "GMSequence",

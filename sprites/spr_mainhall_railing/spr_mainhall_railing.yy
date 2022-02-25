@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_mainhall_railing","path":"sprites/spr_mainhall_railing/spr_mainhall_railing.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_mainhall_railing",
     "tags": [],
     "resourceType": "GMSequence",

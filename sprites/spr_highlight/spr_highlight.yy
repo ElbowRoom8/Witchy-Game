@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_highlight","path":"sprites/spr_highlight/spr_highlight.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_highlight",
     "tags": [],
     "resourceType": "GMSequence",

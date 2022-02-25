@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_fire_potion","path":"sprites/spr_fire_potion/spr_fire_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_fire_potion",
     "tags": [],
     "resourceType": "GMSequence",

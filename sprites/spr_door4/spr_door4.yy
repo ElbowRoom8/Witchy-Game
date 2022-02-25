@@ -138,7 +138,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_door4","path":"sprites/spr_door4/spr_door4.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_door4",
     "tags": [],
     "resourceType": "GMSequence",

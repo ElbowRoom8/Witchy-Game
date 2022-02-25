@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_stone_potion","path":"sprites/spr_stone_potion/spr_stone_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_stone_potion",
     "tags": [],
     "resourceType": "GMSequence",

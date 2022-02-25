@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_refill_button1","path":"sprites/spr_refill_button1/spr_refill_button1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_refill_button1",
     "tags": [],
     "resourceType": "GMSequence",

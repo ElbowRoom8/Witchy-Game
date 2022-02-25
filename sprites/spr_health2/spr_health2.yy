@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_health2","path":"sprites/spr_health2/spr_health2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_health2",
     "tags": [],
     "resourceType": "GMSequence",

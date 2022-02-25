@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_walkup","path":"sprites/spr_iglet_walkup/spr_iglet_walkup.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_walkup",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_mainhall","path":"sprites/spr_mainhall/spr_mainhall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_mainhall",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_laboratory_walls","path":"sprites/spr_laboratory_walls/spr_laboratory_walls.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_laboratory_walls",
     "tags": [],
     "resourceType": "GMSequence",

@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_amber_walkleft","path":"sprites/spr_amber_walkleft/spr_amber_walkleft.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_amber_walkleft",
     "tags": [],
     "resourceType": "GMSequence",

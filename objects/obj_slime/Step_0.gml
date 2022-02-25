@@ -2,7 +2,14 @@
 
 script_object_movement();
 
-if ((distance_to_object(obj_player) < 200) & jump_delay){
+if (distance_to_object(obj_player) < 200) {//& jump_delay){
+	x++;
+	y = x ^ 2;
+	//image_speed = 1;
+	//alarm[1] = 250;
+	
+	#region //outdated slime path
+	/*
 	jump_delay = false;
 	slimePath = path_add();
 	start_x = x;
@@ -34,6 +41,8 @@ if ((distance_to_object(obj_player) < 200) & jump_delay){
 	image_speed = 1;
 	alarm[1] = 250;
 	path_start(slimePath, 1, path_action_stop, true);
+	*/
+	#endregion
 	
 } else {
 	if((irandom_range(1, 200) == 1) & ani_delay){

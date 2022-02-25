@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_shroom_walkright","path":"sprites/spr_iglet_shroom_walkright/spr_iglet_shroom_walkright.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_shroom_walkright",
     "tags": [],
     "resourceType": "GMSequence",

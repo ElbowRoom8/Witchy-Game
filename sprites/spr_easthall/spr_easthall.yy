@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_easthall","path":"sprites/spr_easthall/spr_easthall.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_easthall",
     "tags": [],
     "resourceType": "GMSequence",

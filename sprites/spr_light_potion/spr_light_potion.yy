@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_light_potion","path":"sprites/spr_light_potion/spr_light_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_light_potion",
     "tags": [],
     "resourceType": "GMSequence",

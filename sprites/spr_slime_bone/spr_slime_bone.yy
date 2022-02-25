@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_slime_bone","path":"sprites/spr_slime_bone/spr_slime_bone.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_slime_bone",
     "tags": [],
     "resourceType": "GMSequence",

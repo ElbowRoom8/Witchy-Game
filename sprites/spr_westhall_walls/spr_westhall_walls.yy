@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_westhall_walls","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_westhall_walls",
     "tags": [],
     "resourceType": "GMSequence",

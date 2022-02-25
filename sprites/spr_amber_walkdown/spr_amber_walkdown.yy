@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_amber_walkdown","path":"sprites/spr_amber_walkdown/spr_amber_walkdown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_amber_walkdown",
     "tags": [],
     "resourceType": "GMSequence",

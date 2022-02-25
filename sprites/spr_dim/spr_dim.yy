@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_dim","path":"sprites/spr_dim/spr_dim.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_dim",
     "tags": [],
     "resourceType": "GMSequence",

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_health_potion","path":"sprites/spr_health_potion/spr_health_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_health_potion",
     "tags": [],
     "resourceType": "GMSequence",

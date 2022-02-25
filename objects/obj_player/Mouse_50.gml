@@ -13,7 +13,7 @@ if(gap & inQuest){
 			newObj.target_x = throw_x - newObj.sprite_width / 4;
 			newObj.target_y = throw_y - newObj.sprite_height / 4;
 		} else if (inventory[selNum].type = spr_oil){
-			image_xscale = 9;
+			
 		}
 		inventory[selNum].num -= 1;
 	}

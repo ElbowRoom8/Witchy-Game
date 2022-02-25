@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_regen_potion","path":"sprites/spr_regen_potion/spr_regen_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_regen_potion",
     "tags": [],
     "resourceType": "GMSequence",

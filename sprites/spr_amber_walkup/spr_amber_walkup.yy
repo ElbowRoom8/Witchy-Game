@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_amber_walkup","path":"sprites/spr_amber_walkup/spr_amber_walkup.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_amber_walkup",
     "tags": [],
     "resourceType": "GMSequence",

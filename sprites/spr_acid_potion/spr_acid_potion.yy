@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_acid_potion","path":"sprites/spr_acid_potion/spr_acid_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_acid_potion",
     "tags": [],
     "resourceType": "GMSequence",

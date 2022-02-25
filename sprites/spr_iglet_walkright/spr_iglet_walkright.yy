@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_walkright","path":"sprites/spr_iglet_walkright/spr_iglet_walkright.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_walkright",
     "tags": [],
     "resourceType": "GMSequence",

@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_slime_pink","path":"sprites/spr_slime_pink/spr_slime_pink.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_slime_pink",
     "tags": [],
     "resourceType": "GMSequence",

@@ -9,7 +9,7 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
 #endregion
 
-audio_play_sound(snd_main_theme, 1, false);
+//audio_play_sound(snd_main_theme, 1, false);
 
 image_speed = 0;
 depth = 50;
@@ -33,7 +33,7 @@ inQuest = false;
 globalvar playerName;
 playerName = "rawr xd"; //will change how is set later
 globalvar maxPotions; //maximum number of each potion type you can have on quests
-maxPotions = 7; 
+maxPotions = 3; 
 
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests

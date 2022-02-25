@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_harthemony_walkup","path":"sprites/spr_harthemony_walkup/spr_harthemony_walkup.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_harthemony_walkup",
     "tags": [],
     "resourceType": "GMSequence",

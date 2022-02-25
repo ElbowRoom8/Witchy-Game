@@ -1,4 +1,4 @@
 /// @description (temporary) Exits game
 
-//game_end();
-game_restart();
+game_end();
+//game_restart();

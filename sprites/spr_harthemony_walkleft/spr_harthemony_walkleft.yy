@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_harthemony_walkleft","path":"sprites/spr_harthemony_walkleft/spr_harthemony_walkleft.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_harthemony_walkleft",
     "tags": [],
     "resourceType": "GMSequence",

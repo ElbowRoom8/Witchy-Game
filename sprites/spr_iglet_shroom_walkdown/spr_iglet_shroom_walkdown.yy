@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_shroom_walkdown","path":"sprites/spr_iglet_shroom_walkdown/spr_iglet_shroom_walkdown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_shroom_walkdown",
     "tags": [],
     "resourceType": "GMSequence",

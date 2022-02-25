@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_harthemony_walkright","path":"sprites/spr_harthemony_walkright/spr_harthemony_walkright.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_harthemony_walkright",
     "tags": [],
     "resourceType": "GMSequence",

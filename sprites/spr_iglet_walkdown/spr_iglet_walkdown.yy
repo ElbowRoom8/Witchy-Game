@@ -71,7 +71,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_iglet_walkdown","path":"sprites/spr_iglet_walkdown/spr_iglet_walkdown.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_iglet_walkdown",
     "tags": [],
     "resourceType": "GMSequence",

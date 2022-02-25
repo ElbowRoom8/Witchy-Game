@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_defense_potion","path":"sprites/spr_defense_potion/spr_defense_potion.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "spr_defense_potion",
     "tags": [],
     "resourceType": "GMSequence",

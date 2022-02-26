@@ -1,8 +1,16 @@
-/// @description Insert 
+/// @description 
 randomize();
 slimeHealth = 15;
-ani_delay = true;
-jump_delay = true;
-damage_delay = true;
-slimePath = path_add();
+
+ani_delay = true; //random jiggle
+jump_delay = true; //stops constant jumping
+damage_delay = true; //stops constant damage
+
+target_x = 0; //used for jump target
+target_y = 0; //used for jump target
+jumping = false; //status variable
+
+z = 0; // used for tracking 'vertical' height
+zspeed = 0; //speed for jumpig up
+zgravity = 0; //speed for bringing slime back down
 image_speed = 0;

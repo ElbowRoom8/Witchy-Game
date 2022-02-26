@@ -1,12 +1,13 @@
-/// @description Moves slime
-
+/// @description slime movement
 script_object_movement();
+target_x -= hSpd; //keeps target position for jumps in place
 
-if (distance_to_object(obj_player) < 200) {//& jump_delay){
-	x++;
-	y = x ^ 2;
-	//image_speed = 1;
-	//alarm[1] = 250;
+//checks if slime can jump
+if ((distance_to_object(obj_player) < 200) & jump_delay){
+	image_speed = 1;
+	jump_delay = false;
+	alarm[1] = 250; //sets delay for next attack
+	alarm[2] = 20; //short delay before attack
 	
 	#region //outdated slime path
 	/*
@@ -44,7 +45,50 @@ if (distance_to_object(obj_player) < 200) {//& jump_delay){
 	*/
 	#endregion
 	
+}
+
+//if close enough to target position, stop jumping
+if((abs(x - target_x) < 3) && (abs(y - target_y) < 3)){
+	jumping = false;
+}
+
+
+//jumps
+if(jumping){
+	speed = 3; //begins moving
+	
+	//lower z until at ground again
+	if (z > 0) {
+	    z += zspeed;
+	    zspeed += zgravity;
+	}
+	//bounce on landing if needed
+	if (z < 0) {
+	    z = -z;
+	    zspeed = abs(zspeed) * 0.1;
+	    if (zspeed < 1) {
+	        z = 0;
+	        zspeed = 0;
+	    }
+	}
+	
+	#region //fancy stuff that doesn't work but might be useful
+	//this is fancy math that doesn't work
+	//k = start_y - distance_y - 50;
+	
+	//h = (start_x * sqrt(abs(target_y - k)) - target_x * sqrt(abs(target_x - k))) / (sqrt(abs(target_y - k)) - sqrt(abs(target_x - k)));
+	
+	//a = (start_y - k) / ((start_x - h) ^ 2);
+	
+	//y = a * ((x - h) ^ 2) + k;
+	
+	//this is a jump using the midpoint as the vertex:
+	//z = -abs((((target_x - start_x) / 2) + start_x) - x) + abs((target_x - start_x) / 2);
+	#endregion
+	
+//if not jjumping, jiggle randomly
 } else {
+	speed = 0;
 	if((irandom_range(1, 200) == 1) & ani_delay){
 		image_speed = 1;
 		ani_delay = false;
@@ -52,6 +96,7 @@ if (distance_to_object(obj_player) < 200) {//& jump_delay){
 	}
 }
 
-if(slimeHealth <= 0) {
+//checks for death
+if(slimeHealth <= 0 && !jumping) {
 	instance_destroy();
 }

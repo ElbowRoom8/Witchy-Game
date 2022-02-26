@@ -1,6 +1,20 @@
 /// @description slime movement
 script_object_movement();
-target_x -= hSpd; //keeps target position for jumps in place
+
+//keeps target position for jumps in place
+if(hSpd > 0){
+	if(obj_player.x <= 100) {
+		target_x -= hSpd;
+	} else {
+		target_x -= hSpd * 1.7;
+	}
+} else {
+	if(obj_player.x >= 250) {
+		target_x -= hSpd;
+	} else {
+		target_x -= hSpd * 1.7;
+	}
+}
 
 //checks if slime can jump
 if ((distance_to_object(obj_player) < 200) & jump_delay){

@@ -49,7 +49,7 @@ hSpd = walkSpd * (rightSpd - leftSpd);
 vSpd = walkSpd * (downSpd - upSpd);
 
 //adjusts for diagonal movement
-if (hSpd != 0) and (vSpd != 0) {
+if (hSpd != 0) && (vSpd != 0) {
 	hSpd *= 0.71;
 	vSpd *= 0.71;
 }
@@ -65,7 +65,10 @@ if(place_meeting(x, y + vSpd, obj_wall)){
 //moves player
 if(!inQuest){
 	obj_player.x = obj_player.x + hSpd;
+} else if((hSpd < 0 && obj_player.x < 250) || (hSpd > 0 && obj_player.x > 100)){
+	obj_player.x = obj_player.x - hSpd * 0.85;
 }
+	
 obj_player.y = obj_player.y + vSpd;
 
 //stops sprite animation if player stopped
@@ -75,5 +78,5 @@ if hSpd == 0 and vSpd == 0 {
 }
 
 //moves to players feet
-x = obj_player.x + 1;
-y = obj_player.y + 69;
+x = obj_player.x;
+y = obj_player.y + 65;

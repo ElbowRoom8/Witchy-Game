@@ -13,6 +13,8 @@ max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
 image_speed = 0;
 depth = 50;
+image_xscale = 2;
+image_yscale = 2;
 
 health = 10; //holds player health
 

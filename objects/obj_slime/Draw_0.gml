@@ -1,9 +1,9 @@
-/// @description draws health bar
+/// @description draws health bar and shadows
 if(jumping){
 	//draws shadow at actual position
 	var _x = x;
 	var _y = y;
-	var rx = 16 / (1 + z / 80);
+	var rx = 14 / (1 + z / 100);
 	var ry = rx / 2;
 	draw_set_color(c_black);
 	draw_set_alpha(0.7);
@@ -13,10 +13,6 @@ if(jumping){
 	
 	draw_set_color(c_white);
 	draw_set_alpha(1.0);
-	
-	depth = 40;
-	//draws slime in air (y - z)
-	draw_sprite_ext(sprite_index, image_index, x, y - z, image_xscale, image_yscale, 0, c_white, 1);
 } else {
 	//only draws self if not jumping
 	draw_self();

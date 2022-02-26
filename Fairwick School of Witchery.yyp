@@ -35,7 +35,6 @@
     {"id":{"name":"spr_slime_blue","path":"sprites/spr_slime_blue/spr_slime_blue.yy",},"order":1,},
     {"id":{"name":"spr_mainhall_railing","path":"sprites/spr_mainhall_railing/spr_mainhall_railing.yy",},"order":0,},
     {"id":{"name":"spr_amber_walkdown","path":"sprites/spr_amber_walkdown/spr_amber_walkdown.yy",},"order":3,},
-    {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":29,},
     {"id":{"name":"spr_classroom_walls1","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"order":1,},
     {"id":{"name":"spr_doorframe9","path":"sprites/spr_doorframe9/spr_doorframe9.yy",},"order":2,},
     {"id":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"order":13,},

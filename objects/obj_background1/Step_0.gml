@@ -8,6 +8,23 @@ if ((x < 3) & (!tiled)){
 	newObj = instance_create_depth(x + 640, 0, 200, obj_background1);
 	newObj.counter = counter + 1;
 	
+	if(sprite_index == spr_forest1 || sprite_index == spr_forest4 || sprite_index == spr_forest6){	
+		var n = irandom_range(1, 3);
+		switch n {
+			case 1: newObj.sprite_index = spr_forest1; break;
+			case 2: newObj.sprite_index = spr_forest2; break;
+			case 3: newObj.sprite_index = spr_forest3; break;
+		}
+	} else if (sprite_index == spr_forest2 || sprite_index == spr_forest5){
+		var n = irandom_range(1, 2);
+		switch n {
+			case 1: newObj.sprite_index = spr_forest4; break;
+			case 2: newObj.sprite_index = spr_forest5; break;
+		}
+	} else {
+		newObj.sprite_index = spr_forest6;
+	}
+	
 	//adds trees
 	for(var i = 0; i < 4; i++){
 		var tree_y = irandom_range(15, 0);

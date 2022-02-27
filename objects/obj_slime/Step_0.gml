@@ -64,6 +64,11 @@ if ((distance_to_object(obj_player) < 200) & jump_delay){
 //if close enough to target position, stop jumping
 if((abs(x - target_x) < 3) && (abs(y - target_y) < 3)){
 	jumping = false;
+	//resets sprite
+	sprite_index = spr_slime_green;
+	image_alpha = 1;
+	image_xscale = def_scale;
+	image_yscale = image_xscale;
 }
 
 
@@ -85,6 +90,13 @@ if(jumping){
 	        zspeed = 0;
 	    }
 	}
+	
+	//switches to shadow sprite
+	sprite_index = spr_shadow;
+	image_alpha = 0.6;
+	//scales shadow based on height and size
+	image_xscale = 35 * def_scale / (z + 70);
+	image_yscale = image_xscale;
 	
 	#region //fancy stuff that doesn't work but might be useful
 	//this is fancy math that doesn't work

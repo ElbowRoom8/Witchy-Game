@@ -2,7 +2,11 @@
 if(gap & inQuest){
 	if(inventory[selNum] != -1){
 		if(inventory[selNum].type = spr_health_potion){
-			health += 2;
+			if(health > 8){
+				health = 10;
+			} else {
+				health += 2;
+			}
 		} else if (inventory[selNum].type = spr_fire_potion){
 			fireBreath = 100;
 		} else if (inventory[selNum].type = spr_acid_potion){
@@ -12,8 +16,9 @@ if(gap & inQuest){
 			newObj.image_yscale = 0.5;
 			newObj.target_x = throw_x - newObj.sprite_width / 4;
 			newObj.target_y = throw_y - newObj.sprite_height / 4;
-		} else if (inventory[selNum].type = spr_oil){
-			
+		} else if (inventory[selNum].type = spr_defense_potion){
+			defense = 2;
+			def_timer = room_speed * 30;
 		}
 		inventory[selNum].num -= 1;
 	}

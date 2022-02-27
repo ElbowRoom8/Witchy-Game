@@ -21,10 +21,6 @@ if(inInventory){
 			newObj.val = i;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;
-			if(inventory[i].type == spr_oil){
-				newObj.image_xscale = 2/3;
-				newObj.image_yscale = 2/3;
-			}
 		}
 	}
 	//loops through 50 potion storage slots
@@ -49,13 +45,13 @@ if(inInventory){
 	}
 	//creates refill buttons
 	newObj = instance_create_depth(cx + 56, cy + 136, -1, obj_refill_button);
-	newObj.image_xscale = 0.45;
-	newObj.image_yscale = 0.45;
+	newObj.image_xscale = 0.5;
+	newObj.image_yscale = 0.5;
 	newObj.depth = -1;
 	
-	newObj = instance_create_depth(cx + 89, cy + 136, -1, obj_refill_button);
-	newObj.image_xscale = 0.45;
-	newObj.image_yscale = 0.45;
+	newObj = instance_create_depth(cx + 91, cy + 136, -1, obj_refill_button);
+	newObj.image_xscale = 0.5;
+	newObj.image_yscale = 0.5;
 	newObj.sprite_index = spr_refill_button2;
 	newObj.depth = -1;
 	

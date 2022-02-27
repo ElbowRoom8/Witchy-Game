@@ -1,4 +1,11 @@
 /// @description
+
+if(def_timer > 0){
+	def_timer--;
+} else {
+	defense = 1;
+}
+
 // change selNum
 if keyboard_check(ord(1)){
 	selNum = 0;
@@ -18,4 +25,13 @@ if keyboard_check(ord(1)){
 	selNum = 7;
 } else if keyboard_check(ord(9)){
 	selNum = 8;
+}
+
+if(health <= 0){
+	room_goto(rm_mainhall);
+	obj_player.x = 160;
+	obj_player.y = 168;
+	inQuest = false;
+	health = 10;
+	defense = 1;
 }

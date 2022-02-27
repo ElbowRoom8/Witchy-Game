@@ -1,2 +1,2 @@
 /// @description
-other.slimeHealth -= image_alpha * 0.01;
+other.slimeHealth -= image_alpha * 0.02;

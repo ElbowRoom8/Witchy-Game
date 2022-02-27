@@ -17,6 +17,7 @@ image_xscale = 2;
 image_yscale = 2;
 
 health = 10; //holds player health
+def_timer = 0; //defense buff timer
 
 selNum = 0; //used to pick the correct spot in inventory
 gap = true; //used to prevent holding of potions
@@ -36,12 +37,14 @@ globalvar playerName;
 playerName = "rawr xd"; //will change how is set later
 globalvar maxPotions; //maximum number of each potion type you can have on quests
 maxPotions = 3; 
+globalvar defense;
+defense = 1;
 
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //each slot holds a sprite value, and a number value
 inventory[0] = {type : spr_health_potion, num : 7};
-inventory[1] = {type : spr_oil, num : 3};
+inventory[1] = {type : spr_defense_potion, num : 3};
 inventory[2] = {type : spr_acid_potion, num : 7};
 inventory[3] = {type : spr_fire_potion, num : 7};
 

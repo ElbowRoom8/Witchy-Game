@@ -15,7 +15,7 @@ if (inQuest){
 	}
 	
 	if(defense > 1){
-		draw_sprite_ext(spr_defense, 0,  1075, 45, 2, 2, 0, c_white, 1);
+		draw_sprite_ext(spr_defense_icon, 0,  1075, 45, 2, 2, 0, c_white, 1);
 		draw_text(1075, 60, round(def_timer / room_speed));
 	}
 	

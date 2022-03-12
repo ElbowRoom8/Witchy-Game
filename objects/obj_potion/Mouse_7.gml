@@ -21,7 +21,7 @@ if (stored = "inventory"){
 				//updates inventory array to match changes
 				if (inst.slotNum != val) {
 					//new spot (based on inventory objects slotNum) is filled
-					inventory[inst.slotNum] = {type : sprite_index, num : inventory[val].num};
+					inventory[inst.slotNum] = {type : sprite_index, vrty : inventory[val].vrty, num : inventory[val].num};
 					//old spot is emptied
 					inventory[val] = -1;
 					val = inst.slotNum;
@@ -30,13 +30,13 @@ if (stored = "inventory"){
 			//if occupied, does nothing, and potion will automatically be set back to old coords
 		} else {
 			//if over "potions" type slot, add num to potions array, and delete self
-			if (potion_array_add(val, stored)){
+			if (potion_array_add(val, vrty, stored)){
 				instance_destroy(self);
 			}
 		}		
 	} else {
 		//if over nothing, add num to potions array, and delete self
-		if (potion_array_add(val, stored)){
+		if (potion_array_add(val, vrty, stored)){
 				instance_destroy(self);
 		}
 	}
@@ -51,7 +51,7 @@ potion is destroyed)*/
 		//checks if inventory object is type "inventory"
 		if(inst.stored == "inventory"){
 			//checks for matching potion already in inventory and adds to it, then destroys itself
-			if (potion_array_add(val, stored)){
+			if (potion_array_add(val, vrty, stored)){
 				instance_destroy(self);
 			} else {
 				//if no matching potion, then check if slot is empty
@@ -59,11 +59,11 @@ potion is destroyed)*/
 					//correct the counts
 					if (stored > maxPotions){
 						//if above maxPotions limit, then update both arrays to fix this
-						inventory[inst.slotNum] = {type : sprite_index, num : maxPotions};
-						potions[val].num += (stored - maxPotions);
+						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : maxPotions};
+						potions[val][vrty].num += (stored - maxPotions);
 					} else {
 						//if not above max potions, only update inventory array
-						inventory[inst.slotNum] = {type : sprite_index, num : stored};
+						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : stored};
 					}
 					//sets new snap coords, and sets slot to occupied
 					snapX = inst.x + 1;

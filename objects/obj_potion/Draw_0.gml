@@ -12,8 +12,10 @@ if(touchingMouse & !inQuest){
 			for(var i = 0; i < array_length(potions); i++){
 				if(potions[i] != -1){
 					//find matching potion, and sets highlightNum to the index
-					if(potions[i].type = sprite_index){
-						highlightNum = i;
+					if(potions[i][0].max_v >= vrty){
+						if(potions[i][vrty].type = sprite_index){
+							highlightNum = i;
+						}
 					}
 				} else {
 					break;//reached end of potions
@@ -109,7 +111,7 @@ if (stored == "inventory"){
 	}
 } else if (stored == "potions"){
 	//if type "potions" references potions array
-	var i = potions[val].num
+	var i = potions[val][vrty].num
 	// only draw if greater than 1
 	if (i > 1) {
 		draw_text(x + 1, y + 19, i);

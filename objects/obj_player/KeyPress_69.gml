@@ -19,6 +19,7 @@ if(inInventory){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
 			newObj.depth = -2;
 			newObj.val = i;
+			newObj.vrty = inventory[i].vrty;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;
 		}
@@ -35,11 +36,11 @@ if(inInventory){
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly
 			if(potions[potNum] != -1){
-				newObj = instance_create_depth(cx + 56 + 35 * i, cy + 171 + 35 * j, -2, obj_potion);
+				newObj = instance_create_depth(cx + 56 + 35 * i, cy + 171 + 35 * j, -2, obj_potion_slot);
 				newObj.depth = -2;
 				newObj.val = potNum;
-				newObj.stored = "potions";
-				newObj.sprite_index = potions[potNum].type;
+				//newObj.stored = "potions";
+				newObj.sprite_index = potions[potNum][0].type;
 			}
 		}
 	}
@@ -64,6 +65,7 @@ if(inInventory){
 } else if (!inQuest){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
+	instance_destroy(obj_potion_slot);
 	instance_destroy(obj_refill_button);
 	instance_destroy(obj_dim);
 }

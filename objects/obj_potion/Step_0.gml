@@ -19,7 +19,7 @@ if (stored == "inventory"){
 	}
 //fades empty potions
 } else if (stored == "potions"){
-	if(potions[val].num == 0){
+	if(potions[val][vrty].num == 0){
 		image_alpha = 0.35;
 	} else {
 		image_alpha = 1;

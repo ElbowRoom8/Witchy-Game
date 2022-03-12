@@ -33,5 +33,6 @@ if(health <= 0){
 	obj_player.y = 168;
 	inQuest = false;
 	health = 10;
+	fireBreath = 0;
 	defense = 1;
 }

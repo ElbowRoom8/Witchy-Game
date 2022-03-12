@@ -1,5 +1,6 @@
 /// @description Sets default values
 val = 0; //holds a particular index number in an array
+vrty = 0; //holds the variety of the potion, as well as an index number
 
 stored = ""; //hold which array the potion is a part of
 /* In some cases, stored will hold an integer instead. If you click, and a new
@@ -9,7 +10,6 @@ objOther = self; //used by potions in transit to find parent object
 
 //these hold indexes, and are used to highlight the correct slot in the opposite array
 highlightNum = -1;
-highlightNum2 = -1;
 
 touchingMouse = false; //holds whether or not this particular potion is held
 rightClick = false; //checks if rightclick was used to pick it up

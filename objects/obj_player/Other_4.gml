@@ -28,6 +28,7 @@ if(inQuest){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
 			newObj.depth = -2;
 			newObj.val = i;
+			newObj.vrty = inventory[i].vrty;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;
 		}

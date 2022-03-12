@@ -6,16 +6,21 @@ if(!mouseUsed){
 		//loops through inventory, and moves each slot to potions
 		for(var i = 0; i < array_length(inventory); i++){
 			if(inventory[i] != -1){
-				potion_array_add(i, "inventory");
+				var vrty = inventory[i].vrty;
+				potion_array_add(i, vrty, "inventory");
 			}
 		}
 	} else {
 		//loops through potions, and refills each inventory slot that matches
 		for(var i = 0; i < array_length(potions); i++){
 			if(potions[i] != -1){
-				var temp = potions[i].num;
-				if (!potion_array_add(i, temp)){
-					potions[i].num = temp; //resets potions if no match
+				var max_v = potions[i][0].max_v;
+				for(var j = 0; j <= max_v; j++){
+					var temp = potions[i][j].num;
+					var vrty = potions[i][j].vrty;
+					if (!potion_array_add(i, vrty, temp)){
+						potions[i][vrty].num = temp; //resets potions if no match
+					}
 				}
 			} else {
 				break; //we've reached end of array

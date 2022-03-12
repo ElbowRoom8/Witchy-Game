@@ -4,7 +4,7 @@ if(!inQuest){
 	//if potion is in potions array, creates a new object
 	if (stored == "potions"){
 		//checks if the mouse is currently in use, and that the array index isn't empty
-		if(!mouseUsed & (potions[val].num > 0)){
+		if(!mouseUsed & (potions[val][vrty].num > 0)){
 			//creates new object, and initializes variables
 			newObj = instance_create_depth(x,y, -3, obj_potion);
 			newObj.val = val;
@@ -14,7 +14,7 @@ if(!inQuest){
 			newObj.rightClick = true;
 			newObj.gap = false;
 			newObj.objOther = self; //stores reference to self in new object
-			potions[val].num -= 1; //decreases potions array num
+			potions[val][vrty].num -= 1; //decreases potions array num
 		}
 	//checks if potion is in inventory array
 	} else if (stored == "inventory"){
@@ -29,8 +29,10 @@ if(!inQuest){
 				for(var i = 0; i < array_length(potions); i++){
 					if(potions[i] != -1){
 						//if match, grab index
-						if(potions[i].type = sprite_index){
-							temp = i;
+						if(potions[i][0].max_v >= vrty){
+							if(potions[i][vrty].type = sprite_index){
+								temp = i;
+							}
 						}
 					} else {
 						break; //reached end of potions
@@ -62,9 +64,9 @@ if(!inQuest){
 			//checks parent objects type
 			if(objOther.stored = "potions"){
 				//adds 1 from potions array to this objects stored value;
-				if(potions[val].num > 0){
+				if(potions[val][vrty].num > 0){
 					stored++;
-					potions[val].num -= 1;
+					potions[val][vrty].num -= 1;
 					gap = false;
 				}
 			} else if(objOther.stored = "inventory"){

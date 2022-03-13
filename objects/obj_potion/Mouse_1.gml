@@ -8,6 +8,7 @@ if(!inQuest){
 			//creates new object, and initializes variables
 			newObj = instance_create_depth(x,y, -3, obj_potion);
 			newObj.val = val;
+			newObj.vrty = vrty;
 			newObj.stored = 1; //yet again stored is used to hold number of potions
 			newObj.sprite_index = sprite_index;
 			newObj.touchingMouse = true;
@@ -39,6 +40,7 @@ if(!inQuest){
 					}
 				}
 				newObj.val = temp; //saves index
+				newObj.vrty = vrty;
 				newObj.stored = 1; //sets stored to 1
 				newObj.sprite_index = sprite_index;
 				newObj.touchingMouse = true;

@@ -24,6 +24,8 @@ if(inInventory){
 			newObj.sprite_index = inventory[i].type;
 		}
 	}
+	//resets open tabs
+	tabType = -1;
 	//loops through 50 potion storage slots
 	for(i = 0; i < 10; i++){
 		for(j = 0; j < 5; j++){
@@ -31,7 +33,6 @@ if(inInventory){
 			newObj = instance_create_depth(cx + 55 + 35 * i, cy + 170 + 35 * j, -1, obj_inventory);
 			newObj.image_alpha = 0.85
 			newObj.depth = -1;
-			newObj.stored = "potions";
 			
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly
@@ -45,12 +46,12 @@ if(inInventory){
 		}
 	}
 	//creates refill buttons
-	newObj = instance_create_depth(cx + 56, cy + 136, -1, obj_refill_button);
+	newObj = instance_create_depth(cx + 408, cy + 276, -1, obj_refill_button);
 	newObj.image_xscale = 0.5;
 	newObj.image_yscale = 0.5;
 	newObj.depth = -1;
 	
-	newObj = instance_create_depth(cx + 91, cy + 136, -1, obj_refill_button);
+	newObj = instance_create_depth(cx + 408, cy + 311, -1, obj_refill_button);
 	newObj.image_xscale = 0.5;
 	newObj.image_yscale = 0.5;
 	newObj.sprite_index = spr_refill_button2;
@@ -59,7 +60,7 @@ if(inInventory){
 	//adds fade to background
 	newObj = instance_create_depth(0, 0, -1, obj_dim);
 	newObj.image_alpha = 0.6;
-	newObj.depth = -1;
+	newObj.depth = 0;
 	
 //deletes all of the inventory objects if inventory is closed
 } else if (!inQuest){

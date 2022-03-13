@@ -2,7 +2,7 @@
 
 //sum potions of a variety
 var sum = 0;
-var max_v = potions[val][0].vrty
+max_v = potions[val][0].max_v;
 for(var i = 0; i <= max_v; i++){
 	sum += potions[val][i].num;
 }

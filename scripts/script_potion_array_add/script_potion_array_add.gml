@@ -18,7 +18,7 @@ function potion_array_add(_val, _vrty, _stored){
 	} else {
 		for(var i = 0; i < array_length(inventory); i++){
 			if (inventory[i] != -1) {
-				if (inventory[i].type = potions[_val][_vrty].type){
+				if (inventory[i].type == potions[_val][_vrty].type && inventory[i].vrty == _vrty){
 					var temp = inventory[i].num;
 					inventory[i].num += _stored;
 					//makes sure we haven't overadded to inventory

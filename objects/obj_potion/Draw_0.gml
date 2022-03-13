@@ -39,11 +39,19 @@ if(touchingMouse & !inQuest){
 				}
 			} else {
 				//if "potions" type slot, draw highlight at corresponding potions slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+				if(tabType == highlightNum){
+					draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * vrty, obj_player.cy + 133);
+				}else{
+					draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+				}
 			}
 		} else {
 			//if not touching inventory object, draw highlight at corresponding potions slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+			if(tabType == highlightNum){
+				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * vrty, obj_player.cy + 133);
+			}else{
+				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+			}
 		}
 		
 	//if not inventory type potion, it must be one in transit (potions type never leave slot)
@@ -58,7 +66,7 @@ if(touchingMouse & !inQuest){
 			for(var i = 0; i < array_length(inventory); i++){
 				if(inventory[i] != -1){
 					//searches for matching inventory slot
-					if(inventory[i].type = sprite_index){
+					if(inventory[i].type == sprite_index && inventory[i].vrty == vrty){
 						highlightNum = i;
 					}
 				}
@@ -80,7 +88,11 @@ if(touchingMouse & !inQuest){
 					if(!inst.occupied){
 						draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
 					} else {
-						draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+						if(tabType == val){
+							draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * vrty, obj_player.cy + 133);
+						}else{
+							draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+						}
 					}
 				} else {
 					//if there is a matching inventory slot, draw highlight over it
@@ -88,11 +100,19 @@ if(touchingMouse & !inQuest){
 				}
 			} else {
 				//if inventory object is type "potions", draw highlight over corresponding potions slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+				if(tabType == val){
+					draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * vrty, obj_player.cy + 133);
+				}else{
+					draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+				}
 			}
 		} else {
 			//if not over inventory object, draw highlight over corresponding potions slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+			if(tabType == val){
+				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * vrty, obj_player.cy + 133);
+			}else{
+				draw_sprite(spr_placelight, 0, obj_player.cx + 57 + 35 * hx, obj_player.cy + 172 + 35 * hy);
+			}
 		}
 	}
 }

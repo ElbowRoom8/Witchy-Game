@@ -25,3 +25,10 @@ if (stored == "inventory"){
 		image_alpha = 1;
 	}
 }
+
+//deletes if wrong tab open
+if(stored == "potions"){
+	if(val != tabType){
+		instance_destroy();
+	}
+}

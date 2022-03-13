@@ -40,6 +40,9 @@ maxPotions = 3;
 globalvar defense;
 defense = 1;
 
+globalvar tabType; //used to keep only one potion tab open
+tabType = -1;
+
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //each slot holds a sprite value, and a number value

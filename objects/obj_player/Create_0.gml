@@ -32,6 +32,8 @@ globalvar inInventory; //allows for inventory
 inInventory = false;
 globalvar inQuest; //allows for quests
 inQuest = false;
+globalvar brewing; //allows for brewing
+brewing = false;
 
 globalvar playerName;
 playerName = "rawr xd"; //will change how is set later
@@ -75,3 +77,7 @@ items = array_create(120, -1); //-1 is default value
 globalvar items; //bulk storage of all items you have
 //each slot holds a sprite value and a number value
 items[0] = {type : spr_door1, num : 2};
+items[2] = {type : spr_door2, num : 0};
+items[3] = {type : spr_door3, num : 69};
+items[4] = {type : spr_door4, num : 14};
+items[7] = {type : spr_door5, num : 420};

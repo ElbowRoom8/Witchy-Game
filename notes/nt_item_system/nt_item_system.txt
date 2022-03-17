@@ -1,0 +1,42 @@
+Item system:
+
+when in storage:
+leftclick and hold picks up 1, drag it over to brewer
+	shift = 5 ctrl = 10
+rightclick picks up 1 at a time, leftclick to drop or place in brewer
+	shift = 5, ctrl = 10
+
+when in brewer
+leftclick and hold picks up all, place it back or drop it to storage
+rightclick picks up 1 at a time, leftclick to drop or place back in brewer
+	shift = 5, ctrl = 10
+	
+item vs modifier is all same, just two separate systems (no mixing)
+	modifiers stored at end of item array -> store value somehow?
+
+
+open potion index (potion storage) and click a potion
+	autofills ingredients to make 1 potion, click again to make 2, 3, etc.
+		shift = 5, ctrl = 10
+click a different potion
+	removes all ingredient already in brewer, replaces with new ingredients
+
+
+press brew to create potions
+	checks 3 main ingredients for potion type
+	checks modifier to create potion with correct attribute
+		if no modifier, do not accept
+	consume ingredients, add new potion to array
+		consume ingredients if failed recipe???
+	minigame? potion delay?
+	
+	
+potion attributes -> stored in a int?
+	make a list of possibilities and hard code them?
+		ugly but maybe easiest way...
+		also what i've already started doing i think
+		
+	store in string? -> lol no
+	give each potion a set of attributes to begin with, and set those at creation?
+	
+	

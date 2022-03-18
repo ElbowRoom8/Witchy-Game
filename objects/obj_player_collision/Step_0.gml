@@ -11,7 +11,7 @@ var walkSpd = 2;
 //speed of walking animation, varies for sprinting
 var animationSpd = 1.2;
 //checks for cutscene
-if(!inDialogue and !inInventory){
+if(!inDialogue and !inInventory and !brewing){
 	//controls sprinting
 	if keyboard_check(vk_shift){
 		walkSpd = 3.5;

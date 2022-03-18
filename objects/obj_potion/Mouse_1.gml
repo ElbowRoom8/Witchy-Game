@@ -35,8 +35,6 @@ if(!inQuest){
 								temp = i;
 							}
 						}
-					} else {
-						break; //reached end of potions
 					}
 				}
 				newObj.val = temp; //saves index

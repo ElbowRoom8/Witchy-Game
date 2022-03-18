@@ -22,8 +22,6 @@ if(!mouseUsed){
 						potions[i][vrty].num = temp; //resets potions if no match
 					}
 				}
-			} else {
-				break; //we've reached end of array
 			}
 		}
 	}

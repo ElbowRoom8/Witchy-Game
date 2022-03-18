@@ -1,6 +1,6 @@
 /// @description Opens inventory
 //inverts inInventory if not in dialouge;
-if(!inDialogue & !inQuest){
+if(!inDialogue & !inQuest & !brewing){
 	inInventory = !inInventory;
 }
 
@@ -63,7 +63,7 @@ if(inInventory){
 	newObj.depth = 0;
 	
 //deletes all of the inventory objects if inventory is closed
-} else if (!inQuest){
+} else if (!inQuest && !brewing){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 	instance_destroy(obj_potion_slot);

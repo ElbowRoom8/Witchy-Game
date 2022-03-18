@@ -79,5 +79,11 @@ globalvar items; //bulk storage of all items you have
 items[0] = {type : spr_door1, num : 2};
 items[2] = {type : spr_door2, num : 0};
 items[3] = {type : spr_door3, num : 69};
-items[4] = {type : spr_door4, num : 14};
+items[4] = {type : spr_door4, num : 114001};
 items[7] = {type : spr_door5, num : 420};
+items[8] = {type : spr_door6, num : 1500};
+//store modifiers at end of array
+
+
+brew_slots = array_create(4, -1);
+globalvar brew_slots;

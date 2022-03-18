@@ -4,7 +4,7 @@ function potion_array_add(_val, _vrty, _stored){
 	if (_stored == "inventory") {
 		for(var i = 0; i < array_length(potions); i++){
 			if (potions[i] == -1) {
-				return false; //we've reached the end of the potions array
+				
 			} else if (potions[i][0].max_v < _vrty){
 				
 			} else if(potions[i][_vrty].type = inventory[_val].type){

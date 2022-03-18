@@ -7,28 +7,31 @@ if(touchingMouse){
 	    y = mouse_y - 16;
 	}
 }
+
+//changes amount grabbed on click
+if keyboard_check(vk_shift){
+	grabNum = 5;
+} else if keyboard_check(vk_control){
+	grabNum = 10;
+} else {
+	grabNum = 1;
+}
+
 //checks type of potion
-if (stored == "inventory"){
-	//destroys object if inventory slot is emptied
-	if(inventory[val] == -1){
+if (stored == "brewing"){
+	//destroys object if brew_slots slot is emptied
+	if(brew_slots[val] == -1){
 		instance_destroy(self);
-	} else if(inventory[val].num == 0){
+	} else if(brew_slots[val].num == 0){
 		//removes slot if num drops to 0
-		inventory[val] = -1;
+		brew_slots[val] = -1;
 		instance_destroy(self);
 	}
-//fades empty potions
-} else if (stored == "potions"){
-	if(potions[val][vrty].num == 0){
+//fades empty items
+} else if (stored == "items"){
+	if(items[val].num == 0){
 		image_alpha = 0.35;
 	} else {
 		image_alpha = 1;
-	}
-}
-
-//deletes if wrong tab open
-if(stored == "potions"){
-	if(val != tabType){
-		instance_destroy();
 	}
 }

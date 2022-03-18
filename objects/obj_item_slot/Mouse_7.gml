@@ -5,73 +5,65 @@
 touchingMouse = false;
 mouseUsed = false;
 
-/* if inventory type potion, will either place on new inventory slot, 
-reset back to old slot, or delete and add num to corresonding potions index */
-if (stored = "inventory"){
+/* if brewing type item, will either place on new inventory slot, 
+reset back to old slot, or delete and add num to corresonding items index */
+if (stored = "brewing"){
 	//checks if touching inventory object
 	if(collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
 		var inst = instance_position(mouse_x, mouse_y, obj_inventory);
-		//checks if inventory object has type "inventory"
-		if(inst.stored == "inventory"){
+		//checks if inventory object has type "brewing"
+		if(inst.stored == "brewing"){
 			if(!inst.occupied){
 				//if slot is empty, sets new coords to move to, and sets slot to occupied
 				snapX = inst.x + 1;
 				snapY = inst.y + 1;
 				inst.occupied = true;
-				//updates inventory array to match changes
+				//updates brew_slot array to match changes
 				if (inst.slotNum != val) {
 					//new spot (based on inventory objects slotNum) is filled
-					inventory[inst.slotNum] = {type : sprite_index, vrty : inventory[val].vrty, num : inventory[val].num};
+					brew_slots[inst.slotNum] = {type : sprite_index, num : brew_slots[val].num};
 					//old spot is emptied
-					inventory[val] = -1;
+					brew_slots[val] = -1;
 					val = inst.slotNum;
 				}
 			}
-			//if occupied, does nothing, and potion will automatically be set back to old coords
+			//if occupied, does nothing, and item will automatically be set back to old coords
 		} else {
-			//if over "potions" type slot, add num to potions array, and delete self
-			if (potion_array_add(val, vrty, stored)){
+			//if over "items" type slot, add num to items array, and delete self
+			if (item_array_add(val, stored)){
 				instance_destroy(self);
 			}
 		}		
 	} else {
-		//if over nothing, add num to potions array, and delete self
-		if (potion_array_add(val, vrty, stored)){
+		//if over nothing, add num to items array, and delete self
+		if (item_array_add(val, stored)){
 				instance_destroy(self);
 		}
 	}
-/*if potion in transit ("potions" type potions will never move) it will
+/*if item in transit ("items" type items will never move) it will
 either move to an empty inventory slot, add to a matching inventory slot
 or delete itself (remember counts are automatically fixed if this type of 
-potion is destroyed)*/
-} else if (stored != "potions") {
+item is destroyed)*/
+} else if (stored != "items") {
 	//checks if touching inventory object
 	if(collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
 		var inst = instance_position(mouse_x, mouse_y, obj_inventory);
 		//checks if inventory object is type "inventory"
-		if(inst.stored == "inventory"){
-			//checks for matching potion already in inventory and adds to it, then destroys itself
-			if (potion_array_add(val, vrty, stored)){
+		if(inst.stored == "brewing"){
+			//checks for matching item already in inventory and adds to it, then destroys itself
+			if (item_array_add(val, qty)){
 				instance_destroy(self);
 			} else {
-				//if no matching potion, then check if slot is empty
+				//if no matching item, then check if slot is empty
 				if (!inst.occupied) {
-					//correct the counts
-					if (stored > maxPotions){
-						//if above maxPotions limit, then update both arrays to fix this
-						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : maxPotions};
-						potions[val][vrty].num += (stored - maxPotions);
-					} else {
-						//if not above max potions, only update inventory array
-						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : stored};
-					}
+					brew_slots[inst.slotNum] = {type : sprite_index, num : qty};
 					//sets new snap coords, and sets slot to occupied
 					snapX = inst.x + 1;
 					snapY = inst.y + 1;
 					inst.occupied = true;
-					//transitions object to "inventory" type
+					//transitions object to "brewing" type
 					val = inst.slotNum;
-					stored = "inventory";
+					stored = "brewing";
 					highlightNum = -1;
 				} else {
 					//if slot is occupied, delete self
@@ -79,7 +71,7 @@ potion is destroyed)*/
 				}
 			}
 		} else {
-			//if slot is type "potion", delete self
+			//if slot is type "item", delete self
 			instance_destroy(self);
 		}
 	} else {

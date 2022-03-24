@@ -30,14 +30,14 @@ if(inInventory){
 	for(i = 0; i < 10; i++){
 		for(j = 0; j < 5; j++){
 			//creates inventory objects
-			newObj = instance_create_depth(cx + 55 + 35 * i, cy + 170 + 35 * j, -1, obj_inventory);
+			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -1, obj_inventory);
 			newObj.image_alpha = 0.85
 			newObj.depth = -1;
 			
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly
 			if(potions[potNum] != -1){
-				newObj = instance_create_depth(cx + 56 + 35 * i, cy + 171 + 35 * j, -2, obj_potion_slot);
+				newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -2, obj_potion_slot);
 				newObj.depth = -2;
 				newObj.val = potNum;
 				//newObj.stored = "potions";
@@ -46,14 +46,14 @@ if(inInventory){
 		}
 	}
 	//creates refill buttons
-	newObj = instance_create_depth(cx + 408, cy + 276, -1, obj_refill_button);
-	newObj.image_xscale = 0.5;
-	newObj.image_yscale = 0.5;
+	newObj = instance_create_depth(cx + 418, cy + 281, -1, obj_refill_button);
+	//newObj.image_xscale = 0.5;
+	//newObj.image_yscale = 0.5;
 	newObj.depth = -1;
 	
-	newObj = instance_create_depth(cx + 408, cy + 311, -1, obj_refill_button);
-	newObj.image_xscale = 0.5;
-	newObj.image_yscale = 0.5;
+	newObj = instance_create_depth(cx + 418, cy + 316, -1, obj_refill_button);
+	//newObj.image_xscale = 0.5;
+	//newObj.image_yscale = 0.5;
 	newObj.sprite_index = spr_refill_button2;
 	newObj.depth = -1;
 	

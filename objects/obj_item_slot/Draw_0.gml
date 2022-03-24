@@ -29,17 +29,17 @@ if(touchingMouse & !inQuest){
 			if(inst.stored == "brewing") {
 				//if empty, draw highlight there, otherwise, draw it at old slot
 				if(!inst.occupied){
-					draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
+					draw_sprite(spr_placelight, 0 , inst.x + 3, inst.y + 3);	
 				} else {
-					draw_sprite(spr_placelight, 0 , snapX + 1, snapY + 1);
+					draw_sprite(spr_placelight, 0 , snapX + 2, snapY + 2);
 				}
 			} else {
 				//if "items" type slot, draw highlight at corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 1 + 35 * hx, obj_player.cy + 1 + 35 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
 			}
 		} else {
 			//if not touching inventory object, draw highlight at corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 1 + 35 * hx, obj_player.cy + 1 + 35 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
 		}
 		
 	//if not brewing type item, it must be one in transit (items type never leave slot)
@@ -74,21 +74,21 @@ if(touchingMouse & !inQuest){
 					/*if no matching inventory slot, draw highlight either on the slot it's over,
 					or, is slot is full, over matching items slot */
 					if(!inst.occupied){
-						draw_sprite(spr_placelight, 0 , inst.x + 2, inst.y + 2);	
+						draw_sprite(spr_placelight, 0 , inst.x + 3, inst.y + 3);	
 					} else {
-						draw_sprite(spr_placelight, 0, obj_player.cx + 1 + 35 * hx, obj_player.cy + 1 + 35 * hy);
+						draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
 					}
 				} else {
 					//if there is a matching inventory slot, draw highlight over it
-					draw_sprite(spr_placelight, 0, obj_player.cx + 200, obj_player.cy + 4 + 4 * (highlightNum + 1) + 35 * highlightNum);
+					draw_sprite(spr_placelight, 0, obj_player.cx + 503, obj_player.cy + 3 + 36 * highlightNum);
 				}
 			} else {
 				//if inventory object is type "items", draw highlight over corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 1 + 35 * hx, obj_player.cy + 1 + 35 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
 			}
 		} else {
 			//if not over inventory object, draw highlight over corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 1 + 35 * hx, obj_player.cy + 1 + 35 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
 		}
 	}
 }
@@ -98,10 +98,10 @@ draw_self();
 //draws numbers
 draw_set_font(fnt_2);
 draw_set_color(c_white);
-if (stored == "brewing"){
+if (stored == "brewing" || stored == "m_brewing"){
 	//if type "brewing", reference inventory array
 	var i = brew_slots[val].num;
-} else if (stored == "items"){
+} else if (stored == "items" || stored == "modifiers"){
 	//if type "items" references items array
 	var i = items[val].num;
 } else {

@@ -18,7 +18,7 @@ if keyboard_check(vk_shift){
 }
 
 //checks type of potion
-if (stored == "brewing"){
+if (stored == "brewing" || stored == "m_brewing"){
 	//destroys object if brew_slots slot is emptied
 	if(brew_slots[val] == -1){
 		instance_destroy(self);
@@ -28,7 +28,7 @@ if (stored == "brewing"){
 		instance_destroy(self);
 	}
 //fades empty items
-} else if (stored == "items"){
+} else if (stored == "items" || stored == "modifiers"){
 	if(items[val].num == 0){
 		image_alpha = 0.35;
 	} else {

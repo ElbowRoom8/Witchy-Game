@@ -83,7 +83,10 @@ items[4] = {type : spr_door4, num : 114001};
 items[7] = {type : spr_door5, num : 420};
 items[8] = {type : spr_door6, num : 1500};
 //store modifiers at end of array
-
+globalvar mod_index;
+mod_index = 108;
+items[108] = {type : spr_door7, num : 33};
+items[109] = {type : spr_door8, num : 46};
 
 brew_slots = array_create(4, -1);
 globalvar brew_slots;

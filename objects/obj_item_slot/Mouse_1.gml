@@ -2,14 +2,18 @@
 //this code is a mess too
 if(!inQuest){
 	//if item is in items array, creates a new object
-	if (stored == "items"){
+	if (stored == "items" || stored == "modifiers"){
 		//checks if the mouse is currently in use, and that the array index isn't empty
 		if(!mouseUsed & (items[val].num >= grabNum)){
 			//creates new object, and initializes variables
 			newObj = instance_create_depth(x,y, -3, obj_item_slot);
 			newObj.val = val;
 			newObj.qty = grabNum;
-			newObj.stored = "transit";
+			if (stored == "items"){
+				newObj.stored = "transit";
+			} else {
+				newObj.stored = "m_transit";
+			}
 			newObj.sprite_index = sprite_index;
 			newObj.touchingMouse = true;
 			newObj.rightClick = true;
@@ -21,7 +25,11 @@ if(!inQuest){
 			newObj = instance_create_depth(x,y, -3, obj_item_slot);
 			newObj.val = val;
 			newObj.qty = items[val].num;
-			newObj.stored = "transit";
+			if (stored == "items"){
+				newObj.stored = "transit";
+			} else {
+				newObj.stored = "m_transit";
+			}
 			newObj.sprite_index = sprite_index;
 			newObj.touchingMouse = true;
 			newObj.rightClick = true;
@@ -30,7 +38,7 @@ if(!inQuest){
 			items[val].num = 0; //decreases items array num
 		}
 	//checks if item is in brew_slots array
-	} else if (stored == "brewing"){
+	} else if (stored == "brewing" || stored == "m_brewing"){
 		//checks if mouse is currently in use
 		if(!mouseUsed){
 			//checks if brew_slots num is > 1,
@@ -49,7 +57,11 @@ if(!inQuest){
 				}
 				newObj.val = temp; //saves index
 				newObj.qty = grabNum;
-				newObj.stored = "transit";
+				if (stored == "brewing"){
+					newObj.stored = "transit";
+				} else {
+					newObj.stored = "m_transit";
+				}
 				newObj.sprite_index = sprite_index;
 				newObj.touchingMouse = true;
 				newObj.rightClick = true;
@@ -72,7 +84,7 @@ if(!inQuest){
 		//checks if touching objOther (the parent item object)
 		if(place_meeting(x, y, objOther)) {
 			//checks parent objects type
-			if(objOther.stored = "items"){
+			if(objOther.stored = "items" || objOther.stored == "modifiers"){
 				//adds 1 from items array to this objects stored value;
 				if(items[val].num >= grabNum){
 					qty += grabNum;
@@ -83,7 +95,7 @@ if(!inQuest){
 					items[val].num = 0;
 					gap = false;
 				}
-			} else if(objOther.stored = "brewing"){
+			} else if(objOther.stored = "brewing" || objOther.stored == "m_brewing"){
 				//checks if corresponding brew_slots slot is > 1
 				//note highlightNum is used to reference the brew_slots array
 				if(brew_slots[highlightNum].num > grabNum){ 
@@ -99,11 +111,12 @@ if(!inQuest){
 					var temp = val;
 					val = highlightNum;
 					highlightNum = temp;
-					stored = "brewing";
+					stored = objOther.stored;
 					gap = false;
 					
 					objOther.stored = "delete";
 					objOther.qty = 0;
+					objOther.val = 0;
 					instance_destroy(objOther); //delete parent object
 				}
 			}

@@ -12,7 +12,7 @@ if(tabType != val){
 	//loops through all varieties of type
 	for(var i = 0; i <= max_v; i++){
 		//creates inventory objects
-		newObj = instance_create_depth(cx + 55 + 35 * i, cy + 131, -1, obj_inventory);
+		newObj = instance_create_depth(cx + 55 + 36 * i, cy + 131, -1, obj_inventory);
 		newObj.image_alpha = 0.85
 		newObj.depth = -1;
 		newObj.val = val;
@@ -20,7 +20,7 @@ if(tabType != val){
 	
 		//reads potions array and adds potions accordingly
 		if(potions[val] != -1){
-			newObj = instance_create_depth(cx + 56 + 35 * i, cy + 132, -2, obj_potion);
+			newObj = instance_create_depth(cx + 56 + 36 * i, cy + 132, -2, obj_potion);
 			newObj.depth = -2;
 			newObj.val = val;
 			newObj.vrty = i;

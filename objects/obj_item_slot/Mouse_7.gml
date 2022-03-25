@@ -74,6 +74,8 @@ item is destroyed)*/
 		} else if (inst.stored == "m_brewing"){
 			if (item_array_add(val, qty)){
 				instance_destroy(self);
+			} else {
+				instance_destroy(self);
 			}
 		} else {
 			//if slot is type "item", delete self
@@ -112,6 +114,8 @@ item is destroyed)*/
 			}
 		} else if (inst.stored == "brewing"){
 			if (item_array_add(val, qty)){
+				instance_destroy(self);
+			} else {
 				instance_destroy(self);
 			}
 		} else {

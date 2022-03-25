@@ -4,25 +4,37 @@ if(!inQuest){
 	//if potion is in potions array, creates a new object
 	if (stored == "potions"){
 		//checks if the mouse is currently in use, and that the array index isn't empty
-		if(!mouseUsed & (potions[val][vrty].num > 0)){
+		if(!mouseUsed & (potions[val][vrty].num >= grabNum)){
 			//creates new object, and initializes variables
 			newObj = instance_create_depth(x,y, -3, obj_potion);
 			newObj.val = val;
 			newObj.vrty = vrty;
-			newObj.stored = 1; //yet again stored is used to hold number of potions
+			newObj.stored = grabNum; //yet again stored is used to hold number of potions
 			newObj.sprite_index = sprite_index;
 			newObj.touchingMouse = true;
 			newObj.rightClick = true;
 			newObj.gap = false;
 			newObj.objOther = self; //stores reference to self in new object
-			potions[val][vrty].num -= 1; //decreases potions array num
+			potions[val][vrty].num -= grabNum; //decreases potions array num
+		} else if(!mouseUsed & (potions[val][vrty].num > 0)){
+			//creates new object, and initializes variables
+			newObj = instance_create_depth(x,y, -3, obj_potion);
+			newObj.val = val;
+			newObj.vrty = vrty;
+			newObj.stored = potions[val][vrty].num; //yet again stored is used to hold number of potions
+			newObj.sprite_index = sprite_index;
+			newObj.touchingMouse = true;
+			newObj.rightClick = true;
+			newObj.gap = false;
+			newObj.objOther = self; //stores reference to self in new object
+			potions[val][vrty].num = 0; //decreases potions array num
 		}
 	//checks if potion is in inventory array
 	} else if (stored == "inventory"){
 		//checks if mouse is currently in use
 		if(!mouseUsed){
 			//checks if inventory num is > 1,
-			if (inventory[val].num > 1){
+			if (inventory[val].num >= grabNum){
 				//creates new object, and initializes variables
 				newObj = instance_create_depth(x,y, -3, obj_potion);
 				//finds index of corresonding potions slot
@@ -39,14 +51,14 @@ if(!inQuest){
 				}
 				newObj.val = temp; //saves index
 				newObj.vrty = vrty;
-				newObj.stored = 1; //sets stored to 1
+				newObj.stored = grabNum; //sets stored to grabNum
 				newObj.sprite_index = sprite_index;
 				newObj.touchingMouse = true;
 				newObj.rightClick = true;
 				newObj.gap = false;
 				newObj.objOther = self; //stores reference to self in new object
 				newObj.highlightNum = val; //saves highlightNum as val, since we have the value here
-				inventory[val].num -= 1; //decreases the inventory array accordingly
+				inventory[val].num -= grabNum; //decreases the inventory array accordingly
 			
 			//if not > 1, must be = 1. In this case, you just grab the object
 			} else {
@@ -64,17 +76,21 @@ if(!inQuest){
 			//checks parent objects type
 			if(objOther.stored = "potions"){
 				//adds 1 from potions array to this objects stored value;
-				if(potions[val][vrty].num > 0){
-					stored++;
-					potions[val][vrty].num -= 1;
+				if(potions[val][vrty].num >= grabNum){
+					stored += grabNum;
+					potions[val][vrty].num -= grabNum;
+					gap = false;
+				} else if (potions[val][vrty].num > 0){
+					stored += potions[val][vrty].num;
+					potions[val][vrty].num = 0;
 					gap = false;
 				}
 			} else if(objOther.stored = "inventory"){
 				//checks if corresponding inventory slot is > 1
 				//note highlightNum is used to reference the inventory array
-				if(inventory[highlightNum].num > 1){ 
-					stored++;
-					inventory[highlightNum].num -= 1;
+				if(inventory[highlightNum].num > grabNum){ 
+					stored += grabNum;
+					inventory[highlightNum].num -= grabNum;
 					gap = false;
 				/*if not > 1, must be = 1. In this case, just delete
 				objOther, and transition this object to type "inventory" */

@@ -7,6 +7,15 @@ if(touchingMouse){
 	    y = mouse_y - 16;
 	}
 }
+
+if keyboard_check(vk_shift){
+	grabNum = 5;
+} else if keyboard_check(vk_control){
+	grabNum = 10;
+} else {
+	grabNum = 1;
+}
+
 //checks type of potion
 if (stored == "inventory"){
 	//destroys object if inventory slot is emptied

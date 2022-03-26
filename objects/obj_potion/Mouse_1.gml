@@ -42,9 +42,11 @@ if(!inQuest){
 				for(var i = 0; i < array_length(potions); i++){
 					if(potions[i] != -1){
 						//if match, grab index
-						if(potions[i][0].max_v >= vrty){
-							if(potions[i][vrty].type = sprite_index){
-								temp = i;
+						if((array_length(potions[i]) - 1) >= vrty){
+							if(potions[i][vrty] != -1){
+								if(potions[i][vrty].type = sprite_index){
+									temp = i;
+								}
 							}
 						}
 					}

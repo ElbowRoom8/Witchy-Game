@@ -14,12 +14,14 @@ if(!mouseUsed){
 		//loops through potions, and refills each inventory slot that matches
 		for(var i = 0; i < array_length(potions); i++){
 			if(potions[i] != -1){
-				var max_v = potions[i][0].max_v;
-				for(var j = 0; j <= max_v; j++){
-					var temp = potions[i][j].num;
-					var vrty = potions[i][j].vrty;
-					if (!potion_array_add(i, vrty, temp)){
-						potions[i][vrty].num = temp; //resets potions if no match
+				var max_v = array_length(potions[i]);
+				for(var j = 0; j < max_v; j++){
+					if (potions[i][j] != -1){
+						var temp = potions[i][j].num;
+						var vrty = potions[i][j].vrty;
+						if (!potion_array_add(i, vrty, temp)){
+							potions[i][vrty].num = temp; //resets potions if no match
+						}
 					}
 				}
 			}

@@ -12,9 +12,11 @@ if(touchingMouse & !inQuest){
 			for(var i = 0; i < array_length(potions); i++){
 				if(potions[i] != -1){
 					//find matching potion, and sets highlightNum to the index
-					if(potions[i][0].max_v >= vrty){
-						if(potions[i][vrty].type = sprite_index){
-							highlightNum = i;
+					if((array_length(potions[i]) - 1) >= vrty){
+						if(potions[i][vrty] != -1){
+							if(potions[i][vrty].type = sprite_index){
+								highlightNum = i;
+							}
 						}
 					}
 				}

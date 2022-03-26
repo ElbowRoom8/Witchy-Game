@@ -10,6 +10,7 @@ if(!inDialogue & !inQuest){
 	} else if (brewing){
 		instance_destroy(obj_inventory);
 		instance_destroy(obj_item_slot);
+		instance_destroy(obj_brew);
 		instance_destroy(obj_dim);
 		brewing = false;
 	}

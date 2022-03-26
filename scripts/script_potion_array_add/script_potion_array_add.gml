@@ -5,7 +5,9 @@ function potion_array_add(_val, _vrty, _stored){
 		for(var i = 0; i < array_length(potions); i++){
 			if (potions[i] == -1) {
 				
-			} else if (potions[i][0].max_v < _vrty){
+			} else if ((array_length(potions[i]) - 1) < _vrty){
+				
+			} else if (potions[i][_vrty] == -1){
 				
 			} else if(potions[i][_vrty].type = inventory[_val].type){
 				//move everything from inventory location to potions index

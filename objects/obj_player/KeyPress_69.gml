@@ -7,17 +7,15 @@ if(!inDialogue & !inQuest & !brewing){
 //creates all of the potion and inventory slots if in inventory
 if(inInventory){
 	//loops through 9 inventory slots
-	for(i = 0; i < 9; i++){
+	for(var i = 0; i < 9; i++){
 		//creates inventory objects
 		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -1, obj_inventory);
-		newObj.image_alpha = 0.85
-		newObj.depth = -1;
+		newObj.image_alpha = 0.85;
 		newObj.stored = "inventory";
 		newObj.slotNum = i; //sets slotnum
 		//reads inventory array and adds potions accordingly
 		if(inventory[i] != -1){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
-			newObj.depth = -2;
 			newObj.val = i;
 			newObj.vrty = inventory[i].vrty;
 			newObj.stored = "inventory";
@@ -27,40 +25,47 @@ if(inInventory){
 	//resets open tabs
 	tabType = -1;
 	//loops through 50 potion storage slots
-	for(i = 0; i < 10; i++){
-		for(j = 0; j < 5; j++){
+	for(var i = 0; i < 10; i++){
+		for(var j = 0; j < 5; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -1, obj_inventory);
 			newObj.image_alpha = 0.85
-			newObj.depth = -1;
 			
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly
 			if(potions[potNum] != -1){
-				newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -2, obj_potion_slot);
-				newObj.depth = -2;
-				newObj.val = potNum;
-				//newObj.stored = "potions";
-				newObj.sprite_index = potions[potNum][0].type;
+				var filled = false;
+				for(var k = 0; k < array_length(potions[potNum]); k++){
+					if(potions[potNum][k] != -1){
+						filled = true;
+						break;
+					}
+				}
+				if(filled){
+					newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -2, obj_potion_slot);
+					newObj.val = potNum;
+					if(potions[potNum][0] != -1){
+						newObj.sprite_index = potions[potNum][0].type;
+					} else {
+						for(var k = 0; k < array_length(potRef); k++){
+							if(potRef[k][0].index == potNum){
+								newObj.sprite_index = potRef[k][0].type;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 	//creates refill buttons
 	newObj = instance_create_depth(cx + 418, cy + 281, -1, obj_refill_button);
-	//newObj.image_xscale = 0.5;
-	//newObj.image_yscale = 0.5;
-	newObj.depth = -1;
 	
 	newObj = instance_create_depth(cx + 418, cy + 316, -1, obj_refill_button);
-	//newObj.image_xscale = 0.5;
-	//newObj.image_yscale = 0.5;
 	newObj.sprite_index = spr_refill_button2;
-	newObj.depth = -1;
 	
 	//adds fade to background
-	newObj = instance_create_depth(0, 0, -1, obj_dim);
+	newObj = instance_create_depth(0, 0, 0, obj_dim);
 	newObj.image_alpha = 0.6;
-	newObj.depth = 0;
 	
 //deletes all of the inventory objects if inventory is closed
 } else if (!inQuest && !brewing){

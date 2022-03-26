@@ -55,6 +55,10 @@ if(!inDialogue & !inQuest & !inInventory){
 		}
 	}
 	
+	//adds brew button
+	newObj = instance_create_depth(obj_player.cx + 580, obj_player.cy + 50, -1, obj_brew);
+	newObj.depth = -1;
+	
 	//adds fade to background
 	newObj = instance_create_depth(0, 0, -1, obj_dim);
 	newObj.image_alpha = 0.6;

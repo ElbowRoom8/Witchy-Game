@@ -3,12 +3,12 @@ if (stored == "inventory"){
 //if inventory array, just grab object
 	if(!mouseUsed & !inQuest){
 		touchingMouse = true;
-		depth = -3;
+		depth--;
 	}
 } else if (stored == "potions"){
 //if potions array, make new object, and set num to 0 
 	if(!mouseUsed & (potions[val][vrty].num > 0)){
-		newObj = instance_create_depth(x,y, -3, obj_potion);
+		newObj = instance_create_depth(x,y, depth - 1, obj_potion);
 		newObj.val = val;
 		newObj.vrty = vrty;
 		newObj.stored = potions[val][vrty].num; 

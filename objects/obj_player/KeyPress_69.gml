@@ -64,7 +64,7 @@ if(inInventory){
 	newObj.sprite_index = spr_refill_button2;
 	
 	//adds fade to background
-	newObj = instance_create_depth(0, 0, 0, obj_dim);
+	newObj = instance_create_depth(0, 0, -1, obj_dim);
 	newObj.image_alpha = 0.6;
 	
 //deletes all of the inventory objects if inventory is closed

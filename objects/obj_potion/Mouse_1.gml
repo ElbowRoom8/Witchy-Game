@@ -6,7 +6,7 @@ if(!inQuest){
 		//checks if the mouse is currently in use, and that the array index isn't empty
 		if(!mouseUsed & (potions[val][vrty].num >= grabNum)){
 			//creates new object, and initializes variables
-			newObj = instance_create_depth(x,y, -3, obj_potion);
+			newObj = instance_create_depth(x,y, depth - 1, obj_potion);
 			newObj.val = val;
 			newObj.vrty = vrty;
 			newObj.stored = grabNum; //yet again stored is used to hold number of potions
@@ -18,7 +18,7 @@ if(!inQuest){
 			potions[val][vrty].num -= grabNum; //decreases potions array num
 		} else if(!mouseUsed & (potions[val][vrty].num > 0)){
 			//creates new object, and initializes variables
-			newObj = instance_create_depth(x,y, -3, obj_potion);
+			newObj = instance_create_depth(x,y, depth - 1, obj_potion);
 			newObj.val = val;
 			newObj.vrty = vrty;
 			newObj.stored = potions[val][vrty].num; //yet again stored is used to hold number of potions
@@ -36,7 +36,7 @@ if(!inQuest){
 			//checks if inventory num is > 1,
 			if (inventory[val].num >= grabNum){
 				//creates new object, and initializes variables
-				newObj = instance_create_depth(x,y, -3, obj_potion);
+				newObj = instance_create_depth(x,y, depth - 1, obj_potion);
 				//finds index of corresonding potions slot
 				var temp = -1;
 				for(var i = 0; i < array_length(potions); i++){
@@ -66,7 +66,7 @@ if(!inQuest){
 			} else {
 				touchingMouse = true;
 				rightClick = true;
-				depth = -3;
+				depth--;
 			}
 		}
 	/* if not "potions" or "inventory", must be a potion in transit

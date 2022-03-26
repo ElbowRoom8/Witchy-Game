@@ -89,6 +89,8 @@ potion is destroyed)*/
 }
 // resets more variables and finishes placing object
 rightClick = false;
-depth = -2;
+if(touchingMouse){
+	depth++;
+}
 x = snapX;
 y = snapY;

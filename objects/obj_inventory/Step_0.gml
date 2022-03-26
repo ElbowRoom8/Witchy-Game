@@ -18,7 +18,7 @@ if(place_meeting(x, y, obj_potion)) {
 }
 
 //deletes if wrong tab open
-if(stored == "potions"){
+if(stored == "potions" || stored == "p_autofill"){
 	if(val != tabType){
 		instance_destroy();
 	}

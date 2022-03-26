@@ -29,7 +29,7 @@ if(full_slots){
 					if(potRef[i][j].modifier == brew_slots[3].type){
 						var ind = potRef[i][j].index;
 						var temp = potRef[i][j].vrty;
-						
+						tabType = -1;
 						//checks if potions index exists
 						if(potions[ind][temp] == -1){
 							potions[ind][temp] = {type : potRef[i][j].type, vrty : temp, num : lowest_num};

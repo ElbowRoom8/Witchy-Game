@@ -1,6 +1,7 @@
 /// @description opens potion storage
-if (!open){
-	open = true;
+open = !open;
+
+if (open){
 	//resets open tabs
 	tabType = -1;
 	//loops through 50 potion storage slots
@@ -58,5 +59,4 @@ if (!open){
 	
 	instance_destroy(obj_potion_slot);
 	instance_destroy(obj_potion_autofill);
-	open = false;
 }

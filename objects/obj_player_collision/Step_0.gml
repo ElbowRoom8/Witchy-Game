@@ -7,7 +7,7 @@ var rightSpd = 0;
 var upSpd = 0;
 var downSpd = 0;
 //movement speed, varies for sprinting
-var walkSpd = 2;
+var walkSpd = 3;
 //speed of walking animation, varies for sprinting
 var animationSpd = 1.2;
 //checks for cutscene
@@ -17,7 +17,7 @@ if(!inDialogue and !inInventory and !brewing){
 		walkSpd = 3.5;
 		animationSpd = 2;
 	} else {
-		walkSpd = 2;
+		walkSpd = 2.5;
 		animationSpd = 1.2;
 	}
 

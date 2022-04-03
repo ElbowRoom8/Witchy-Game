@@ -15,10 +15,6 @@ if(b_empty){
 				instance_destroy();
 			}
 		}
-		/*
-		if(brew_slots[k] != -1){
-			item_array_add(k, "brewing");
-		}*/
 	}
 }
 

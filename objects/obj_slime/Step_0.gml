@@ -8,7 +8,7 @@ if(hSpd > 0){
 	} else {
 		target_x -= hSpd * 1.7;
 	}
-} else {
+} else if (!backTracked){
 	if(obj_player.x >= 250) {
 		target_x -= hSpd;
 	} else {

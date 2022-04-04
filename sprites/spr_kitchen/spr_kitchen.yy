@@ -14,7 +14,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 232,
+  "width": 276,
   "height": 224,
   "textureGroupId": {
     "name": "Default",

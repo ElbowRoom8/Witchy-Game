@@ -7,7 +7,7 @@ function script_object_movement(){
 			} else {
 				x -= hSpd * 1.7;
 			}
-		} else {
+		} else if (!backTracked){
 			if(obj_player.x >= 250) {
 				x -= hSpd;
 			} else {

@@ -65,8 +65,15 @@ if(place_meeting(x, y + vSpd, obj_wall)){
 //moves player
 if(!inQuest){
 	obj_player.x = obj_player.x + hSpd;
-} else if((hSpd < 0 && obj_player.x < 250) || (hSpd > 0 && obj_player.x > 100)){
+} else if(hSpd > 0 && obj_player.x > 100){
 	obj_player.x = obj_player.x - hSpd * 0.85;
+} else if(hSpd < 0 && obj_player.x < 250 && !backTracked) {
+	obj_player.x = obj_player.x - hSpd * 0.85;
+} else if(hSpd < 0 && obj_player.x > 100 && backTracked){
+	obj_player.x = obj_player.x + hSpd;
+} else if (backTracked){
+	obj_player.image_speed = 0;
+	obj_player.image_index = 0;
 }
 	
 obj_player.y = obj_player.y + vSpd;

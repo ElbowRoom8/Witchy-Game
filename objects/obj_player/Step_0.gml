@@ -28,6 +28,7 @@ if keyboard_check(ord(1)){
 }
 
 if(health <= 0){
+	room_persistent = false;
 	room_goto(rm_mainhall);
 	obj_player.x = 160;
 	obj_player.y = 168;

@@ -7,7 +7,7 @@ if (inQuest) {
 			} else {
 				x -= hSpd * 1.7;
 			}
-		} else {
+		} else if (!backTracked){
 			if(obj_player.x >= 250) {
 				x -= hSpd;
 			} else {
@@ -22,7 +22,7 @@ if (inQuest) {
 			} else {
 				x -= hSpd / 1.11111 * 1.7;
 			}
-		} else {
+		} else if (!backTracked){
 			if(obj_player.x >= 250) {
 				x -= hSpd / 1.11111;
 			} else {
@@ -37,7 +37,7 @@ if (inQuest) {
 			} else {
 				x -= hSpd / 1.25 * 1.7;
 			}
-		} else {
+		} else if (!backTracked){
 			if(obj_player.x >= 250) {
 				x -= hSpd / 1.25;
 			} else {

@@ -1,12 +1,35 @@
 /// @description create next backround
 script_object_movement();
 
+//updates traveled
+if(hSpd > 0){
+	if(obj_player.x <= 100) {
+		traveled += hSpd;
+	} else {
+		traveled += hSpd * 1.7;
+	}
+	backTracked = false;
+} else if (!backTracked) {
+	if(obj_player.x >= 250) {
+		traveled += hSpd;
+	} else {
+		traveled += hSpd * 1.7;
+	}
+}
+//sets cap on traveled
+if(traveled > 640){
+	traveled = 640;
+} else if (traveled < 0){
+	//traveled = 0;
+}
+
 if ((x < 3) & (!tiled)){
 	tiled = true;
 	
 	//creates next background
 	newObj = instance_create_depth(x + 640, 0, 200, obj_background1);
 	newObj.counter = counter + 1;
+	newObj.traveled = traveled;
 	
 	//controls forest background + path
 	if(sprite_index == spr_forest1 || sprite_index == spr_forest4 || sprite_index == spr_forest6){	
@@ -26,7 +49,7 @@ if ((x < 3) & (!tiled)){
 		newObj.sprite_index = spr_forest6;
 	}
 	
-	#region //old tree code
+#region //old tree code
 	/*
 	//adds trees
 	for(var i = 0; i < 4; i++){
@@ -43,15 +66,15 @@ if ((x < 3) & (!tiled)){
 			newObj.sprite_index = spr_tree4;
 		}
 	}
-	*/
-	#endregion
+	*/ 
+#endregion
 	
-	//adds background trees
+#region //adds background trees and walls
 	if(counter % 3 == 0){
 		//chance of getting a clearing
-		var opening = 0; //irandom_range(0, 1);
-		/*
-		for(var i = 0; i < 10; i++){
+		var opening = irandom_range(0, 6);
+		
+		for(var i = 0; i < 11; i++){
 			if(i == 7 && !opening){
 				newObj = instance_create_depth(x + 640 + 192 * i, 0, 190, obj_tree_background);
 				newObj.sprite_index = spr_tree_background4;
@@ -77,18 +100,42 @@ if ((x < 3) & (!tiled)){
 				newObj = instance_create_depth(x + 640 + 192 * i, 0, 192, obj_tree_background);
 				newObj.sprite_index = spr_tree_background3;
 			}
-		}*/
+		}
+		//checks if opening was selected
 		if(!opening){
-			newObj = instance_create_depth(x + 640, 100, 100, obj_wall);
-			newObj.image_xscale = 640 * 3 / newObj.sprite_width;
+			for(var i = 1; i <= 2; i++){
+				newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
+				newObj.image_xscale = 640 / newObj.sprite_width;
+				newObj.moveable = true;
+			}
+			//door to clearing
+			newObj = instance_create_depth(x + 640 + 1394, 50, 100, obj_door1);
+			newObj.image_xscale = 94 / newObj.sprite_height;
+			newObj.moveable = true;
+			//creates opening
+			newObj = instance_create_depth(x + 640 + 1280, 120, 100, obj_wall);
+			newObj.image_xscale = 104 / newObj.sprite_width;
+			newObj.moveable = true;
+			newObj = instance_create_depth(x + 640 + 1486, 120, 100, obj_wall);
+			newObj.image_xscale = 434 / newObj.sprite_width;
+			newObj.moveable = true;
+			//side walls
+			newObj = instance_create_depth(x + 640 + 1394, 0, 100, obj_wall);
+			newObj.image_yscale = 128 / newObj.sprite_height;
+			newObj.moveable = true;
+			newObj = instance_create_depth(x + 640 + 1486, 0, 100, obj_wall);
+			newObj.image_yscale = 128 / newObj.sprite_height;
 			newObj.moveable = true;
 		}else{
-			newObj = instance_create_depth(x + 640, 100, 100, obj_wall);
-			newObj.image_xscale = 640 * 3 / newObj.sprite_width;
-			newObj.moveable = true;
+			//if not opening, create 3 walls
+			for(var i = 1; i <= 3; i++){
+				newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
+				newObj.image_xscale = 640 / newObj.sprite_width;
+				newObj.moveable = true;
+			}
 		}
 		
-		//starting trees
+		//starting trees & wall
 		if(counter == 0){
 			for(var i = 0; i < 5; i++){
 				newObj = instance_create_depth(x + 640 - 192 * i, 0, 190, obj_tree_background);
@@ -98,16 +145,19 @@ if ((x < 3) & (!tiled)){
 				newObj = instance_create_depth(x + 640 - 192 * i, 0, 192, obj_tree_background);
 				newObj.sprite_index = spr_tree_background3;
 			}
-			newObj = instance_create_depth(x, 100, 100, obj_wall);
+			newObj = instance_create_depth(x, 120, 100, obj_wall);
 			newObj.image_xscale = 640 / newObj.sprite_width;
 			newObj.moveable = true;
 		}
 	}
+#endregion
+	
+	instance_create_depth(200, 200, 75, obj_tree);
 	
 	//creates enemies
 	for (var i = 0; i <= irandom_range(0, counter); i++){
-		//newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, obj_slime);
-		//newObj.image_xscale = 2;
-		//newObj.image_yscale = newObj.image_xscale;
+		newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, obj_slime);
+		newObj.image_xscale = 2;
+		newObj.image_yscale = newObj.image_xscale;
 	}
 }

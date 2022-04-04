@@ -85,6 +85,7 @@
     {"id":{"name":"spr_storage_button","path":"sprites/spr_storage_button/spr_storage_button.yy",},"order":32,},
     {"id":{"name":"spr_laboratory_walls","path":"sprites/spr_laboratory_walls/spr_laboratory_walls.yy",},"order":1,},
     {"id":{"name":"spr_iglet_shroom_walkup","path":"sprites/spr_iglet_shroom_walkup/spr_iglet_shroom_walkup.yy",},"order":4,},
+    {"id":{"name":"rm_forest_clearing","path":"rooms/rm_forest_clearing/rm_forest_clearing.yy",},"order":21,},
     {"id":{"name":"obj_pinger","path":"objects/obj_pinger/obj_pinger.yy",},"order":4,},
     {"id":{"name":"spr_tree_background3","path":"sprites/spr_tree_background3/spr_tree_background3.yy",},"order":13,},
     {"id":{"name":"obj_door5","path":"objects/obj_door5/obj_door5.yy",},"order":4,},
@@ -214,6 +215,7 @@
     {"roomId":{"name":"rm_classroom7","path":"rooms/rm_classroom7/rm_classroom7.yy",},},
     {"roomId":{"name":"rm_classroom8","path":"rooms/rm_classroom8/rm_classroom8.yy",},},
     {"roomId":{"name":"rm_forest","path":"rooms/rm_forest/rm_forest.yy",},},
+    {"roomId":{"name":"rm_forest_clearing","path":"rooms/rm_forest_clearing/rm_forest_clearing.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

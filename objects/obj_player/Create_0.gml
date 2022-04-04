@@ -22,6 +22,7 @@ def_timer = 0; //defense buff timer
 
 selNum = 0; //used to pick the correct spot in inventory
 gap = true; //used to prevent holding of potions
+old_x = 0; //used to place player in correct spot leaving clearings
 throw_x = 0; //used for throwing potions
 throw_y = 0;
 
@@ -35,6 +36,8 @@ globalvar inInventory; //allows for inventory
 inInventory = false;
 globalvar inQuest; //allows for quests
 inQuest = false;
+globalvar backTracked;//stops player if moving backwards in quests
+backTracked = false;
 globalvar brewing; //allows for brewing
 brewing = false;
 

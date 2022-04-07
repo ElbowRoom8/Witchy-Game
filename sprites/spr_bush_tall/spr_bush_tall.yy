@@ -9,13 +9,13 @@
   "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 15,
-  "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_top": 1,
+  "bbox_bottom": 28,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 16,
-  "height": 16,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"29124340-b1e9-40ac-a5f5-fac0e4748616","path":"sprites/spr_flower_2/spr_flower_2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"29124340-b1e9-40ac-a5f5-fac0e4748616","path":"sprites/spr_flower_2/spr_flower_2.yy",},"LayerId":{"name":"3ebed12b-3118-4332-a531-c88d0aea6a90","path":"sprites/spr_flower_2/spr_flower_2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_flower_2","path":"sprites/spr_flower_2/spr_flower_2.yy",},"resourceVersion":"1.0","name":"29124340-b1e9-40ac-a5f5-fac0e4748616","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4c183cd6-dfde-4b4b-83e4-1cab82368359","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4c183cd6-dfde-4b4b-83e4-1cab82368359","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},"LayerId":{"name":"92af1ebe-5c21-4612-a9e6-e346f1257dcc","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_bush_tall","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},"resourceVersion":"1.0","name":"4c183cd6-dfde-4b4b-83e4-1cab82368359","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_flower_2","path":"sprites/spr_flower_2/spr_flower_2.yy",},
+    "spriteId": {"name":"spr_bush_tall","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"77ed2329-de44-4d60-926c-8e250208c694","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29124340-b1e9-40ac-a5f5-fac0e4748616","path":"sprites/spr_flower_2/spr_flower_2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"10561ce3-efd5-425c-87f1-b86e7eba87f7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4c183cd6-dfde-4b4b-83e4-1cab82368359","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_flower_2","path":"sprites/spr_flower_2/spr_flower_2.yy",},
+    "parent": {"name":"spr_bush_tall","path":"sprites/spr_bush_tall/spr_bush_tall.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_flower_2",
+    "name": "spr_bush_tall",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3ebed12b-3118-4332-a531-c88d0aea6a90","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"92af1ebe-5c21-4612-a9e6-e346f1257dcc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Environment.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_flower_2",
+  "name": "spr_bush_tall",
   "tags": [],
   "resourceType": "GMSprite",
 }

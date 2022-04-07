@@ -86,6 +86,8 @@ if(empty){
 
 //actually moves items to brew slots
 if(!empty){
+	var b_x = 200;//used for positioning ingredients
+	var b_y = 10;
 	//grabs the lowest value in brew
 	var lowest_num = -1;
 	for(var i = 0; i < 4; i++){
@@ -132,7 +134,7 @@ if(!empty){
 			for(var i = 0; i < 3; i++){
 				items[prev_ing[i]].num -= lowest_num;
 				brew_slots[i] = {type : items[prev_ing[i]].type, num : lowest_num};
-				newObj = instance_create_depth(obj_player.cx + 501, obj_player.cy + 1 + 36 * i, -2, obj_item_slot);
+				newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -2, obj_item_slot);
 				newObj.sprite_index = items[prev_ing[i]].type;
 				newObj.stored = "brewing";
 				newObj.val = i;
@@ -141,7 +143,7 @@ if(!empty){
 			//adds modifier
 			items[prev_ing[3]].num -= lowest_num;
 			brew_slots[3] = {type : items[prev_ing[3]].type, num : lowest_num};
-			newObj = instance_create_depth(obj_player.cx + 501, obj_player.cy + 1 + 36 * i, -2, obj_item_slot);
+			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -2, obj_item_slot);
 			newObj.sprite_index = items[prev_ing[3]].type;
 			newObj.stored = "m_brewing";
 			newObj.val = 3;
@@ -153,7 +155,7 @@ if(!empty){
 			items[prev_ing[i]].num -= lowest_num;
 			brew_slots[i] = {type : items[prev_ing[i]].type, num : lowest_num};
 			
-			newObj = instance_create_depth(obj_player.cx + 501, obj_player.cy + 1 + 36 * i, -2, obj_item_slot);
+			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -2, obj_item_slot);
 			newObj.sprite_index = items[prev_ing[i]].type;
 			newObj.stored = "brewing";
 			newObj.val = i;
@@ -162,7 +164,7 @@ if(!empty){
 		//adds modifier
 			items[prev_ing[3]].num -= lowest_num;
 			brew_slots[3] = {type : items[prev_ing[3]].type, num : lowest_num};
-			newObj = instance_create_depth(obj_player.cx + 501, obj_player.cy + 1 + 36 * i, -2, obj_item_slot);
+			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -2, obj_item_slot);
 			newObj.sprite_index = items[prev_ing[3]].type;
 			newObj.stored = "m_brewing";
 			newObj.val = 3;

@@ -2,9 +2,19 @@
 if(!inDialogue & !inQuest & !inInventory){
 	brewing = true;
 	
+	//sets camera variable
+	halfViewWidth = camera_get_view_width(view_camera[0]) / 2;
+	halfViewHeight = camera_get_view_height(view_camera[0])/2;
+
+	cx = obj_player.x + (obj_player.sprite_width / 2) - halfViewWidth;
+	cy = obj_player.y + (obj_player.sprite_height / 2) - halfViewHeight;
+
+	cx = clamp(cx, min_view_x, max_view_x);
+	cy = clamp(cy, min_view_y, max_view_y);
+	
 	//creates brewing area
 	for(var i = 0; i < 4; i++){
-		newObj = instance_create_depth(obj_player.cx + 500, obj_player.cy + 36 * i, -1, obj_inventory);
+		newObj = instance_create_depth(cx + 200, cy + 10 + 36 * i, -1, obj_inventory);
 		newObj.image_alpha = 0.85;
 		if (i < 3){
 			newObj.stored = "brewing";
@@ -15,16 +25,16 @@ if(!inDialogue & !inQuest & !inInventory){
 	}
 	
 	//creates items storage
-	for(i = 0; i < 10; i++){
-		for(var j = 0; j < 10; j++){
+	for(i = 0; i < 5; i++){
+		for(var j = 0; j < 9; j++){
 			//creates inventory objects
-			newObj = instance_create_depth(obj_player.cx + 36 * i, obj_player.cy + 36 * j, -1, obj_inventory);
+			newObj = instance_create_depth(cx + 10 + 36 * i, cy + 10 + 36 * j, -1, obj_inventory);
 			newObj.image_alpha = 0.85
 			
-			potNum = i + j * 10; //caclulates array number
+			potNum = i + j * 5; //caclulates array number
 			//reads items array and adds items accordingly
 			if(items[potNum] != -1){
-				newObj = instance_create_depth(obj_player.cx + 1 + 36 * i, obj_player.cy + 1 + 36 * j, -2, obj_item_slot);
+				newObj = instance_create_depth(cx + 11 + 36 * i, cy + 11 + 36 * j, -2, obj_item_slot);
 				newObj.val = potNum;
 				newObj.stored = "items";
 				newObj.sprite_index = items[potNum].type;
@@ -36,13 +46,13 @@ if(!inDialogue & !inQuest & !inInventory){
 	for(i = 0; i < 4; i++){
 		for(var j = 0; j < 3; j++){
 			//creates inventory objects
-			newObj = instance_create_depth(obj_player.cx + 500 + 36 * i, obj_player.cy + 200 + 36 * j, -1, obj_inventory);
+			newObj = instance_create_depth(cx + 486 + 36 * i, cy + 10 + 36 * j, -1, obj_inventory);
 			newObj.image_alpha = 0.85
 			
-			potNum = i + j * 3 + mod_index; //caclulates array number
+			potNum = i + j * 4 + mod_index; //caclulates array number
 			//reads items array and adds items accordingly
 			if(items[potNum] != -1){
-				newObj = instance_create_depth(obj_player.cx + 501 + 36 * i, obj_player.cy + 201 + 36 * j, -2, obj_item_slot);
+				newObj = instance_create_depth(cx + 487 + 36 * i, cy + 11 + 36 * j, -2, obj_item_slot);
 				newObj.val = potNum;
 				newObj.stored = "modifiers";
 				newObj.sprite_index = items[potNum].type;
@@ -51,10 +61,10 @@ if(!inDialogue & !inQuest & !inInventory){
 	}
 	
 	//adds brew button
-	newObj = instance_create_depth(obj_player.cx + 580, obj_player.cy + 50, -1, obj_brew);
+	newObj = instance_create_depth(cx + 280, cy + 50, -1, obj_brew);
 
 	//adds storage button
-	newObj = instance_create_depth(obj_player.cx + 580, obj_player.cy + 320, -3, obj_storage_button);
+	newObj = instance_create_depth(cx + 595, cy + 134, -3, obj_storage_button);
 
 	//adds fade to background
 	newObj = instance_create_depth(0, 0, -1, obj_dim);

@@ -4,6 +4,12 @@
 //checks if this item is being moved
 if(touchingMouse & !inQuest){
 	draw_set_alpha(0.5);
+	var i_x = 10;//used for item highlights
+	var i_y = 10;
+	var m_x = 486;//used for modifier highlights
+	var m_y = 10;
+	var b_x = 200;//used for brewing highlights
+	var b_y = 10;
 	/*if brewing type item, it will highlight other inventory slots 
 	it's above, otherwise just highlight the corresponding spot on the
 	item storage*/
@@ -19,8 +25,8 @@ if(touchingMouse & !inQuest){
 			}
 		}
 		//used to find coords of matching item slot
-		hx = highlightNum mod 10;
-		hy = highlightNum div 10;
+		hx = highlightNum mod 5;
+		hy = highlightNum div 5;
 		
 		//checks for inventory collisions
 		if (collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
@@ -35,11 +41,11 @@ if(touchingMouse & !inQuest){
 				}
 			} else {
 				//if "items" type slot, draw highlight at corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + i_x + 3 + 36 * hx, obj_player.cy + i_y + 3 + 36 * hy);
 			}
 		} else {
 			//if not touching inventory object, draw highlight at corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + i_x + 3 + 36 * hx, obj_player.cy + i_y + 3 + 36 * hy);
 		}
 		
 	}else if (stored == "m_brewing"){
@@ -54,7 +60,7 @@ if(touchingMouse & !inQuest){
 			}
 		}
 		//used to find coords of matching item slot
-		hx = (highlightNum - mod_index) mod 3;
+		hx = (highlightNum - mod_index) mod 4;
 		hy = (highlightNum - mod_index) div 4;
 		
 		//checks for inventory collisions
@@ -70,11 +76,11 @@ if(touchingMouse & !inQuest){
 				}
 			} else {
 				//if "items" type slot, draw highlight at corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 503 + 36 * hx, obj_player.cy + 203 + 36 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + m_x + 3 + 36 * hx, obj_player.cy + m_y + 3 + 36 * hy);
 			}
 		} else {
 			//if not touching inventory object, draw highlight at corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 503 + 36 * hx, obj_player.cy + 203 + 36 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + m_x + 3 + 36 * hx, obj_player.cy + m_y + 3 + 36 * hy);
 		}
 		
 	//if not a brewing type item, it must be one in transit (items type never leave slot)
@@ -96,8 +102,8 @@ if(touchingMouse & !inQuest){
 			}
 		}
 		//used to find coords of matching items slot
-		hx = val mod 10;
-		hy = val div 10;
+		hx = val mod 5;
+		hy = val div 5;
 		
 		//checks for inventory collisions
 		if (collision_point(mouse_x, mouse_y, obj_inventory, false, true)) {
@@ -111,19 +117,19 @@ if(touchingMouse & !inQuest){
 					if(!inst.occupied && inst.stored != "m_brewing"){
 						draw_sprite(spr_placelight, 0 , inst.x + 3, inst.y + 3);	
 					} else {
-						draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
+						draw_sprite(spr_placelight, 0, obj_player.cx + i_x + 3 + 36 * hx, obj_player.cy + i_y + 3 + 36 * hy);
 					}
 				} else {
 					//if there is a matching inventory slot, draw highlight over it
-					draw_sprite(spr_placelight, 0, obj_player.cx + 503, obj_player.cy + 3 + 36 * highlightNum);
+					draw_sprite(spr_placelight, 0, obj_player.cx + b_x + 3, obj_player.cy + b_y + 3 + 36 * highlightNum);
 				}
 			} else {
 				//if inventory object is type "items", draw highlight over corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + i_x + 3 + 36 * hx, obj_player.cy + i_y + 3 + 36 * hy);
 			}
 		} else {
 			//if not over inventory object, draw highlight over corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 3 + 36 * hx, obj_player.cy + 3 + 36 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + i_x + 3 + 36 * hx, obj_player.cy + i_y + 3 + 36 * hy);
 		}
 		
 	} else if (stored == "m_transit") {
@@ -139,7 +145,7 @@ if(touchingMouse & !inQuest){
 			}
 		}
 		//used to find coords of matching items slot
-		hx = (val - mod_index) mod 3;
+		hx = (val - mod_index) mod 4;
 		hy = (val - mod_index) div 4;
 		
 		//checks for inventory collisions
@@ -154,19 +160,19 @@ if(touchingMouse & !inQuest){
 					if(!inst.occupied && inst.stored != "brewing"){
 						draw_sprite(spr_placelight, 0 , inst.x + 3, inst.y + 3);	
 					} else {
-						draw_sprite(spr_placelight, 0, obj_player.cx + 503 + 36 * hx, obj_player.cy + 203 + 36 * hy);
+						draw_sprite(spr_placelight, 0, obj_player.cx + m_x + 3 + 36 * hx, obj_player.cy + m_y + 3 + 36 * hy);
 					}
 				} else {
 					//if there is a matching inventory slot, draw highlight over it
-					draw_sprite(spr_placelight, 0, obj_player.cx + 503, obj_player.cy + 3 + 36 * highlightNum);
+					draw_sprite(spr_placelight, 0, obj_player.cx + b_x + 3, obj_player.cy + b_y + 3 + 36 * highlightNum);
 				}
 			} else {
 				//if inventory object is type "items", draw highlight over corresponding items slot
-				draw_sprite(spr_placelight, 0, obj_player.cx + 503 + 36 * hx, obj_player.cy + 203 + 36 * hy);
+				draw_sprite(spr_placelight, 0, obj_player.cx + m_x + 3 + 36 * hx, obj_player.cy + m_y + 3 + 36 * hy);
 			}
 		} else {
 			//if not over inventory object, draw highlight over corresponding items slot
-			draw_sprite(spr_placelight, 0, obj_player.cx + 503 + 36 * hx, obj_player.cy + 203 + 36 * hy);
+			draw_sprite(spr_placelight, 0, obj_player.cx + m_x + 3 + 36 * hx, obj_player.cy + m_y + 3 + 36 * hy);
 		}
 	}
 }
@@ -196,12 +202,12 @@ if(i > 999){
         count++;
     }
 	if(i > 99999){
-		draw_text(x + 1, y + 19, string_format(i / 1000, 3, 0) + "k");
+		draw_text(x + 2, y + 19, string_format(i / 1000, 3, 0) + "k");
 	} else {
-		draw_text(x + 1, y + 19, string_format(i / 1000, count, !!(floor(i / 100) % 10)) + "k");
+		draw_text(x + 2, y + 19, string_format(i / 1000, count, !!(floor(i / 100) % 10)) + "k");
 	}
 
 // only draw if greater than 1
 } else if (i > 1) {
-	draw_text(x + 1, y + 19, i);
+	draw_text(x + 2, y + 19, i);
 }

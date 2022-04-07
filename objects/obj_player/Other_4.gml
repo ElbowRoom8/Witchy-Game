@@ -20,13 +20,11 @@ if(inQuest){
 		//creates inventory objects
 		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -1, obj_inventory);
 		newObj.image_alpha = 0.85;
-		newObj.depth = -1;
 		newObj.stored = "inventory";
 		newObj.slotNum = i; //sets slotnum
 		//reads inventory array and adds potions accordingly
 		if(inventory[i] != -1){
 			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
-			newObj.depth = -2;
 			newObj.val = i;
 			newObj.vrty = inventory[i].vrty;
 			newObj.stored = "inventory";

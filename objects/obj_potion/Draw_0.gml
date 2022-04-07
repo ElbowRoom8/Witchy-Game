@@ -142,12 +142,12 @@ if(i > 999){
         count++;
     }
 	if(i > 99999){
-		draw_text(x + 1, y + 19, string_format(i / 1000, 3, 0) + "k");
+		draw_text(x + 2, y + 19, string_format(i / 1000, 3, 0) + "k");
 	} else {
-		draw_text(x + 1, y + 19, string_format(i / 1000, count, !!(floor(i / 100) % 10)) + "k");
+		draw_text(x + 2, y + 19, string_format(i / 1000, count, !!(floor(i / 100) % 10)) + "k");
 	}
 
 // only draw if greater than 1
 } else if (i > 1) {
-	draw_text(x + 1, y + 19, i);
+	draw_text(x + 2, y + 19, i);
 }

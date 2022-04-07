@@ -8,7 +8,7 @@ if (open){
 	for(var i = 0; i < 10; i++){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
-			newObj = instance_create_depth(obj_player.cx + 55 + 36 * i, obj_player.cy + 170 + 36 * j, -3, obj_inventory);
+			newObj = instance_create_depth(obj_player.cx + 270 + 36 * i, obj_player.cy + 170 + 36 * j, -3, obj_inventory);
 			newObj.image_alpha = 0.85
 			newObj.stored = "autofill";
 			
@@ -23,7 +23,7 @@ if (open){
 					}
 				}
 				if(filled){
-					newObj = instance_create_depth(obj_player.cx + 56 + 36 * i, obj_player.cy + 171 + 36 * j, -4, obj_potion_slot);
+					newObj = instance_create_depth(obj_player.cx + 271 + 36 * i, obj_player.cy + 171 + 36 * j, -4, obj_potion_slot);
 					newObj.val = potNum;
 					newObj.stored = "autofill";
 					if(potions[potNum][0] != -1){
@@ -39,20 +39,11 @@ if (open){
 			}
 		}
 	}
-	//adds fade to background
-	newObj = instance_create_depth(0, 0, -3, obj_dim);
-	newObj.image_alpha = 0.3;
-	newObj.stored = "autofill";
+	
 } else {
 	//closes storage
 	with (obj_inventory){
 		if (stored = "autofill" || stored == "p_autofill"){
-			instance_destroy();
-		}
-	}
-	
-	with (obj_dim){
-		if (stored = "autofill"){
 			instance_destroy();
 		}
 	}

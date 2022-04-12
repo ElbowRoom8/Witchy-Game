@@ -4,7 +4,14 @@ image_xscale = 2;
 image_yscale = 2;
 interaction = false;
 
-//test dialogue
-d_intro = [
-	"Hello, you must be " + playerName + ".",
-	"I trust you'll enjoy your stay here at Fairwick."]
+//dialgue variables
+index = -1; //used to reference correct area of dialogue grid
+c_index = -1; //used to save start of character area in dialogue
+speaker = sprite_index;
+i = 0;
+
+escape = false; //used to hold if the next character is a command
+shaky = false; //used to track shaky text
+color = c_dkgrey; //used to change color
+
+spoken = false;// temp testing variable

@@ -9,15 +9,17 @@ if(inInventory){
 	//loops through 9 inventory slots
 	for(var i = 0; i < 9; i++){
 		//creates inventory objects
-		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -1, obj_inventory);
+		newObj = instance_create_depth(cx + 4, cy + 2 + 4 * (i + 1) + 35 * i, -2, obj_inventory);
 		newObj.image_alpha = 0.85;
 		newObj.stored = "inventory";
 		newObj.slotNum = i; //sets slotnum
 		//reads inventory array and adds potions accordingly
 		if(inventory[i] != -1){
-			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -2, obj_potion);
+			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -3, obj_potion);
 			newObj.val = i;
 			newObj.vrty = inventory[i].vrty;
+			newObj.t_text = inventory[i].t_text;
+			newObj.v_text = inventory[i].v_text;
 			newObj.stored = "inventory";
 			newObj.sprite_index = inventory[i].type;
 		}
@@ -28,7 +30,7 @@ if(inInventory){
 	for(var i = 0; i < 10; i++){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
-			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -1, obj_inventory);
+			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -2, obj_inventory);
 			newObj.image_alpha = 0.85
 			
 			potNum = i + j * 10; //caclulates array number
@@ -42,7 +44,7 @@ if(inInventory){
 					}
 				}
 				if(filled){
-					newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -2, obj_potion_slot);
+					newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -3, obj_potion_slot);
 					newObj.val = potNum;
 					if(potions[potNum][0] != -1){
 						newObj.sprite_index = potions[potNum][0].type;
@@ -58,9 +60,9 @@ if(inInventory){
 		}
 	}
 	//creates refill buttons
-	newObj = instance_create_depth(cx + 418, cy + 281, -1, obj_refill_button);
+	newObj = instance_create_depth(cx + 418, cy + 281, -2, obj_refill_button);
 	
-	newObj = instance_create_depth(cx + 418, cy + 316, -1, obj_refill_button);
+	newObj = instance_create_depth(cx + 418, cy + 316, -2, obj_refill_button);
 	newObj.sprite_index = spr_refill_button2;
 	
 	//adds fade to background

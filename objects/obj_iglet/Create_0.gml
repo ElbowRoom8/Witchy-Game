@@ -1,0 +1,11 @@
+/// @description Stores all dialogues
+image_speed = 0;
+image_xscale = 2;
+image_yscale = 2;
+interaction = false;
+
+//dialgue variables
+index = -1; //used to reference correct area of dialogue grid
+c_index = -1; //used to save start of character area in dialogue
+speaker = sprite_index;
+i = 0;

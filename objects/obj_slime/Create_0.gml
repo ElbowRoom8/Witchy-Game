@@ -2,6 +2,7 @@
 randomize();
 slimeHealth = 15;
 def_scale = 1;
+sprRef = sprite_index;
 
 ani_delay = true; //random jiggle
 jump_delay = true; //stops constant jumping

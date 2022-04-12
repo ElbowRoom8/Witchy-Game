@@ -17,11 +17,12 @@ if (stored = "inventory"){
 				//if slot is empty, sets new coords to move to, and sets slot to occupied
 				snapX = inst.x + 1;
 				snapY = inst.y + 1;
+				depth = -3;
 				inst.occupied = true;
 				//updates inventory array to match changes
 				if (inst.slotNum != val) {
 					//new spot (based on inventory objects slotNum) is filled
-					inventory[inst.slotNum] = {type : sprite_index, vrty : inventory[val].vrty, num : inventory[val].num};
+					inventory[inst.slotNum] = {type : sprite_index, vrty : inventory[val].vrty, num : inventory[val].num, t_text : t_text, v_text : v_text};
 					//old spot is emptied
 					inventory[val] = -1;
 					val = inst.slotNum;
@@ -59,15 +60,16 @@ potion is destroyed)*/
 					//correct the counts
 					if (stored > maxPotions){
 						//if above maxPotions limit, then update both arrays to fix this
-						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : maxPotions};
+						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : maxPotions, t_text : t_text, v_text : v_text};
 						potions[val][vrty].num += (stored - maxPotions);
 					} else {
 						//if not above max potions, only update inventory array
-						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : stored};
+						inventory[inst.slotNum] = {type : sprite_index, vrty : vrty, num : stored, t_text : t_text, v_text : v_text};
 					}
 					//sets new snap coords, and sets slot to occupied
 					snapX = inst.x + 1;
 					snapY = inst.y + 1;
+					depth = -3;
 					inst.occupied = true;
 					//transitions object to "inventory" type
 					val = inst.slotNum;
@@ -89,8 +91,6 @@ potion is destroyed)*/
 }
 // resets more variables and finishes placing object
 rightClick = false;
-if(touchingMouse){
-	depth++;
-}
 x = snapX;
 y = snapY;
+depth = -3;

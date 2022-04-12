@@ -53,31 +53,31 @@ defense = 1;
 
 globalvar potRef;
 //form: {type/sprite, index (for potions array), modifier/sprite, vrty for that modifier}
-potRef[0][0] = {type : spr_health_potion, index : 0, modifier : spr_door7, vrty : 0};
-potRef[0][1] = {type : spr_health_potion, index : 0, modifier : spr_door8, vrty : 1};
+potRef[0][0] = {type : spr_health_potion, index : 0, modifier : spr_door7, vrty : 0, t_text : "Health Potion", v_text : "idk lol hi mom"};
+potRef[0][1] = {type : spr_health_potion, index : 0, modifier : spr_door8, vrty : 1, t_text : "Health Potion", v_text : "idk lol hi dad"};
 
-potRef[1][0] = {type : spr_door1, index : 0, modifier : spr_door7, vrty : 2};
-potRef[1][1] = {type : spr_door1, index : 0, modifier : spr_door8, vrty : 3};
+potRef[1][0] = {type : spr_door1, index : 0, modifier : spr_door7, vrty : 2, t_text : "Health Potion", v_text : "idk lol hi no one"};
+potRef[1][1] = {type : spr_door1, index : 0, modifier : spr_door8, vrty : 3, t_text : "Health Potion", v_text : "idk lol hi everyone"};
 
-potRef[2][0] = {type : spr_defense_potion, index : 1, modifier : spr_door7, vrty : 0};
+potRef[2][0] = {type : spr_defense_potion, index : 1, modifier : spr_door7, vrty : 0, t_text : "Defense Potion", v_text : "df +50% \n time -10s"};
 
-potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door7, vrty : 0};
-potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door8, vrty : 1};
+potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door7, vrty : 0, t_text : "Potion of Regeneration", v_text : "poopity scoop"};
+potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door8, vrty : 1, t_text : "Potion of Regeneration", v_text : "scoopity wooop"};
 
-potRef[4][0] = {type : spr_fire_potion, index : 3, modifier : spr_door7, vrty : 0};
-potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door8, vrty : 1};
-potRef[4][2] = {type : spr_fire_potion, index : 3, modifier : spr_door3, vrty : 2};
-potRef[4][3] = {type : spr_fire_potion, index : 3, modifier : spr_door4, vrty : 3};
+potRef[4][0] = {type : spr_fire_potion, index : 3, modifier : spr_door7, vrty : 0, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
+potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door8, vrty : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
+potRef[4][2] = {type : spr_fire_potion, index : 3, modifier : spr_door3, vrty : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist -25% \nqty + 30%"};
+potRef[4][3] = {type : spr_fire_potion, index : 3, modifier : spr_door4, vrty : 3, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist +25% \nqty - 30%"};
 
-potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door7, vrty : 0};
+potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door7, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
 
-potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door7, vrty : 0};
+potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door7, vrty : 0, t_text : "Acid Potion", v_text : "it's a trip bro"};
 
-potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door7, vrty : 0};
+potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door7, vrty : 0, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 
-potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door7, vrty : 0};
+potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door7, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 
-potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door7, vrty : 0};
+potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door7, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
 #endregion
 
@@ -88,10 +88,10 @@ tabType = -1;
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //form: {sprite/type of potion, variety of potion, quantity}
-inventory[0] = {type : spr_health_potion, vrty : 1, num : 7};
-inventory[1] = {type : spr_defense_potion, vrty : 0, num : 3};
-inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7};
-inventory[3] = {type : spr_fire_potion, vrty : 1, num : 7};
+inventory[0] = {type : spr_health_potion, vrty : 1, num : 7, t_text : "Health Potion", v_text : "idk lol hi dad"};
+inventory[1] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
+inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Acid Potion", v_text : "it's a trip bro"};
+inventory[3] = {type : spr_fire_potion, vrty : 1, num : 7, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have
@@ -109,22 +109,22 @@ for(var i = 0; i < array_length(potRef); i++){
 }
 
 //form: {sprite/type of potion, variety of potion, quantity}
-potions[0][0] = {type : spr_health_potion, vrty : 0, num : 8};
-potions[0][1] = {type : spr_health_potion, vrty : 1, num : 8};
+potions[0][0] = {type : spr_health_potion, vrty : 0, num : 8, t_text : "Health Potion", v_text : "idk lol hi mom"};
+potions[0][1] = {type : spr_health_potion, vrty : 1, num : 8, t_text : "Health Potion", v_text : "idk lol hi dad"};
 
-potions[1][0] = {type : spr_defense_potion, vrty : 0, num : 3};
+potions[1][0] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
 
-potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2};
+potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "poopity scoop"};
 
 //potions[3][0] = {type : spr_fire_potion, vrty : 0, num : 1};
-potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2};
-potions[3][3] = {type : spr_fire_potion, vrty : 3, num : 1};
+potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
+potions[3][3] = {type : spr_fire_potion, vrty : 3, num : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
-potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0};
-potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2};
-potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1};
-potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6};
-potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0};
+potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
+potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Acid Potion", v_text : "it's a trip bro"};
+potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
+potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
 #endregion
 
@@ -160,4 +160,13 @@ recipes[2] = {ing1 : spr_door1, ing2 : spr_door6, ing3 : spr_door4, res : spr_re
 
 
 
+#endregion
+
+#region Set up dialogue ds_grid
+//loads csv file
+global.dialogue = load_csv("fairwick_dialogue.csv");
+//checks if load was successful
+if(!ds_exists(global.dialogue, ds_type_grid)){
+	show_error("Error: Failed to load dialogue file", true);
+}
 #endregion

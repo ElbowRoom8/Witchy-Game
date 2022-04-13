@@ -11,7 +11,7 @@ if(!interaction & !inQuest){
 	//check conditions and load lines
 	if(!spoken){
 		index = script_dialogue_scenario(c_index, "The Beginning");
-		//spoken = true;
+		spoken = true;
 	} else {
 		index = script_dialogue_scenario(c_index, "Grab a Bite");
 	}

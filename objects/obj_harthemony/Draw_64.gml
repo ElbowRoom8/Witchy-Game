@@ -16,13 +16,20 @@ if(interaction){
 		draw_sprite_ext(speaker, 0, 20, 470, 5, 5, 0, c_white, 1);
 	}
 	//write name of character
-	var str_width = string_width(name);
 	draw_set_font(fnt_1);
 	draw_set_color(c_dkgrey);
 	draw_set_halign(fa_center);
-	if(str_width > 190){
+	//swaps playerName var in
+	if(name == "Player"){
+		name = playerName;
+	}
+	if(string_width(name) > 190){
 		draw_set_font(fnt_3);
-		draw_text_ext(100, 649, name, -1, 180);
+		if(string_width(name) > 190){
+			draw_text_ext(100, 649, name, -1, 180);
+		} else {
+			draw_text(100, 663, name);
+		}
 	} else {
 		draw_text(100, 655, name);
 	}

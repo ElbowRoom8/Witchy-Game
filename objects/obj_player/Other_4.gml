@@ -14,7 +14,6 @@ cx = clamp(cx, min_view_x, max_view_x);
 cy = clamp(cy, min_view_y, max_view_y);
 
 if(inQuest){
-	selNum = 0;
 	//loops through 9 inventory slots
 	for(i = 0; i < 9; i++){
 		//creates inventory objects

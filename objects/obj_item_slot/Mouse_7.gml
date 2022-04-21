@@ -129,6 +129,6 @@ item is destroyed)*/
 }
 // resets more variables and finishes placing object
 rightClick = false;
-depth = -2;
+depth = -3;
 x = snapX;
 y = snapY;

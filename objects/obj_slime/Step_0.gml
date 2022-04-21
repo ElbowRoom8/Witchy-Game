@@ -1,6 +1,8 @@
 /// @description slime movement
 script_object_movement();
 
+depth = room_height - (y + image_yscale * sprite_height / 4);
+
 //keeps target position for jumps in place
 if(hSpd > 0){
 	if(obj_player.x <= 100) {
@@ -92,7 +94,6 @@ if(jumping){
 	}
 	
 	//switches to shadow sprite
-	sprRef = sprite_index;
 	sprite_index = spr_shadow;
 	image_alpha = 0.6;
 	//scales shadow based on height and size

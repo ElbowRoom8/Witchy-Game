@@ -4,6 +4,7 @@ if(room = rm_mainhall){
 	obj_player.x = 100;
 	obj_player.y = 160;
 	inQuest = true;
+	obj_player.selNum = 0;
 }else if(room= rm_forest){
 	room_goto(rm_mainhall);
 	obj_player.x = 390;

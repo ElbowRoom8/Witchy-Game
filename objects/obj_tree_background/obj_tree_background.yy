@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_tree_background1",
+    "path": "sprites/spr_tree_background1/spr_tree_background1.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

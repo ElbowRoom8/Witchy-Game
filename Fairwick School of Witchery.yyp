@@ -112,6 +112,7 @@
     {"id":{"name":"fnt_1","path":"fonts/fnt_1/fnt_1.yy",},"order":0,},
     {"id":{"name":"spr_harthemony_portrait","path":"sprites/spr_harthemony_portrait/spr_harthemony_portrait.yy",},"order":4,},
     {"id":{"name":"spr_tooltip","path":"sprites/spr_tooltip/spr_tooltip.yy",},"order":33,},
+    {"id":{"name":"snd_room_theme","path":"sounds/snd_room_theme/snd_room_theme.yy",},"order":4,},
     {"id":{"name":"spr_amber_walkright","path":"sprites/spr_amber_walkright/spr_amber_walkright.yy",},"order":1,},
     {"id":{"name":"spr_bush_small1","path":"sprites/spr_bush_small1/spr_bush_small1.yy",},"order":21,},
     {"id":{"name":"spr_harthemony_walkdown","path":"sprites/spr_harthemony_walkdown/spr_harthemony_walkdown.yy",},"order":0,},

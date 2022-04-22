@@ -83,7 +83,7 @@ if(interaction){
 			draw_set_color(color);
 			//draws character
 			if(shaky){
-				draw_text(215 + space * charWidth + random_range(-1 ,1), 456 + 35 * line + random_range(-1 ,1), char);
+				draw_text(215 + space * charWidth + random_range(-1, 1), 456 + 35 * line + random_range(-1, 1), char);
 			} else {
 				draw_text(215 + space * charWidth, 456 + 35 * line, char);
 			}

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_door5",
-    "path": "sprites/spr_door5/spr_door5.yy",
+    "name": "spr_bed",
+    "path": "sprites/spr_bed/spr_bed.yy",
   },
   "solid": false,
   "visible": true,
@@ -19,20 +19,23 @@
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
   "physicsKinematic": false,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":0.0,"y":0.0,},
+    {"x":32.0,"y":0.0,},
+    {"x":32.0,"y":48.0,},
+    {"x":0.0,"y":48.0,},
+  ],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_pinger","path":"objects/obj_pinger/obj_pinger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Decors",
+    "path": "folders/Objects/Decors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_labset",
+  "name": "obj_bed",
   "tags": [],
   "resourceType": "GMObject",
 }

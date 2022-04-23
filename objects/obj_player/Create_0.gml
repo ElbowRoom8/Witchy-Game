@@ -132,13 +132,13 @@ potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Pot
 #region Set up massive item reference array
 globalvar itemRef;
 //form: {type, name, tooltip}
-itemRef[0] = {type : spr_door1, t_text : "Slime Slime", v_text : "It's sorta sticky"};
+itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "It's sorta sticky"};
 itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};
-itemRef[2] = {type : spr_door2, t_text : "Spider Silk", v_text : "Has bugs stuck in it"};
-itemRef[3] = {type : spr_door3, t_text : "Spider Tooth", v_text : "Feels sharp"};
+itemRef[2] = {type : spr_item_silk, t_text : "Spider Silk", v_text : "Has bugs stuck in it"};
+itemRef[3] = {type : spr_item_spider_teeth, t_text : "Spider Tooth", v_text : "Feels sharp"};
 itemRef[4] = {type : spr_door4, t_text : "Dreamroot", v_text : "You kind of want to lick it"};
-itemRef[7] = {type : spr_door5, t_text : "Wolf Pelt", v_text : "Surprisingly soft"};
-itemRef[8] = {type : spr_door6, t_text : "Wolf Claw", v_text : "Infused with the thrill of the hunt"};
+itemRef[7] = {type : spr_item_wolf_pelt, t_text : "Wolf Pelt", v_text : "Surprisingly soft"};
+itemRef[8] = {type : spr_item_wolf_claw, t_text : "Wolf Claw", v_text : "Infused with the thrill of the hunt"};
 itemRef[108] = {type : spr_door7, t_text : "Damesflower", v_text : "Used to relieve fever"};
 itemRef[109] = {type : spr_door8, t_text : "Tallowroot", v_text : "Feels greasy"};
 #endregion
@@ -148,16 +148,16 @@ itemRef[109] = {type : spr_door8, t_text : "Tallowroot", v_text : "Feels greasy"
 items = array_create(120, -1); //-1 is default value
 globalvar items; //bulk storage of all items you have
 //form: {type of item / sprite, quantity}
-items[0] = {type : spr_door1, num : 50};
-items[2] = {type : spr_door2, num : 0};
-items[3] = {type : spr_door3, num : 69};
-items[4] = {type : spr_door4, num : 114001};
+items[0] = {type : spr_item_slime, num : 50};
+items[2] = {type : spr_item_silk, num : 0};
+items[3] = {type : spr_item_wolf_pelt, num : 69};
+items[4] = {type : spr_item_wolf_claw, num : 114001};
 items[7] = {type : spr_door5, num : 420};
 items[8] = {type : spr_door6, num : 1500};
 //store modifiers at end of array
 globalvar mod_index;
 mod_index = 108;//gives start of modifiers
-items[108] = {type : spr_door7, num : 33};
+items[108] = {type : spr_item_spider_teeth, num : 33};
 items[109] = {type : spr_door8, num : 46};
 
 brew_slots = array_create(4, -1);
@@ -169,9 +169,9 @@ globalvar brew_slots;
 
 globalvar recipes;
 //form: {ingredient 1, 2, 3, sprite/type of potion}
-recipes[0] = {ing1 : spr_door1, ing2 : spr_door3, ing3 : spr_door4, res : spr_health_potion};
-recipes[1] = {ing1 : spr_door5, ing2 : spr_door1, ing3 : spr_door6, res : spr_fire_potion};
-recipes[2] = {ing1 : spr_door1, ing2 : spr_door6, ing3 : spr_door4, res : spr_regen_potion};
+recipes[0] = {ing1 : spr_item_slime, ing2 : spr_item_silk, ing3 : spr_item_spider_teeth, res : spr_health_potion};
+recipes[1] = {ing1 : spr_item_silk, ing2 : spr_item_slime, ing3 : spr_item_wolf_claw, res : spr_fire_potion};
+recipes[2] = {ing1 : spr_item_slime, ing2 : spr_item_wolf_claw, ing3 : spr_item_spider_teeth, res : spr_regen_potion};
 
 
 

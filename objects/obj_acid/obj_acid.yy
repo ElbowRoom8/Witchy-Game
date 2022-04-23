@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_door3",
-    "path": "sprites/spr_door3/spr_door3.yy",
+    "name": "spr_acid_particle",
+    "path": "sprites/spr_acid_particle/spr_acid_particle.yy",
   },
   "solid": false,
   "visible": true,

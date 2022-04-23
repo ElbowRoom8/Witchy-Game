@@ -148,6 +148,7 @@
     {"id":{"name":"snd_main_theme","path":"sounds/snd_main_theme/snd_main_theme.yy",},"order":0,},
     {"id":{"name":"spr_iglet_shroom_walkright","path":"sprites/spr_iglet_shroom_walkright/spr_iglet_shroom_walkright.yy",},"order":2,},
     {"id":{"name":"obj_door2","path":"objects/obj_door2/obj_door2.yy",},"order":1,},
+    {"id":{"name":"spr_acid_particle","path":"sprites/spr_acid_particle/spr_acid_particle.yy",},"order":17,},
     {"id":{"name":"spr_fire1","path":"sprites/spr_fire1/spr_fire1.yy",},"order":24,},
     {"id":{"name":"spr_harthemony_walkright","path":"sprites/spr_harthemony_walkright/spr_harthemony_walkright.yy",},"order":2,},
     {"id":{"name":"spr_vortex_potion","path":"sprites/spr_vortex_potion/spr_vortex_potion.yy",},"order":15,},
@@ -217,7 +218,7 @@
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
     {"name":"macOS","path":"options/mac/options_mac.yy",},
   ],
-  "defaultScriptType": 1,
+  "isDnDProject": false,
   "isEcma": false,
   "configs": {
     "name": "Default",
@@ -287,14 +288,14 @@
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
-    {"isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texturegroup1","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"texturegroup1","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"fairwick_dialogue.csv","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.3.0.625",
+    "IDEVersion": "2022.2.1.618",
   },
   "resourceVersion": "1.5",
   "name": "Fairwick School of Witchery",

@@ -9,7 +9,7 @@ function script_object_collision(_xoffset, _yoffset){
 	image_speed = 1;
 	image_xscale = 2;
 	image_yscale = 2;
-	depth = room_height - y - 4 - _yoffset;
+	depth = room_height - y;
 
 	// collision box
 	newObj = instance_create_depth(x - sprite_width/2 + 4, y - sprite_height/2 + 4 + _yoffset, 75, obj_wall);

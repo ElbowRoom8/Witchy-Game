@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "spr_door2",
-    "path": "sprites/spr_door2/spr_door2.yy",
+    "name": "spr_stool",
+    "path": "sprites/spr_stool/spr_stool.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -21,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player_collision","path":"objects/obj_player_collision/obj_player_collision.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Doors",
-    "path": "folders/Objects/Doors.yy",
+    "name": "Decors",
+    "path": "folders/Objects/Decors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_door2",
+  "name": "obj_stool",
   "tags": [],
   "resourceType": "GMObject",
 }

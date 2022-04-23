@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_door5",
-    "path": "sprites/spr_door5/spr_door5.yy",
+    "name": "spr_cauldron",
+    "path": "sprites/spr_cauldron/spr_cauldron.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,15 +21,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_pinger","path":"objects/obj_pinger/obj_pinger.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Decors",
+    "path": "folders/Objects/Decors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_labset",

@@ -4,7 +4,7 @@
     "path": "sprites/spr_door7/spr_door7.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

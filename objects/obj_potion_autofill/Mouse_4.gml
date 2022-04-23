@@ -136,6 +136,8 @@ if(!empty){
 				brew_slots[i] = {type : items[prev_ing[i]].type, num : lowest_num};
 				newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -3, obj_item_slot);
 				newObj.sprite_index = items[prev_ing[i]].type;
+				newObj.t_text = itemRef[prev_ing[i]].t_text;
+				newObj.v_text = itemRef[prev_ing[i]].v_text;
 				newObj.stored = "brewing";
 				newObj.val = i;
 				newObj.highlightNum = prev_ing[i];
@@ -145,6 +147,8 @@ if(!empty){
 			brew_slots[3] = {type : items[prev_ing[3]].type, num : lowest_num};
 			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -3, obj_item_slot);
 			newObj.sprite_index = items[prev_ing[3]].type;
+			newObj.t_text = itemRef[prev_ing[i]].t_text;
+			newObj.v_text = itemRef[prev_ing[i]].v_text;
 			newObj.stored = "m_brewing";
 			newObj.val = 3;
 			newObj.highlightNum = prev_ing[3];
@@ -157,17 +161,21 @@ if(!empty){
 			
 			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -3, obj_item_slot);
 			newObj.sprite_index = items[prev_ing[i]].type;
+			newObj.t_text = itemRef[prev_ing[i]].t_text;
+			newObj.v_text = itemRef[prev_ing[i]].v_text;
 			newObj.stored = "brewing";
 			newObj.val = i;
 			newObj.highlightNum = prev_ing[i];
 		}
 		//adds modifier
-			items[prev_ing[3]].num -= lowest_num;
-			brew_slots[3] = {type : items[prev_ing[3]].type, num : lowest_num};
-			newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -3, obj_item_slot);
-			newObj.sprite_index = items[prev_ing[3]].type;
-			newObj.stored = "m_brewing";
-			newObj.val = 3;
-			newObj.highlightNum = prev_ing[3];
+		items[prev_ing[3]].num -= lowest_num;
+		brew_slots[3] = {type : items[prev_ing[3]].type, num : lowest_num};
+		newObj = instance_create_depth(obj_player.cx + b_x + 1, obj_player.cy + b_y + 1 + 36 * i, -3, obj_item_slot);
+		newObj.sprite_index = items[prev_ing[3]].type;
+		newObj.t_text = itemRef[prev_ing[i]].t_text;
+		newObj.v_text = itemRef[prev_ing[i]].v_text;
+		newObj.stored = "m_brewing";
+		newObj.val = 3;
+		newObj.highlightNum = prev_ing[3];
 	}
 }

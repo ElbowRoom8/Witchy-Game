@@ -36,6 +36,8 @@ if(!inDialogue & !inQuest & !inInventory){
 			if(items[potNum] != -1){
 				newObj = instance_create_depth(cx + 11 + 36 * i, cy + 11 + 36 * j, -3, obj_item_slot);
 				newObj.val = potNum;
+				newObj.t_text = itemRef[potNum].t_text;
+				newObj.v_text = itemRef[potNum].v_text;
 				newObj.stored = "items";
 				newObj.sprite_index = items[potNum].type;
 			}
@@ -54,6 +56,8 @@ if(!inDialogue & !inQuest & !inInventory){
 			if(items[potNum] != -1){
 				newObj = instance_create_depth(cx + 487 + 36 * i, cy + 11 + 36 * j, -3, obj_item_slot);
 				newObj.val = potNum;
+				newObj.t_text = itemRef[potNum].t_text;
+				newObj.v_text = itemRef[potNum].v_text;
 				newObj.stored = "modifiers";
 				newObj.sprite_index = items[potNum].type;
 			}

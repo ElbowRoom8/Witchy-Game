@@ -9,6 +9,8 @@ if(!inQuest){
 			newObj = instance_create_depth(x,y, -4, obj_item_slot);
 			newObj.val = val;
 			newObj.qty = grabNum;
+			newObj.t_text = t_text;
+			newObj.v_text = v_text;
 			if (stored == "items"){
 				newObj.stored = "transit";
 			} else {
@@ -25,6 +27,8 @@ if(!inQuest){
 			newObj = instance_create_depth(x,y, -4, obj_item_slot);
 			newObj.val = val;
 			newObj.qty = items[val].num;
+			newObj.t_text = t_text;
+			newObj.v_text = v_text;
 			if (stored == "items"){
 				newObj.stored = "transit";
 			} else {
@@ -57,6 +61,8 @@ if(!inQuest){
 				}
 				newObj.val = temp; //saves index
 				newObj.qty = grabNum;
+				newObj.t_text = t_text;
+				newObj.v_text = v_text;
 				if (stored == "brewing"){
 					newObj.stored = "transit";
 				} else {

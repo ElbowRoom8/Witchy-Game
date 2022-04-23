@@ -19,6 +19,7 @@ image_yscale = 2;
 
 health = 10; //holds player health
 def_timer = 0; //defense buff timer
+pickup = [];
 
 selNum = 0; //used to pick the correct spot in inventory
 gap = true; //used to prevent holding of potions
@@ -126,6 +127,20 @@ potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of
 potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
+#endregion
+
+#region Set up massive item reference array
+globalvar itemRef;
+//form: {type, name, tooltip}
+itemRef[0] = {type : spr_door1, t_text : "Slime Slime", v_text : "It's sorta sticky"};
+itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};
+itemRef[2] = {type : spr_door2, t_text : "Spider Silk", v_text : "Has bugs stuck in it"};
+itemRef[3] = {type : spr_door3, t_text : "Spider Tooth", v_text : "Feels sharp"};
+itemRef[4] = {type : spr_door4, t_text : "Dreamroot", v_text : "You kind of want to lick it"};
+itemRef[7] = {type : spr_door5, t_text : "Wolf Pelt", v_text : "Surprisingly soft"};
+itemRef[8] = {type : spr_door6, t_text : "Wolf Claw", v_text : "Infused with the thrill of the hunt"};
+itemRef[108] = {type : spr_door7, t_text : "Damesflower", v_text : "Used to relieve fever"};
+itemRef[109] = {type : spr_door8, t_text : "Tallowroot", v_text : "Feels greasy"};
 #endregion
 
 #region Set up items

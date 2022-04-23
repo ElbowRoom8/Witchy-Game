@@ -2,8 +2,8 @@
 val = 0; //holds a particular index number in an array
 vrty = 0; //holds the variety of the potion, as well as an index number
 
-t_text = "";//holds name of potion
-v_text = "";//holds tooltip about vrty
+t_text = ""; //holds name of potion
+v_text = ""; //holds tooltip about vrty
 
 stored = ""; //hold which array the potion is a part of
 /* In some cases, stored will hold an integer instead. If you click, and a new

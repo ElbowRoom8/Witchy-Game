@@ -1,0 +1,1 @@
+script_object_collision(1, 3)

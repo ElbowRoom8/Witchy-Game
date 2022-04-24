@@ -25,8 +25,8 @@ mouseUsed = false; //holds if any item is touchingMouse
 snapX = x;
 snapY = y;
 
-image_xscale = 4;
-image_yscale = 4;
+image_xscale = 1;
+image_yscale = 1;
 
 //for draw_GUI
 //grab the width and height of view

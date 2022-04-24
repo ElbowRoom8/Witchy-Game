@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_chair",
-    "path": "sprites/spr_chair/spr_chair.yy",
+    "name": "spr_table",
+    "path": "sprites/spr_table/spr_table.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,7 +30,7 @@
     "path": "folders/Objects/Decors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_chair",
+  "name": "obj_table",
   "tags": [],
   "resourceType": "GMObject",
 }

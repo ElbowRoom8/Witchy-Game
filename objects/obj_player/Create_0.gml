@@ -7,6 +7,15 @@ min_view_y = 0;
 max_view_x = room_width - camera_get_view_width(view_camera[0]);
 max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
+
+//for draw_GUI
+//grab the width and height of view
+var cw = camera_get_view_width(view_camera);
+var ch = camera_get_view_height(view_camera);
+//set some variables to hold the value and div that by width and height
+display_scalex = display_get_gui_width() / cw;
+display_scaley = display_get_gui_height() / ch;
+
 #endregion
 
 //audio_play_sound(snd_main_theme, 1, false);
@@ -132,7 +141,7 @@ potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Pot
 #region Set up massive item reference array
 globalvar itemRef;
 //form: {type, name, tooltip}
-itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "It's sorta sticky"};
+itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "Implies the existence of other types of slime"};
 itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};
 itemRef[2] = {type : spr_item_silk, t_text : "Spider Silk", v_text : "Has bugs stuck in it"};
 itemRef[3] = {type : spr_item_spider_teeth, t_text : "Spider Tooth", v_text : "Feels sharp"};

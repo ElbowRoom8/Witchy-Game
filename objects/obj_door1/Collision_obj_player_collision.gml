@@ -17,7 +17,7 @@ if(room = rm_mainhall){
 	obj_player.y = 50;
 } else if(room = rm_forest){
 	room_persistent = true;
-	obj_player.old_x = obj_player.x;
+	obj_player.old_x = x + sprite_width / 3;
 	room_goto(rm_forest_clearing);
 	obj_player.x = 300;
 	obj_player.y = 285;

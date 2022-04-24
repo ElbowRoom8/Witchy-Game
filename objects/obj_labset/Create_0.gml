@@ -1,7 +1,7 @@
 /// @description Stores all dialogues
 
 // depth and scale
-script_object_collision(0, 4)
+script_object_collision(0, 20)
 //camera stuff cause gamemaker is dumb
 min_view_x = 0;
 min_view_y = 0;

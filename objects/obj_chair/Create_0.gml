@@ -1,1 +1,1 @@
-script_object_collision(2, 8)
+script_object_collision(2, 13);

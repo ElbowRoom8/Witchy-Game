@@ -218,6 +218,23 @@ if ((x < 3) & (!tiled)){
 		}
 	}
 #endregion
+
+#region //adds light beams
+
+for(var i = 0; i < 4; i++){
+	newObj = instance_create_depth(640 + irandom_range(-50, 50) + 150 * i, 0, 0, obj_light);
+	switch irandom_range(0, 2){
+		case 0 : newObj.sprite_index = spr_light1;
+		break;
+		case 1 : newObj.sprite_index = spr_light2;
+		break;
+		case 2 : newObj.sprite_index = spr_light3;
+		break;
+	}
+}
+
+
+#endregion
 	
 #region //adds environment
 

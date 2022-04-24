@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "spr_door1",
-    "path": "sprites/spr_door1/spr_door1.yy",
+    "name": "spr_item_slime",
+    "path": "sprites/spr_item_slime/spr_item_slime.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_health_potion",
+    "path": "sprites/spr_health_potion/spr_health_potion.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

@@ -150,14 +150,14 @@ globalvar items; //bulk storage of all items you have
 //form: {type of item / sprite, quantity}
 items[0] = {type : spr_item_slime, num : 50};
 items[2] = {type : spr_item_silk, num : 0};
-items[3] = {type : spr_item_wolf_pelt, num : 69};
-items[4] = {type : spr_item_wolf_claw, num : 114001};
-items[7] = {type : spr_door5, num : 420};
-items[8] = {type : spr_door6, num : 1500};
+items[3] = {type : spr_item_spider_teeth, num : 69};
+items[4] = {type : spr_door4, num : 114001};
+items[7] = {type : spr_item_wolf_pelt, num : 420};
+items[8] = {type : spr_item_wolf_claw, num : 1500};
 //store modifiers at end of array
 globalvar mod_index;
 mod_index = 108;//gives start of modifiers
-items[108] = {type : spr_item_spider_teeth, num : 33};
+items[108] = {type : spr_door7, num : 33};
 items[109] = {type : spr_door8, num : 46};
 
 brew_slots = array_create(4, -1);

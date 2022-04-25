@@ -1,6 +1,5 @@
 /// @description Ticks each letter in a dialogue
 if(j <= string_length(text)){
-	audio_play_sound(snd_bruh, 10, false);
 	//this is the next letter
 	var char = string_char_at(text , j);
 	//checks for escape symbol

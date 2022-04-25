@@ -3,7 +3,6 @@ image_xscale = 2;
 image_yscale = image_xscale;
 index = -1;
 dropNum = 1;
-type = sprite_index;
 collectTimer = room_speed * 0.5;
 
 alarm[0] = 10;

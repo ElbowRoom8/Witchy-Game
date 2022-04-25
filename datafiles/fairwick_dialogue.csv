@@ -5,7 +5,7 @@ Harthemony,The Beginning,Player,Here we are Floofy! \n\rFairwick School of Witch
 ,,Player,I bet there are plenty of awesome spots on campus for me to take you. Would you like that?
 ,,Prof. Harthemony,\dMrow \p
 ,,Player,"That's that, \dFloofy\s. \nWe'll go on a cool outing together in no time, but first..."
-,,Player,I've got to figure out where my \gclasses\q are!
+,,Player,I've got to figure out where my \gclasses\w are!
 ,Grab a Bite,Player,I'm a silly boi
 ,,Player,Yum yub
 ,,Prof. Harthemony,poopity scoop
@@ -13,7 +13,64 @@ Harthemony,The Beginning,Player,Here we are Floofy! \n\rFairwick School of Witch
 ,,Prof. Iglet,Mrow!
 ,,Player,UWU goth boi marry me
 ,,Player,that's all folks!
+,Playtest,Player,Were you aware that I'm the main character?
+,,Prof. Harthemony,You won't be once I'm through with you.
+,,Prof. Harthemony,"I'm Professor Harthemony, Fairwick's potions professor."
+,,Prof. Harthemony,You'll have to follow my precise instructions if you wish to make it out of my class alive.
+,,Player,Is there a curve?
+,,Prof. Harthemony,I should petrify you just for asking that.
+,Playtest 2,Prof. Harthemony,"Get a move on \qmain character\q, you've got things to learn"
 Iglet,The Light,Player,ooooo I'm blinded by the light
 ,,Prof. Iglet,\dOOOOOOOOOOOOOOOOOOOOOO\s I'm blinded by the light
 ,,Player,damn you win
-,,,\cWhat's up? \1nothin much \2gluten free hexes
+Amber,Playtest,Player,"Believe it or not, I'm actually the main character."
+,,Amber,"Well, I guess that makes me the main character. You're just a copy of me."
+,,Amber,"I'm Amber, a second year. Pleased to make your acquaintance."
+,,Player,How do you know you aren't a copy of me?
+,,Amber,...
+,,Amber,.....
+,,Amber,Oh my God.
+,Playtest 2,Amber,It's great having a new student on campus
+,,Amber,I just wish you didn't look so familiar
+Ferringway,Playtest,Player,"Believe it or not, I'm actually the main character."
+,,Prof. Ferringway,"Oh, good! I have fourteen fetch quests for you."
+,,Prof. Ferringway,"I'm professor Ferringway, plant scientist and head of research at the school."
+,,Prof. Ferringway,"There's also a fungal scientist at the school, but he's preoccupied at the moment."
+,,Prof. Ferringway,Have you spoken with him yet? He's worth a visit if not.
+Truffle,Playtest,Player,"Believe it or not, I'm the main character."
+,,Chef Truffle,A great main character deserves a great main course!
+,,Chef Truffle,"I'm Truffle, Fairwick's chef."
+,,Chef Truffle,I'll cook anything! Except cats.
+,,Player,Would you cook... me?
+,,Chef Truffle,I'm pretty sure that'd be a game over.
+,,Player,Answer the question.
+,Playtest 2,Player,What do you do when you're not cooking?
+,,Chef Truffle,"Oh, you know, keep up to date with food related news"
+,,Chef Truffle,"According to the Olive Oil Times, transportation strikes in Spain are decreasing olive oil exports"
+,,Chef Truffle,Olive oil's going to be a hot commodity this fiscal year
+Yuvei,Playtest,Player,You should know that I'm the main character.
+,,Prof. Yuvei,"Oh no, not another one."
+,,Prof. Yuvei,"I'm Yuvei, Fairwick's field combat instructor."
+,,Player,\qAnother one\q?
+,,Prof. Yuvei,"Who do you think saves you \qmain characters\q, when you get a game over?"
+,,Prof. Yuvei,I have to drag you back from the forest when you get knocked out.
+,,Prof. Yuvei,Every.
+,,Prof. Yuvei,Time.
+,,Player,I'll talk to the devs about that
+,Playtest 2,Player,I'm pretty sure I'm immortal
+,,Prof. Yuvei,Whatever you say kid
+,,Prof. Yuvei,Just tell the \qdevs\q to stop getting meta with the dialogue
+Lidia,Playtest,Player,"Incredibly, I'm actually the main character."
+,,Lidia,"Oh wow, you must be important!"
+,,Lidia,Will you help me solve all of my lifes problems?\nI've got a big assignment due soon.
+,,Player,Can I refuse?
+,,Lidia,Sure.
+,,Lidia,If you don't want to see the \d\rTrue Ending\w\s.
+,,Player,dammit
+Ginger,Playtest,Player,"Believe it or not, I'm the main character."
+,,Ginger,No way! I'm a background NPC!
+,,Ginger,I have more dialogue in this demo than I will in the final game!
+Not Player,Playtest,Main Character,"Believe it or not, I'm actually the main character."
+,,Player,"Believe it or not, I-"
+,,Player,Wait what?
+,,Main Character,\dI know what you are \b\p\w.

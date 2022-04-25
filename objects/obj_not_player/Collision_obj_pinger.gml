@@ -10,10 +10,10 @@ if(!interaction & !inQuest){
 	}
 	//check conditions and load lines
 	if(!spoken){
-		index = script_dialogue_scenario(c_index, "The Beginning");
-		spoken = true;
+		index = script_dialogue_scenario(c_index, "Playtest");
+		//spoken = true;
 	} else {
-		index = script_dialogue_scenario(c_index, "Grab a Bite");
+	//	index = script_dialogue_scenario(c_index, "Grab a Bite");
 	}
 
 	text = ds_grid_get(global.dialogue, 3, index);

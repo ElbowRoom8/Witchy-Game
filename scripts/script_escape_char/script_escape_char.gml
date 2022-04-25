@@ -6,6 +6,9 @@ function escape_char(_char, _text, _j){
 	} else if(_char == "n"){ //inserts newline
 		_text = string_delete(_text, _j, 2);
 		_text = string_insert("\n", _text, _j);
+	} else if(_char == "q"){ //inserts newline
+		_text = string_delete(_text, _j, 2);
+		_text = string_insert("\"", _text, _j);
 	} else {
 		return 0;
 	}
@@ -20,7 +23,9 @@ function escape_color(_char){
 		color = c_red;
 	} else if(_char == "g"){ //green
 		color = c_green;
-	} else if(_char == "q"){ //normal
+	}else if(_char == "b"){ //blue
+		color = c_blue;
+	} else if(_char == "w"){ //normal
 		color = c_dkgray;
 	} else if (_char == "d"){ //shaky text
 		color = 1;

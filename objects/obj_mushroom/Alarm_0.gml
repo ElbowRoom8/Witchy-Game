@@ -6,9 +6,9 @@ switch sprite_index{
 		index = 4;
 		break;
 	case spr_mushroom2:
-		index = 108;
+		index = 5;
 		break;
 	case spr_mushroom3:
-		index = 109;
+		index = 108;
 		break;
 }

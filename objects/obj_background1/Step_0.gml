@@ -139,7 +139,7 @@ if ((x < 3) & (!tiled)){
 #region //adds background trees and walls
 	if(counter % 3 == 0){
 		//chance of getting a clearing
-		var opening = 0//irandom_range(0, 6);
+		var opening = irandom_range(0, 6);
 		
 		for(var i = 0; i < 11; i++){
 			if(i == 7 && !opening){
@@ -176,7 +176,7 @@ if ((x < 3) & (!tiled)){
 				newObj.moveable = true;
 			}
 			//door to clearing
-			newObj = instance_create_depth(x + 640 + 1394, 50, 100, obj_door1);
+			newObj = instance_create_depth(x + 640 + 1394, 80, 100, obj_door1);
 			newObj.image_xscale = 94 / newObj.sprite_height;
 			newObj.moveable = true;
 			//creates opening

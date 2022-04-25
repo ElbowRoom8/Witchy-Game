@@ -44,11 +44,15 @@ switch room{
 		audio_sound_gain(snd_jazz, 1, 3000);
 		break;
 	case rm_forest : 
-		audio_stop_sync_group(school);
-		audio_group_stop_all(Music);
-		audio_play_sound(snd_forest_theme, 1, true);
-		audio_sound_gain(snd_forest_theme, 0, 0);
-		audio_sound_gain(snd_forest_theme, 1, 3000);
+		if(!audio_is_playing(snd_forest_theme)){
+			audio_stop_sync_group(school);
+			audio_group_stop_all(Music);
+			audio_play_sound(snd_forest_theme, 1, true);
+			audio_sound_gain(snd_forest_theme, 0, 0);
+			audio_sound_gain(snd_forest_theme, 1, 3000);
+		}
+		break;
+	case rm_forest_clearing :
 		break;
 	case rm_mainhall : 
 		audio_stop_sync_group(school);

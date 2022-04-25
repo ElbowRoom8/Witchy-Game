@@ -5,6 +5,13 @@ index = -1;
 dropNum = 1;
 collectTimer = room_speed * 0.5;
 
+if(room = rm_forest_clearing){
+	var chance = irandom_range(0, 4);
+	if (chance){
+		sprite_index = spr_mushroom3;
+	}
+}
+
 alarm[0] = 10;
 
 //for draw_GUI

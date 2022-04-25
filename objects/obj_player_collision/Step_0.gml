@@ -63,7 +63,7 @@ if(place_meeting(x, y + vSpd, obj_wall)){
 }
 
 //moves player
-if(!inQuest){
+if(!inQuest || room = rm_forest_clearing){
 	obj_player.x = obj_player.x + hSpd;
 } else if(hSpd > 0 && obj_player.x > 100){
 	obj_player.x = obj_player.x - hSpd * 0.85;

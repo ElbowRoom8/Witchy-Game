@@ -1,2 +1,4 @@
 /// @description Moves bush
-script_object_movement();
+if(room != rm_forest_clearing){
+	script_object_movement();
+}

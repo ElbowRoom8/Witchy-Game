@@ -139,7 +139,7 @@ if ((x < 3) & (!tiled)){
 #region //adds background trees and walls
 	if(counter % 3 == 0){
 		//chance of getting a clearing
-		var opening = irandom_range(0, 6);
+		var opening = irandom_range(0, 3);
 		
 		for(var i = 0; i < 11; i++){
 			if(i == 7 && !opening){
@@ -196,7 +196,7 @@ if ((x < 3) & (!tiled)){
 		}else{
 			//if not opening, create 3 walls
 			for(var i = 1; i <= 3; i++){
-				//newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
+				newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
 				newObj.image_xscale = 640 / newObj.sprite_width;
 				newObj.moveable = true;
 			}

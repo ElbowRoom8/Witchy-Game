@@ -22,6 +22,7 @@ if(room = rm_mainhall){
 	obj_player.x = 128;
 	obj_player.y = 200;
 } else if(room = rm_forest_clearing){
+	room_persistent = true;
 	room_goto(rm_forest);
 	obj_player.x = obj_player.old_x;
 	obj_player.y = 50;

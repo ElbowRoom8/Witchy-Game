@@ -11,9 +11,9 @@ if(!interaction & !inQuest){
 	//check conditions and load lines
 	if(!spoken){
 		index = script_dialogue_scenario(c_index, "Playtest");
-		spoken = true;
+		//spoken = true;
 	} else {
-		index = script_dialogue_scenario(c_index, "Playtest 2");
+		//index = script_dialogue_scenario(c_index, "Playtest 2");
 	}
 
 	text = ds_grid_get(global.dialogue, 3, index);

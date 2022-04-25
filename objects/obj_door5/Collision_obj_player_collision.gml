@@ -24,6 +24,8 @@ if(room = rm_mainhall){
 	obj_player.y = 420;
 } else if(room = rm_easthall){
 	room_goto(rm_courtyard);
+	obj_player.x = 640;
+	obj_player.y = 64;
 } else if(room = rm_cafeteria){
 	room_goto(rm_kitchen);
 	obj_player.x = 24;

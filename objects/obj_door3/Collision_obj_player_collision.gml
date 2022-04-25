@@ -1,6 +1,8 @@
 /// @description moves to given room
 if(room = rm_mainhall){
 	room_goto(rm_courtyard);
+	obj_player.x = 470;
+	obj_player.y = 464;
 } else if(room = rm_courtyard){
 	room_goto(rm_mainhall);	
 	obj_player.x = 644;

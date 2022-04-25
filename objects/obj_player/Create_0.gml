@@ -17,6 +17,9 @@ display_scaley = display_get_gui_height() / ch;
 #endregion
 
 audio_group_load(Music);
+school = audio_create_sync_group(true);
+audio_stop_sync_group(school);
+alarm[0] = 30;
 
 #region Set up local variables
 image_speed = 0;

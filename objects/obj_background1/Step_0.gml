@@ -139,7 +139,7 @@ if ((x < 3) & (!tiled)){
 #region //adds background trees and walls
 	if(counter % 3 == 0){
 		//chance of getting a clearing
-		var opening = 1;//irandom_range(0, 6);
+		var opening = 0//irandom_range(0, 6);
 		
 		for(var i = 0; i < 11; i++){
 			if(i == 7 && !opening){

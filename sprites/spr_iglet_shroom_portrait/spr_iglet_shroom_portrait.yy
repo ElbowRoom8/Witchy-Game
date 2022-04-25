@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Iglet_Shroom",
-    "path": "folders/Sprites/Iglet_Shroom.yy",
+    "path": "folders/Sprites/Characters/Iglet_Shroom.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_iglet_shroom_portrait",

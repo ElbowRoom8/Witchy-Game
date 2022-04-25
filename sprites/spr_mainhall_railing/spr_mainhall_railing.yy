@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Sprites/Backgrounds.yy",
+    "name": "Main Hall",
+    "path": "folders/Sprites/Backgrounds/Main Hall.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_mainhall_railing",

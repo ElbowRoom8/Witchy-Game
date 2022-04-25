@@ -10,7 +10,7 @@ if(place_meeting(x, y, obj_player) && keyboard_check(vk_space)){
 			} else {
 				items[index] = {type : type, num : dropNum}
 			}
-			array_insert(obj_player.pickup, 0, "+1 " + itemRef[index].t_text);
+			array_insert(obj_player.pickup, 0, {text : "+1 " + itemRef[index].t_text, val : 0});
 			instance_destroy();
 		}
 	}

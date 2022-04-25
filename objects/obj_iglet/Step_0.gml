@@ -1,4 +1,6 @@
 //sets directional speed and sprites
+depth = room_height - (y + image_yscale * sprite_height / 2);
+
 igletcounter += 1
 
 if (igletcounter mod 400 < 100) {

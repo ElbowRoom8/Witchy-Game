@@ -22,8 +22,19 @@ if (inQuest){
 	//draws item pickup text
 	for(var i = 0; i < array_length(pickup); i++){
 		draw_set_font(fnt_4);
-		draw_text(xx - 10, yy - 15 - 10 * i, pickup[i]);
+		var temp = pickup[i].val;
+		//checks if timed out
+		if(temp >= 200){
+			array_delete(pickup, i, 1);
+			i--;
+		} else {
+			//set image alpha based on time
+			draw_set_alpha(1 - temp / 300);
+			pickup[i].val++;
+			draw_text(xx - 10, yy - 15 - 15 * i, pickup[i].text);
+		}
 	}
+	draw_set_alpha(1);
 	
 	//draws defense icon
 	if(defense > 1){

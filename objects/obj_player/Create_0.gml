@@ -1,12 +1,10 @@
 /// @description Sets variables
-
 #region Setup cameras clamp variables
 
 min_view_x = 0;
 min_view_y = 0;
 max_view_x = room_width - camera_get_view_width(view_camera[0]);
 max_view_y = room_height - camera_get_view_height(view_camera[0]);
-
 
 //for draw_GUI
 //grab the width and height of view
@@ -18,7 +16,7 @@ display_scaley = display_get_gui_height() / ch;
 
 #endregion
 
-//audio_play_sound(snd_main_theme, 1, false);
+audio_group_load(Music);
 
 #region Set up local variables
 image_speed = 0;

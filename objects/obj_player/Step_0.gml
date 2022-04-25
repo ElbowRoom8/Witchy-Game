@@ -2,7 +2,7 @@
 
 depth = room_height - (y + image_yscale * sprite_height / 2);
 
-
+//defense timer
 if(def_timer > 0){
 	def_timer--;
 } else {

@@ -34,3 +34,24 @@ if(inQuest){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 }
+
+switch room{
+	case rm_laboratory : 
+		audio_group_stop_all(Music);
+		audio_play_sound(snd_jazz, 1, true);
+		break;
+	case rm_forest : 
+		audio_group_stop_all(Music);
+		audio_play_sound(snd_forest_theme, 1, true);
+		break;
+	case rm_mainhall : 
+		audio_group_stop_all(Music);
+		audio_play_sound(snd_room_theme, 1, true);
+		break;
+	default : 
+		if(!audio_is_playing(snd_school_theme)){
+			audio_group_stop_all(Music);
+			audio_play_sound(snd_school_theme, 1, true);
+		}
+		break;
+}

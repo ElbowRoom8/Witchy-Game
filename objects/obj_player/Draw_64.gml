@@ -13,9 +13,9 @@ if (inQuest){
 	var h = ceil(health);
 	for (var i = 0; i < h; i += 2){
 		if(i == (h - 1)) {
-			draw_sprite_ext(spr_health2, 0,  1075 + 20 * i, 10, 2, 2, 0, c_white, 1);
+			draw_sprite_ext(spr_health2, 0,  980 + 30 * i, 10, 3, 3, 0, c_white, 1);
 		} else {
-			draw_sprite_ext(spr_health, 0, 1075 + 20 * i, 10, 2, 2, 0, c_white, 1);
+			draw_sprite_ext(spr_health, 0, 980 + 30 * i, 10, 3, 3, 0, c_white, 1);
 		}
 	}
 	

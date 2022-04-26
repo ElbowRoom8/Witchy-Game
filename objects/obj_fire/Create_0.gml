@@ -1,6 +1,8 @@
 /// @description
 randomize();
-image_speed = 0.4;
+image_speed = 0.7;
+image_xscale = 2;
+image_yscale = image_xscale;
 
 hypot = sqrt( power((mouse_x - x), 2) + power((mouse_y - y), 2));
 hspeed = 1.6 * (mouse_x - x)/hypot;

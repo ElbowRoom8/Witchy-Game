@@ -2,9 +2,8 @@
 index = -1;
 dropNum = 0;
 
-image_xscale = 0.5;
-image_yscale = 0.5;
+image_xscale = 1;
+image_yscale = image_xscale;
 
-randomize();
-image_angle = 24 * irandom_range(0, 15);
+//image_angle = 90 * irandom_range(0, 3);
 alarm[0] = 5;

@@ -39,7 +39,7 @@ if(!inDialogue and !inInventory and !brewing){
 	}
 	if keyboard_check(ord("S")) or keyboard_check(vk_down){
 		downSpd = 1;
-		obj_player.sprite_index = spr_amber_walkdown;
+		obj_player.sprite_index = spr_player_walkdown;
 		obj_player.image_speed = animationSpd;
 	}
 }

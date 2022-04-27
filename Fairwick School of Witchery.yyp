@@ -240,6 +240,7 @@
     {"id":{"name":"spr_pixel","path":"sprites/spr_pixel/spr_pixel.yy",},"order":6,},
     {"id":{"name":"obj_block_purple","path":"objects/obj_block_purple/obj_block_purple.yy",},"order":5,},
     {"id":{"name":"spr_mainhall_walls","path":"sprites/spr_mainhall_walls/spr_mainhall_walls.yy",},"order":1,},
+    {"id":{"name":"spr_player_walkdown","path":"sprites/spr_player_walkdown/spr_player_walkdown.yy",},"order":1,},
     {"id":{"name":"spr_easthall_walls","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"order":1,},
     {"id":{"name":"obj_storage_button","path":"objects/obj_storage_button/obj_storage_button.yy",},"order":8,},
     {"id":{"name":"spr_easthall","path":"sprites/spr_easthall/spr_easthall.yy",},"order":0,},

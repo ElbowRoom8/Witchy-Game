@@ -7,9 +7,9 @@ var rightSpd = 0;
 var upSpd = 0;
 var downSpd = 0;
 //movement speed, varies for sprinting
-var walkSpd = 3;
+var walkSpd = 2;
 //speed of walking animation, varies for sprinting
-var animationSpd = 1.2;
+var animationSpd = 1;
 //checks for cutscene
 if(!inDialogue and !inInventory and !brewing){
 	//controls sprinting
@@ -17,24 +17,24 @@ if(!inDialogue and !inInventory and !brewing){
 		walkSpd = 3.5;
 		animationSpd = 2;
 	} else {
-		walkSpd = 2.5;
-		animationSpd = 1.2;
+		walkSpd = 2;
+		animationSpd = 1.5;
 	}
 
 	//sets directional speed and sprites
 	if keyboard_check(ord("A")) or keyboard_check(vk_left){
 		leftSpd = 1;
-		obj_player.sprite_index = spr_amber_walkleft;
+		obj_player.sprite_index = spr_player_walkleft;
 		obj_player.image_speed = animationSpd;
 	}
 	if keyboard_check(ord("D")) or keyboard_check(vk_right){
 		rightSpd = 1;
-		obj_player.sprite_index = spr_amber_walkright;
+		obj_player.sprite_index = spr_player_walkright;
 		obj_player.image_speed = animationSpd;
 	}
 	if keyboard_check(ord("W")) or keyboard_check(vk_up){
 		upSpd = 1;
-		obj_player.sprite_index = spr_amber_walkup;
+		obj_player.sprite_index = spr_player_walkup;
 		obj_player.image_speed = animationSpd;
 	}
 	if keyboard_check(ord("S")) or keyboard_check(vk_down){

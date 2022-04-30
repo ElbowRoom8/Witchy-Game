@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_amber_walkdown",
-    "path": "sprites/spr_amber_walkdown/spr_amber_walkdown.yy",
+    "name": "spr_player_walkdown",
+    "path": "sprites/spr_player_walkdown/spr_player_walkdown.yy",
   },
   "solid": false,
   "visible": true,

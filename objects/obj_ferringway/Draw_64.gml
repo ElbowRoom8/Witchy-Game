@@ -99,6 +99,8 @@ if(interaction){
 		for(var k = 0; k < array_length(letter); k++){
 			if(k == obj_player.choice){
 				color = c_lime;
+				draw_sprite(spr_door3, 0, 215 + space * charWidth, 456 + 35 * line);
+				space = 1;
 			} else {
 				color = c_dkgray;
 			}

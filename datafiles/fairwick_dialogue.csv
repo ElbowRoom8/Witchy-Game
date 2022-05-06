@@ -1,12 +1,39 @@
 ﻿Character,Scenario,Speaker,Dialogue
-Harthemony,The Beginning,Player,Here we are Floofy! \n\rFairwick School of Witchery.
+Player,The Beginning,Player,Here we are Floofy! Fairwick School of Witchery.
+,,Player,It's bigger than I expected.
+,,Floofy,Mrow
+,,Player,I bet there are plenty of awesome spots on campus for me to take you. Would you like that?
+,,Floofy,Mrow!
+,,Player,"That's that, Floofy. we'll go on a cool outing together in no time, but first..."
+,,Player,I've got to figure out where my classes are!
+,Ignore Great Hall,Player,Or maybe I can spend a little while exploring the school's exterior! It's not like we have to go in right away after all...
+,,Floofy,Mrrow?
+,,Player,"I'm just not quite ready yet Floofy, It's a big step. Give me a minute out here to calm down, then we'll go in."
+,Approach Great Hall,Player,Whoo...
+,,Player,Time for our great journey to begin!
+,,Floofy,Rawr!
+,My New School,Player,So this is my new school
+,,Player,These are the people who will become my best friends... and worst enemies.
+,,Floofy,Moew!
+,,Player,"Of course, no one could replace you, Floofy!"
+,,Player,I wonder what Mom and Dad would think of this place...
+,,Player,"It may not be the most prestigious school, but it's my school."
+,,Player,I'll work hard to be the best student I can!
+,,Prof. Harthemony,"Attention students! Convocation is beginning shortly. Once you have found your classes, please come outside to the courtyard to meet with your new professors. If you need a map of the school, please take one from the bulletin board to my right. That will be all."
+,,Player,Woah! That must have been a professor! I wonder if I'll be in his class.
+,,Player,I guess I should start taking a look around. That bulletin board seems like a good place to start.
+,,,
+,,,
+,,,
+,,,
+Harthemony,Test,Player,Here we are Floofy! \n\rFairwick School of Witchery.
 ,,Player,It's bigger than I expected.
 ,,Prof. Harthemony,Mrow \p mrow!
 ,,Player,I bet there are plenty of awesome spots on campus for me to take you. Would you like that?
 ,,Prof. Harthemony,\dMrow \p
 ,,Player,"That's that, \dFloofy\s. \nWe'll go on a cool outing together in no time, but first..."
 ,,Player,I've got to figure out where my \gclasses\w are!
-,Grab a Bite,Player,I'm a silly boi
+,Silly Boi,Player,I'm a silly boi
 ,,Player,Yum yub
 ,,Prof. Harthemony,poopity scoop
 ,,Player,awooga hunny
@@ -70,6 +97,25 @@ Lidia,Playtest,Player,"Incredibly, I'm actually the main character."
 ,,Lidia,Sure.
 ,,Lidia,If you don't want to see the \d\rTrue Ending\w\s.
 ,,Player,darnit
+,Meet Lidia,Player,Hi there! I'm \p.It's nice to meet you.
+,,Lidia,"Oh, sorry. Am I in your way?"
+,,Player,"No, I wanted to say hello! I’m a first year student."
+,,Lidia,"Oh, h-hi! I’m Lidia. How are you liking the campus so far?"
+,,Player,It’s really pretty. It’s nothing like where I’m from.
+,,Floofy,Mrrrrrowww!
+,,Player,"Right, where we’re from. Sorry Floofy."
+,,Lidia,Woah! Is this your cat?
+,,Player,Yeah. Floofy and I are inseparable.
+,,Lidia,"Mmm, I see. I had a cat back home too… I miss him."
+,,Player,It’s hard being away from home. Are you a first year too?
+,,Lidia,Yes.
+,,Player,Woah! Maybe we’ll have classes together.
+,,Lidia,Maybe.
+,,Player,"I’m gonna look around some more, but let’s hang out sometime!"
+,,,
+,,,
+,,,
+,,,
 Ginger,Playtest,Player,"Believe it or not, I'm the main character."
 ,,Ginger,No way! I'm a background NPC!
 ,,Ginger,I have more dialogue in this demo than I will in the final game!

@@ -32,6 +32,8 @@ def_timer = 0; //defense buff timer
 pickup = [];
 
 selNum = 0; //used to pick the correct spot in inventory
+choice = -1; //used for selction options in dialogue
+chooseMax = -1;
 gap = true; //used to prevent holding of potions
 old_x = 0; //used to place player in correct spot leaving clearings
 throw_x = 0; //used for throwing potions

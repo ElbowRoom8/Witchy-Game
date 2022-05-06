@@ -9,6 +9,9 @@ function escape_char(_char, _text, _j){
 	} else if(_char == "q"){ //inserts newline
 		_text = string_delete(_text, _j, 2);
 		_text = string_insert("\"", _text, _j);
+	}else if (_char == "c"){ //player choice
+		choosing = true; //lol guess I'm allowed to do this huh
+		_text = string_delete(_text, _j, 2);
 	} else {
 		return 0;
 	}
@@ -26,7 +29,11 @@ function escape_color(_char){
 	}else if(_char == "b"){ //blue
 		color = c_blue;
 	} else if(_char == "w"){ //normal
-		color = c_dkgray;
+		if(choosing){
+			color = c_lime;
+		} else {
+			color = c_dkgray;
+		}
 	} else if (_char == "d"){ //shaky text
 		color = 1;
 	} else if (_char == "s"){ //still text

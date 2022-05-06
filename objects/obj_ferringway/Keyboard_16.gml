@@ -1,5 +1,5 @@
 /// @description Skips through dialogue
-if(interaction){
+if(interaction & !choosing){
 	var i = 0;
 	while (i <= string_length(text)){
 		var char = string_char_at(text , i);

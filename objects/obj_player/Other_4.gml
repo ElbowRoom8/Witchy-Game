@@ -35,6 +35,7 @@ if(inQuest){
 	instance_destroy(obj_potion);
 }
 
+#region music
 switch room{
 	case rm_laboratory : 
 		audio_stop_sync_group(school);
@@ -86,3 +87,4 @@ switch room{
 		}
 			
 }
+#endregion

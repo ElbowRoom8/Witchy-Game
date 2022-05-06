@@ -40,55 +40,119 @@ if(interaction){
 	color = c_dkgrey;
 	shaky = false;
 	
-	//loops through letter string and does each char individually
-	var l = 1,
-	while (l <= string_length(letter)){
-		var length = 0;
-		var char = string_char_at(letter, l);
+	//checks if choosing
+	if(!choosing){
+		//loops through letter string and does each char individually
+		var l = 1,
 		while (l <= string_length(letter)){
-			if(string_char_at(letter, l) == " "){
-				break;
+			var length = 0;
+			var char = string_char_at(letter, l);
+			while (l <= string_length(letter)){
+				if(string_char_at(letter, l) == " "){
+					break;
+				}
+				l++;
+				length++;
 			}
-			l++;
-			length++;
-		}
 		
-		if(space + length > lineEnd){
-			space = 0;
-			line++;
-		}
-		l -= length;
+			if(space + length > lineEnd){
+				space = 0;
+				line++;
+			}
+			l -= length;
 		
-		//checks for color changes
-		if(char == "\\"){
-			//if char is esc, then run check on next char
-			l++;
-			esc = escape_color(string_char_at(letter, l)); //see script
-			if(esc != 0) {
-				//set variables accordingly
-				if(esc == 1){
-					shaky = true;
-				}else if(esc == 2){
-					shaky = false;
+			//checks for color changes
+			if(char == "\\"){
+				//if char is esc, then run check on next char
+				l++;
+				esc = escape_color(string_char_at(letter, l)); //see script
+				if(esc != 0) {
+					//set variables accordingly
+					if(esc == 1){
+						shaky = true;
+					}else if(esc == 2){
+						shaky = false;
+					} else {
+						color = esc;
+					}
+				}
+				space--;
+			} else if (char =="\n"){
+				space = -1;
+				line++;
+			} else {
+				//sets color for character
+				draw_set_color(color);
+				//draws character
+				if(shaky){
+					draw_text(215 + space * charWidth + random_range(-1, 1), 456 + 35 * line + random_range(-1, 1), char);
 				} else {
-					color = esc;
+					draw_text(215 + space * charWidth, 456 + 35 * line, char);
 				}
 			}
-			space--;
-		} else if (char =="\n"){
-			space = -1;
-			line++;
-		} else {
-			//sets color for character
-			draw_set_color(color);
-			//draws character
-			if(shaky){
-				draw_text(215 + space * charWidth + random_range(-1, 1), 456 + 35 * line + random_range(-1, 1), char);
-			} else {
-				draw_text(215 + space * charWidth, 456 + 35 * line, char);
-			}
+			space++;
+			l++;
 		}
-		space++;
-		l++;
+	} else {
+	//this is very efficient believe me
+		//goes line by line to draw the correct color
+		for(var k = 0; k < array_length(letter); k++){
+			if(k == obj_player.choice){
+				color = c_lime;
+			} else {
+				color = c_dkgray;
+			}
+			
+			//loops through letter string and does each char individually
+			var l = 1,
+			while (l <= string_length(letter[k])){
+				var length = 0;
+				var char = string_char_at(letter[k], l);
+				while (l <= string_length(letter[k])){
+					if(string_char_at(letter[k], l) == " "){
+						break;
+					}
+					l++;
+					length++;
+				}
+		
+				if(space + length > lineEnd){
+					space = 0;
+					line++;
+				}
+				l -= length;
+		
+				//checks for color changes
+				if(char == "\\"){
+					//if char is esc, then run check on next char
+					l++;
+					esc = escape_color(string_char_at(letter[k], l)); //see script
+					if(esc != 0) {
+						//set variables accordingly
+						if(esc == 1){
+							shaky = true;
+						}else if(esc == 2){
+							shaky = false;
+						} else {
+							color = esc;
+						}
+					}
+					space--;
+				} else {
+					//sets color for character
+					draw_set_color(color);
+					//draws character
+					if(shaky){
+						draw_text(215 + space * charWidth + random_range(-1, 1), 456 + 35 * line + random_range(-1, 1), char);
+					} else {
+						draw_text(215 + space * charWidth, 456 + 35 * line, char);
+					}
+				}
+				space++;
+				l++;
+			}
+			space = 0;
+			line+=2;
+		}
 	}
 }

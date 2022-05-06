@@ -36,7 +36,10 @@ Ferringway,Playtest,Player,"Believe it or not, I'm actually the main character."
 ,,Prof. Ferringway,"Oh, good! I have fourteen fetch quests for you."
 ,,Prof. Ferringway,"I'm professor Ferringway, plant scientist and head of research at the school."
 ,,Prof. Ferringway,"There's also a fungal scientist at the school, but he's preoccupied at the moment."
-,,Prof. Ferringway,Have you spoken with him yet? He's worth a visit if not.
+,,Prof. Ferringway,Have you spoken with him yet?
+,,Player,\cYes\nNo
+,Yes,Prof. Ferringway,Glad to hear it. Take care!
+,No,Prof. Ferringway,He's worth a visit! Take care!
 Truffle,Playtest,Player,"Believe it or not, I'm the main character."
 ,,Chef Truffle,A great main character deserves a great main course!
 ,,Chef Truffle,"I'm Truffle, Fairwick's chef."

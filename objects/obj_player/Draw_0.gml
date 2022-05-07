@@ -1,8 +1,7 @@
-/// @description Draw shadow and potion arrow
+/// @description Draw shadow and bullseye
 if(inQuest){
 	if(inventory[selNum] != -1){
-		if(inventory[selNum].type = spr_acid_potion){
-			draw_set_color(c_black);
+		if(inventory[selNum].type == spr_acid_potion || inventory[selNum].type == spr_fire_potion){
 			var throwDist = 110;
 			throw_x = mouse_x;
 			throw_y = mouse_y;
@@ -11,7 +10,7 @@ if(inQuest){
 				throw_x = (x + sprite_width / 2) + (throwDist * dcos(dir));
 				throw_y = (y + sprite_height / 3 + 5) - (throwDist * dsin(dir));
 			}
-			draw_arrow(x + sprite_width / 2, y + sprite_height / 3 + 5, throw_x, throw_y, 15);
+			draw_sprite_ext(spr_bullseye, 0, throw_x, throw_y, image_xscale, image_yscale, 0, c_white, 1);
 		}
 	}
 }

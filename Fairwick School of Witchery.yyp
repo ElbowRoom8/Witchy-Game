@@ -162,6 +162,7 @@
     {"id":{"name":"spr_truffle_portrait","path":"sprites/spr_truffle_portrait/spr_truffle_portrait.yy",},"order":1,},
     {"id":{"name":"spr_door2","path":"sprites/spr_door2/spr_door2.yy",},"order":1,},
     {"id":{"name":"rm_classroom2","path":"rooms/rm_classroom2/rm_classroom2.yy",},"order":16,},
+    {"id":{"name":"spr_bullseye","path":"sprites/spr_bullseye/spr_bullseye.yy",},"order":12,},
     {"id":{"name":"spr_tree_background1","path":"sprites/spr_tree_background1/spr_tree_background1.yy",},"order":15,},
     {"id":{"name":"obj_potion_slot","path":"objects/obj_potion_slot/obj_potion_slot.yy",},"order":4,},
     {"id":{"name":"spr_spider","path":"sprites/spr_spider/spr_spider.yy",},"order":1,},

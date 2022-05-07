@@ -2,6 +2,15 @@
 randomize();
 slimeHealth = 15;
 def_scale = 1;
+// randomize sprite color
+color = irandom_range(0, 2);
+if (color == 0) {
+	sprite_index = spr_slime_green;
+} else if (color == 1) {
+	sprite_index = spr_slime_brown;
+} else if (color == 2) {
+	sprite_index = spr_slime_pink;
+}
 sprRef = sprite_index;
 
 ani_delay = true; //random jiggle

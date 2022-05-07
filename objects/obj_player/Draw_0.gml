@@ -1,4 +1,4 @@
-/// @description draw potion arrow
+/// @description Draw shadow and potion arrow
 if(inQuest){
 	if(inventory[selNum] != -1){
 		if(inventory[selNum].type = spr_acid_potion){
@@ -15,4 +15,5 @@ if(inQuest){
 		}
 	}
 }
-draw_self()
+draw_sprite_ext(spr_shadow, 0, x + sprite_width / 2, y + sprite_height - 8, image_xscale, image_yscale, 0, c_white, 1);
+draw_self();

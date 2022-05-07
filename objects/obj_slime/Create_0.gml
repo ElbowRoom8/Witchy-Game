@@ -1,8 +1,9 @@
 /// @description 
 randomize();
 slimeHealth = 15;
-def_scale = 1;
+def_scale = 2;
 // randomize sprite color
+image_alpha = 0;
 color = irandom_range(0, 2);
 if (color == 0) {
 	sprite_index = spr_slime_green;

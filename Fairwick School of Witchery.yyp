@@ -41,6 +41,7 @@
     {"id":{"name":"spr_stone_potion","path":"sprites/spr_stone_potion/spr_stone_potion.yy",},"order":8,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":1,},
     {"id":{"name":"spr_bubble_potion","path":"sprites/spr_bubble_potion/spr_bubble_potion.yy",},"order":9,},
+    {"id":{"name":"obj_shadow","path":"objects/obj_shadow/obj_shadow.yy",},"order":19,},
     {"id":{"name":"spr_door6","path":"sprites/spr_door6/spr_door6.yy",},"order":5,},
     {"id":{"name":"spr_rock6","path":"sprites/spr_rock6/spr_rock6.yy",},"order":29,},
     {"id":{"name":"spr_block_brown","path":"sprites/spr_block_brown/spr_block_brown.yy",},"order":4,},

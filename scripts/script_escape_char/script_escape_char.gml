@@ -28,6 +28,8 @@ function escape_color(_char){
 		color = c_green;
 	}else if(_char == "b"){ //blue
 		color = c_blue;
+	}else if(_char =="m"){//marroon
+		color = c_maroon;
 	} else if(_char == "w"){ //normal
 		if(choosing){
 			color = c_lime;

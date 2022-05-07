@@ -22,6 +22,21 @@ Player,The Beginning,Player,Here we are Floofy! Fairwick School of Witchery.
 ,,Prof. Harthemony,"Attention students! Convocation is beginning shortly. Once you have found your classes, please come outside to the courtyard to meet with your new professors. If you need a map of the school, please take one from the bulletin board to my right. That will be all."
 ,,Player,Woah! That must have been a professor! I wonder if I'll be in his class.
 ,,Player,I guess I should start taking a look around. That bulletin board seems like a good place to start.
+,Need Map,Player,(I don't know where I'm going! I should grab a map from the bulletin board.)
+,Grab Map,Player,"Oooh. Here we go, maps!"
+,, ,You Acquired the \mFairwick Map\w. You feel slightly less lost.
+,,Player,"Now I can explore the school. It looks like I have classes in the \bEast Wing\w and the \bPotions Room\w. I should probably check out the \bCafeteria\w, too."
+,Enter Great Hall,Player,"(Right now it says I'm in the \bGreat Hall\w, a place where students gather and events happen. That does sound pretty great!)"
+,Enter East Wing,Player,"(This is the \bEast Wing\w, where I have potions class. It's taught by someone named professor Harthemony.)"
+,Enter Potions Room,Player,(This is the \bPotions Room\w where both students and professors brew potions)
+,Enter Cafeteria,Player,(This is the \bCafeteria\w. I can't wait to try the food!)
+,,Floofy,Meeeeeoooow
+,,Player,"Yes, Floofy, you can try the cafeteria food too."
+,Attempt Courtyard,Player,"(This way leads to the \bCourtyard\w. I can't go yet, they're still getting ready for convocation.)"
+,Finish Tour,Player,(It's almost time for convocation. I should go to the \bCourtyard\w if I want to make it in time.)
+,,,
+,,,
+,,,
 ,,,
 ,,,
 ,,,
@@ -50,15 +65,6 @@ Harthemony,Test,Player,Here we are Floofy! \n\rFairwick School of Witchery.
 Iglet,The Light,Player,ooooo I'm blinded by the light
 ,,Prof. Iglet,\dOOOOOOOOOOOOOOOOOOOOOO\s I'm blinded by the light
 ,,Player,damn you win
-Amber,Playtest,Player,"Believe it or not, I'm actually the main character."
-,,Amber,"Well, I guess that makes me the main character. You're just a copy of me."
-,,Amber,"I'm Amber, a second year. Pleased to make your acquaintance."
-,,Player,How do you know you aren't a copy of me?
-,,Amber,...
-,,Amber,.....
-,,Amber,Oh my God.
-,Playtest 2,Amber,It's great having a new student on campus
-,,Amber,I just wish you didn't look so familiar
 Ferringway,Playtest,Player,"Believe it or not, I'm actually the main character."
 ,,Prof. Ferringway,"Oh, good! I have fourteen fetch quests for you."
 ,,Prof. Ferringway,"I'm professor Ferringway, plant scientist and head of research at the school."
@@ -90,6 +96,88 @@ Yuvei,Playtest,Player,You should know that I'm the main character.
 ,Playtest 2,Player,I'm pretty sure I'm immortal
 ,,Prof. Yuvei,Whatever you say kid
 ,,Prof. Yuvei,Just tell the \qdevs\q to stop getting meta with the dialogue
+Amber,Playtest,Player,"Believe it or not, I'm actually the main character."
+,,Amber,"Well, I guess that makes me the main character. You're just a copy of me."
+,,Amber,"I'm Amber, a second year. Pleased to make your acquaintance."
+,,Player,How do you know you aren't a copy of me?
+,,Amber,...
+,,Amber,.....
+,,Amber,Oh my God.
+,Playtest 2,Amber,It's great having a new student on campus
+,,Amber,I just wish you didn't look so familiar
+,Meet Amber,Marcus,"C'mon, it'll be fun!"
+,,Amber,No. I'm busy.
+,,Marcus,Pretty please? For old times' sake?
+,,Amber,"Marcus, I already told you no."
+,,Player,"Hey you two, what's going on?"
+,,Marcus,"Hi! I'm trying to convince Amber to play slime tag with me, but school made her all serious and boring."
+,,Amber,"I just want to start the year off on the right foot. Studying is very important if you want good grades, Marcus."
+,,Marcus,Why not play slime tag now and study later?
+,,Amber,"That's called procrastination, Marcus, and it's a bad habit."
+,,Marcus,"Aww, please? I've missed you!"
+,,Player,Do you two know each other?
+,,Amber,We're from the same town.
+,,Marcus,"And we used to play slime tag all the time, but then Amber left for school last year."
+,,Marcus,"I just came to Fairwick this year, so we haven't talked in forever!"
+,,Player,No way! I'm a first year too! I'm \p.
+,,Marcus,It's nice to meet you!
+,,Marcus,"Amber, if you don't want to play slime tag, would you show me around campus instead?"
+,,Amber,"Well, I guess the school year technically hasn't started yet. Plus I wouldn't want you being too lost..."
+,,Amber,"It stinks being alone in a new place, trust me."
+,,Player,"Thank goodness I'm not alone in a new place, I've got Floofy."
+,,Floofy,Meow!
+,,Amber,"Aww, cute!"
+,,Amber,Ok! I'll show you around Marcus.
+,,Amber,"You're \p, right? I'm Amber. I'd love to have you and your cute cat along, if you'd like to join us."
+,,Player,Yeah!
+,No Map,Amber,"When you two are ready, grab a map off the bulletin board and we'll get going."
+,,Amber,"No pressure if you'd rather explore solo, \p."
+,Map 1,Player,I've got the map
+,,Amber,"Awesome! Do you have one too, Marcus?"
+,,Marcus,"yup, I'm good to go."
+,,Floofy,Mrow!
+,,Amber,"Whoo, between the three of you I'm practically a tour guide!"
+,,Amber,Are we ready to set off?
+,,Player,\cLet's go!\nNot yet...
+,Map 2,Amber,"Are you ready for the tour now, \p?"
+,,Player,\cLet's go!\nNot yet...
+,Not yet,Player,"No thanks, maybe I'll be back later though."
+,,Amber,"No problem, take your time"
+,Group Tour,Amber,"All right, let's get going."
+,,Marcus,Yay! I really liked reading about the school in their pamphlets before I got here. I'm so excited to finally see it.
+,,Amber,"First, this is the \bGreat Hall\w. Lots of social gatherings happen here."
+,,Amber,…
+,,Amber,I don't spend much time here.
+,,Marcus,"Aww, Amber! But you're such a social person!"
+,,Amber,ast year… took a toll on me.
+,,Floofy,Meow.
+,,Marcus,Nothing a little slime tag can't fix.
+,,Amber,Let's keep moving.
+,,Amber,"This is the way to the \bCourtyard\w. The faculty are preparing for convocation right now, but you'll see it later. It's very pretty this time of year."
+,,Amber,"I like reading there sometimes, when the weather is nice."
+,,Amber,This is the East Wing. It houses professor Harthemony's potions class.
+,,Player,I have that class!
+,,Amber,Good luck. Harthemony is a tough teacher.
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
 Lidia,Playtest,Player,"Incredibly, I'm actually the main character."
 ,,Lidia,"Oh wow, you must be important!"
 ,,Lidia,Will you help me solve all of my lifes problems?\nI've got a big assignment due soon.
@@ -99,19 +187,19 @@ Lidia,Playtest,Player,"Incredibly, I'm actually the main character."
 ,,Player,darnit
 ,Meet Lidia,Player,Hi there! I'm \p.It's nice to meet you.
 ,,Lidia,"Oh, sorry. Am I in your way?"
-,,Player,"No, I wanted to say hello! I’m a first year student."
-,,Lidia,"Oh, h-hi! I’m Lidia. How are you liking the campus so far?"
-,,Player,It’s really pretty. It’s nothing like where I’m from.
+,,Player,"No, I wanted to say hello! I'm a first year student."
+,,Lidia,"Oh, h-hi! I'm Lidia. How are you liking the campus so far?"
+,,Player,It's really pretty. It's nothing like where I'm from.
 ,,Floofy,Mrrrrrowww!
-,,Player,"Right, where we’re from. Sorry Floofy."
+,,Player,"Right, where we're from. Sorry Floofy."
 ,,Lidia,Woah! Is this your cat?
 ,,Player,Yeah. Floofy and I are inseparable.
-,,Lidia,"Mmm, I see. I had a cat back home too… I miss him."
-,,Player,It’s hard being away from home. Are you a first year too?
+,,Lidia,"Mmm, I see. I had a cat back home too... I miss him."
+,,Player,It's hard being away from home. Are you a first year too?
 ,,Lidia,Yes.
-,,Player,Woah! Maybe we’ll have classes together.
+,,Player,Woah! Maybe we'll have classes together.
 ,,Lidia,Maybe.
-,,Player,"I’m gonna look around some more, but let’s hang out sometime!"
+,,Player,"I'm gonna look around some more, but let's hang out sometime!"
 ,,,
 ,,,
 ,,,
@@ -123,3 +211,59 @@ Not Player,Playtest,Main Character,"Believe it or not, I'm actually the main cha
 ,,Player,"Believe it or not, I-"
 ,,Player,Wait what?
 ,,Main Character,\dI know what you are \b\p\w.
+Morgan,Meet Morgan,Lux,Where's this coming from? Was he this bad last year too or–
+,,Player,Hi! I'm \p.
+,,Lux,"uh, cool? Good for you. Anyway Hero, I really don't think–"
+,,Player,"Oh, I wasn't trying to intrude. I'm a first year, and I just came to campus. Do you have any advice for fitting in at Fairwick?"
+,,Lux,"Uh, no? Can you please leave?"
+,,Morgan,"Lux, don't be rude. Hi (studentName), I'm Hero. At your service. We're fourth-years. "
+,,Floofy,M-mroar?
+,,Player,"(What, these two are a little intimidating!)"
+,,Player,H-hi? What's Fairwick like?
+,,Lux,Why did you come here? This school blows.
+,,Morgan,"Nah, a couple people just blow. I'll get over it."
+,,Lux,"If you want some real advice, take Flitpaw's class. They don't take attendance so it's easy credit. Classes are a waste of time."
+,,Player,Shouldn't I go to classes so I can learn potion-making?
+,,Lux,"Why? Classes won't actually improve your life. If you want to learn something useful, you're better off exploring the forest. That's what we do."
+,,Morgan,HERO: You can come out with us! We're friends with the school chef. If we find Haverin seeds in the forest he'll make them into Haverin for us.
+,,Lux,Hero! I thought that was our thing...
+,,Player,Haverin?
+,,Morgan,"It's an exotic drink. The school imported Haverin seeds into the forest generations ago, though. Back when the school was still prestigious and influential."
+,,Lux,"Wait, really? Where'd you even learn that?"
+,,Morgan,President Gyre's book
+,,Lux,Oh.
+,,Lux,My.
+,,Lux,GOD.
+,,Lux,"You actually read that dusty old thing? I had no idea you were such a nerd, Hero."
+,,Morgan,"I'm a nerd, huh? Truffle told me he was teaching you how to process Haverin seeds. Now that is some nerd activity right there."
+,,Lux,"That's because I'm addicted, not because I'm interested!"
+,,Morgan,"Anyway, come see us tonight in the Great Hall after convocation if you want to have Haverin. We'll bring extra potions and show you how to handle yourself out there"
+,,Lux,"Hero, why are we babysitting the first year? Let's just go together like last year."
+,,Morgan,"Come on, Lux! It'll be fun to change things up!"
+,,Lux,...
+,,Lux,"uuuugh, okay."
+,,Morgan,Yeah! We'll see you tonight if you feel like joining us.
+,,Lux,"Later, kid."
+Big Boy,Meet Big Boy,Desmond,"Cats are friends, not food!"
+,,Floofy,Nyaw?
+,,Big Boy,"Ooooooh, here comes one now."
+,,Player,"Hi everybody, what are you all talking about?"
+,,Big Boy,We were asking Desmond if he eats cats.
+,,Player,Why would he eat cats?
+,,Big Boy,‘Cause he's a vampire bat.
+,,Desmond,"Actually Big Boy, I'm a pedioid vampire bat. I don't mean anyone any harm"
+,,Big Boy,So you aren't going to try and suck out my blood?
+,,Desmond,Of course not!
+,,Big Boy,"Darn, that would have been rad."
+,,Player,My name's \p. I'm a first year. What about you all?
+,,Big Boy,I'm a first year too. I like plants.
+,,Big Boy,and cats.
+,,Big Boy,Desmond is pretty cool too.
+,,Big Boy,He'd be cooler if he sucked peoples' blood out.
+,,Desmond,"I'm Desmond, I'm a first year like Big Boy. It's nice to meet you."
+,,Jeremy,"I'm Jeremy, a third year."
+,,Jeremy,I'm trying to win a seat on Student Council this year. Vote for me!
+,,Goth Boy,"Hi, I'm Goth Boy."
+,,Goth Boy,...
+,,Goth Boy,That's all I have to day.
+,,Player,"Nice meeting all of you, hope I see you around in classes!"

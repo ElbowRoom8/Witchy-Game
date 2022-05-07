@@ -71,7 +71,6 @@
     {"id":{"name":"obj_spider","path":"objects/obj_spider/obj_spider.yy",},"order":11,},
     {"id":{"name":"script_compare_recipe","path":"scripts/script_compare_recipe/script_compare_recipe.yy",},"order":4,},
     {"id":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"order":6,},
-    {"id":{"name":"spr_arrow","path":"sprites/spr_arrow/spr_arrow.yy",},"order":7,},
     {"id":{"name":"script_drop_items","path":"scripts/script_drop_items/script_drop_items.yy",},"order":1,},
     {"id":{"name":"obj_table","path":"objects/obj_table/obj_table.yy",},"order":13,},
     {"id":{"name":"spr_block_orange_large","path":"sprites/spr_block_orange_large/spr_block_orange_large.yy",},"order":5,},

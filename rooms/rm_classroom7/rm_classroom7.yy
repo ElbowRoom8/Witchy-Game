@@ -110,8 +110,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "School",
-    "path": "folders/Rooms/School.yy",
+    "name": "Classrooms",
+    "path": "folders/Rooms/School/Classrooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_classroom7",

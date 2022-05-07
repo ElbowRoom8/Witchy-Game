@@ -1,5 +1,5 @@
 /// @description moves to given room
-if(room = rm_mainhall){
+if(room = rm_frontyard){
 	room_goto(rm_forest);
 	obj_player.x = 100;
 	obj_player.y = 160;

@@ -31,4 +31,6 @@ if(room = rm_mainhall){
 	room_goto(rm_easthall);
 	obj_player.x = 740;
 	obj_player.y = 50;
+} else if(room = rm_frontyard){
+	
 }

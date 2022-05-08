@@ -100,6 +100,7 @@
     {"id":{"name":"spr_flower2","path":"sprites/spr_flower2/spr_flower2.yy",},"order":9,},
     {"id":{"name":"rm_base","path":"rooms/rm_base/rm_base.yy",},"order":3,},
     {"id":{"name":"rm_kitchen","path":"rooms/rm_kitchen/rm_kitchen.yy",},"order":3,},
+    {"id":{"name":"script_npc_code","path":"scripts/script_npc_code/script_npc_code.yy",},"order":9,},
     {"id":{"name":"spr_item_wolf_pelt","path":"sprites/spr_item_wolf_pelt/spr_item_wolf_pelt.yy",},"order":4,},
     {"id":{"name":"spr_kitchen_walls","path":"sprites/spr_kitchen_walls/spr_kitchen_walls.yy",},"order":1,},
     {"id":{"name":"spr_textbox","path":"sprites/spr_textbox/spr_textbox.yy",},"order":5,},

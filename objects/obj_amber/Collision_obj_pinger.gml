@@ -1,8 +1,9 @@
-/// Begins interaction
+///@description **Hardcode Intereactions Here**
+//Begins interaction
 if(!interaction & !inQuest){
 	interaction = true;
 	inDialogue = true;
-	i = 0; //dialogue line counter
+	i = 0; //dialogue lSine counter
 	
 	//check if c_index is filled yet
 	if(c_index == -1){

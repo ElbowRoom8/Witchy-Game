@@ -1,4 +1,5 @@
-/// Begins interaction
+///@description **Hardcode Intereactions Here**
+//Begins interaction
 if(!interaction & !inQuest){
 	interaction = true;
 	inDialogue = true;

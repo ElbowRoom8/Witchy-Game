@@ -15,5 +15,6 @@ i = 0;
 escape = false; //used to hold if the next character is a command
 shaky = false; //used to track shaky text
 color = c_dkgrey; //used to change color
+choosing = false; //used to check if player is making a decision
 
 spoken = false;// temp testing variable

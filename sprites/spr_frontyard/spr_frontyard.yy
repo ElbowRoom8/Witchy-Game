@@ -68,6 +68,10 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"92857267-a7fe-4dd8-982d-4f76ff1ae271","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
+  "parent": {
+    "name": "Front Yard",
+    "path": "folders/Sprites/Backgrounds/Front Yard.yy",
+  },
   "resourceVersion": "1.0",
   "name": "spr_frontyard",
   "tags": [],

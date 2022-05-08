@@ -10,7 +10,7 @@ if(inQuest){
 				throw_x = (x + sprite_width / 2) + (throwDist * dcos(dir));
 				throw_y = (y + sprite_height / 3 + 5) - (throwDist * dsin(dir));
 			}
-			draw_sprite_ext(spr_bullseye, 0, throw_x, throw_y, image_xscale, image_yscale, 0, c_white, 1);
+			draw_sprite_ext(spr_bullseye, -1, throw_x, throw_y, image_xscale, image_yscale, 0, c_white, 1);
 		}
 	}
 }

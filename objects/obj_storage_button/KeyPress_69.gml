@@ -23,7 +23,7 @@ if (open){
 					}
 				}
 				if(filled){
-					newObj = instance_create_depth(obj_player.cx + 271 + 36 * i, obj_player.cy + 171 + 36 * j, -4, obj_potion_slot);
+					newObj = instance_create_depth(obj_player.cx + 272 + 36 * i, obj_player.cy + 170 + 36 * j, -4, obj_potion_slot);
 					newObj.val = potNum;
 					newObj.stored = "autofill";
 					if(potions[potNum][0] != -1){

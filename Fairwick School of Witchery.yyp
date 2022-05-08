@@ -209,6 +209,7 @@
     {"id":{"name":"obj_not_player","path":"objects/obj_not_player/obj_not_player.yy",},"order":7,},
     {"id":{"name":"spr_vortex_potion","path":"sprites/spr_vortex_potion/spr_vortex_potion.yy",},"order":15,},
     {"id":{"name":"script_object_movement","path":"scripts/script_object_movement/script_object_movement.yy",},"order":0,},
+    {"id":{"name":"spr_brew_button_shake","path":"sprites/spr_brew_button_shake/spr_brew_button_shake.yy",},"order":13,},
     {"id":{"name":"light_right_cropped","path":"sprites/light_right_cropped/light_right_cropped.yy",},"order":17,},
     {"id":{"name":"obj_acid","path":"objects/obj_acid/obj_acid.yy",},"order":8,},
     {"id":{"name":"spr_forest5","path":"sprites/spr_forest5/spr_forest5.yy",},"order":5,},

@@ -337,5 +337,9 @@ for(var i = 0; i < 4; i++){
 		newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, obj_slime);
 		newObj.image_xscale = 2;
 		newObj.image_yscale = newObj.image_xscale;
+		
+		newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, obj_spider);
+		newObj.image_xscale = 2;
+		newObj.image_yscale = newObj.image_xscale;
 	}
 }

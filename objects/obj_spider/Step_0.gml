@@ -18,6 +18,7 @@ if(hSpd > 0){
 
 //checks if slime can jump
 if (distance_to_object(obj_player) < 200){
+	/*
 	if(obj_player.x > (x + 10)){
 		if(jump_delay && move_delay){
 			jump_delay = false;
@@ -56,15 +57,15 @@ if (distance_to_object(obj_player) < 200){
 			path_start(spiderPath, 1, path_action_stop, true);
 			depth = 100;
 		}
-	} else if (move_delay){
-		move_delay = false;
-		alarm[0] = 80;
+	} else if (move_delay){*/
+		//move_delay = false;
+		//alarm[0] = 80;
 		target_x = obj_player.x + 60;
 		target_y = obj_player.y + obj_player.sprite_height / 2;
 		direction = point_direction(x, y, target_x, target_y); //moves in a line towards player
 		image_speed = 1;
 		speed = 4;
-	}
+	//}
 	
 }
 
@@ -74,11 +75,13 @@ if(speed == 0){
 
 
 //if close enough to target position, stop jumping
+/*
 if((abs(x - target_x) < 3) && (abs(y - target_y) < 3)){
 	speed = 0;
 	image_speed = 0;
 	jumping = false;
 }
+*/
 
 //checks for death
 if(spiderHealth <= 0) {

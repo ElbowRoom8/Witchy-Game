@@ -1,4 +1,4 @@
-/// @description draws health bar
+/// @description draws health bar and jumping sprite
 draw_self();
 
 if(spiderHealth > 0){

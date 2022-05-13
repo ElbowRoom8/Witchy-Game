@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_spider",
-    "path": "sprites/spr_spider/spr_spider.yy",
+    "name": "spr_wolf",
+    "path": "sprites/spr_wolf/spr_wolf.yy",
   },
   "solid": false,
   "visible": true,
@@ -36,7 +36,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_spider",
+  "name": "obj_wolf",
   "tags": [],
   "resourceType": "GMObject",
 }

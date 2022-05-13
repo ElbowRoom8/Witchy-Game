@@ -1,7 +1,6 @@
 /// @description Sets variables
 #region Setup cameras clamp variables
 
-bullseyebool = 1;
 min_view_x = 0;
 min_view_y = 0;
 max_view_x = room_width - camera_get_view_width(view_camera[0]);
@@ -144,6 +143,7 @@ potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Pot
 
 #region Set up massive item reference array
 globalvar itemRef;
+itemRef = array_create(109, {type : -1, name : -1, tooltip : -1});
 //form: {type, name, tooltip}
 itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "Implies the existence of other types of slime"};
 itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};

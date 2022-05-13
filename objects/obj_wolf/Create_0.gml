@@ -1,5 +1,5 @@
 /// @description
-spiderHealth = 15;
+wolfHealth = 15;
 def_scale = 2;
 
 damage_delay = true;

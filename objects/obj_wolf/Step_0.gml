@@ -30,6 +30,6 @@ if(speed == 0){
 
 
 //checks for death
-if(spiderHealth <= 0) {
+if(wolfHealth <= 0) {
 	instance_destroy();
 }

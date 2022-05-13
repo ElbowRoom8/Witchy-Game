@@ -1,4 +1,4 @@
-/// @description controls depth and damage
+/// @description damage
 
 if(!jumping){
 	//damages player once per jump

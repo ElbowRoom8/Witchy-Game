@@ -2,6 +2,7 @@
 maxHealth = 10;
 objHealth = maxHealth;
 def_scale = 2;
+def_width = sprite_width;
 
 damage_delay = true;
 move_delay = true; //stops constant stepping

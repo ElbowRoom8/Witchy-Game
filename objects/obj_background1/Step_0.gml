@@ -334,9 +334,9 @@ for(var i = 0; i < 4; i++){
 	
 	//enemy array
 	var enemy_list;
-	enemy_list[0] = {object : obj_slime, spawn_rate : 10};
-	enemy_list[1] = {object : obj_wolf, spawn_rate : 1};
-	enemy_list[2] = {object : obj_spider, spawn_rate : 1};
+	enemy_list[0] = {object : obj_slime, spawn_rate : 100};
+	enemy_list[1] = {object : obj_wolf, spawn_rate : 100};
+	enemy_list[2] = {object : obj_spider, spawn_rate : 100};
 	
 	for (var i = 0; i < array_length(enemy_list); i++){ // for each enemy in the enemy array
 		show_debug_message(counter * enemy_list[i].spawn_rate);

@@ -199,3 +199,7 @@ if(!ds_exists(global.dialogue, ds_type_grid)){
 	show_error("Error: Failed to load dialogue file", true);
 }
 #endregion
+
+#region For spawning objects
+instance_create_depth(x, y, depth, obj_floofy);
+#endregion

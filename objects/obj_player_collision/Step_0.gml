@@ -62,6 +62,12 @@ if(place_meeting(x, y + vSpd, obj_wall)){
 	vSpd = 0;
 }
 
+//checks slowness debuff
+if (obj_player.slowness) {
+	hSpd = hSpd/2;
+	vSpd = vSpd/2;
+}
+
 //moves player
 if(!inQuest || room = rm_forest_clearing){
 	obj_player.x = obj_player.x + hSpd;

@@ -1,9 +1,9 @@
-/// @description ramming attack
+/// @description stepping back and spitting attack
 depth = room_height - (y + image_yscale * sprite_height / 4);
 y = clamp(y, 100, room_height);// set minimum y value
 script_object_movement();
 
-//keeps target position for ramming in place
+//keeps target position for stepping in place
 if(hSpd > 0){
 	if(obj_player.x <= 100) {
 		target_x -= hSpd;
@@ -18,16 +18,17 @@ if(hSpd > 0){
 	}
 }
 
-//checks if ram is active
-if (move_delay) {
+//checks if step is active
+//only steps back if the player gets too close
+if (move_delay && distance_to_object(obj_player) < 100) {
 	move_delay = false;
-	alarm[0] = 200;// delay for next move
+	alarm[0] = 20;// delay for stepping back
+} else { // if the spider isn't stepping
+	if (attack_delay) {
+		attack_delay = false;
+		alarm[2] = 200;// delay for spitting
+	}
 }
-
-if(speed == 0){
-	image_speed = 0;
-}
-
 
 //checks for death
 if(spiderHealth <= 0) {

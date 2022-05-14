@@ -2,12 +2,13 @@
 
 depth = room_height - (y + image_yscale * sprite_height / 2);
 
-//defense timer
+// potion effects
 if(def_timer > 0){
 	def_timer--;
 } else {
 	defense = 1;
 }
+slowness = false;
 
 // change selNum
 if keyboard_check(ord(1)){

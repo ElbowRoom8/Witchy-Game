@@ -28,7 +28,6 @@ image_xscale = 2;
 image_yscale = 2;
 
 health = 10; //holds player health
-def_timer = 0; //defense buff timer
 pickup = [];
 
 selNum = 0; //used to pick the correct spot in inventory
@@ -39,7 +38,10 @@ old_x = 0; //used to place player in correct spot leaving clearings
 throw_x = 0; //used for throwing potions
 throw_y = 0;
 
+// status effects
 fireBreath = 0; //used to count amount of firebreath left
+def_timer = 0; //defense buff timer
+slowness = false;
 #endregion
 
 #region Set up global status variables

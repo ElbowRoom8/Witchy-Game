@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
-  "bbox_right": 14,
-  "bbox_top": 1,
+  "bbox_left": 0,
+  "bbox_right": 15,
+  "bbox_top": 0,
   "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b411d4aa-1cfb-4658-ac3a-bfcb52576e21","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b411d4aa-1cfb-4658-ac3a-bfcb52576e21","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},"LayerId":{"name":"86d45e8a-07d0-4c35-bff5-2486967cce8f","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_defense_icon","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},"resourceVersion":"1.0","name":"b411d4aa-1cfb-4658-ac3a-bfcb52576e21","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"9ac1a260-aeba-4504-9464-f390edd39e5f","path":"sprites/spr_spider_web/spr_spider_web.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"9ac1a260-aeba-4504-9464-f390edd39e5f","path":"sprites/spr_spider_web/spr_spider_web.yy",},"LayerId":{"name":"304d66f8-3e10-4fb4-b0b1-cfbe5d60e630","path":"sprites/spr_spider_web/spr_spider_web.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_spider_web","path":"sprites/spr_spider_web/spr_spider_web.yy",},"resourceVersion":"1.0","name":"9ac1a260-aeba-4504-9464-f390edd39e5f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_defense_icon","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},
+    "spriteId": {"name":"spr_spider_web","path":"sprites/spr_spider_web/spr_spider_web.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"63097d41-314f-4651-8d46-b8aab1accf72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b411d4aa-1cfb-4658-ac3a-bfcb52576e21","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"81a86bf0-fdf2-46f7-99c8-a8e6d01c17da","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9ac1a260-aeba-4504-9464-f390edd39e5f","path":"sprites/spr_spider_web/spr_spider_web.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_defense_icon","path":"sprites/spr_defense_icon/spr_defense_icon.yy",},
+    "parent": {"name":"spr_spider_web","path":"sprites/spr_spider_web/spr_spider_web.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_defense_icon",
+    "name": "spr_spider_web",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"86d45e8a-07d0-4c35-bff5-2486967cce8f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"304d66f8-3e10-4fb4-b0b1-cfbe5d60e630","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Potions",
-    "path": "folders/Sprites/Potions.yy",
+    "name": "Spiders",
+    "path": "folders/Sprites/Monsters/Spiders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_defense_icon",
+  "name": "spr_spider_web",
   "tags": [],
   "resourceType": "GMSprite",
 }

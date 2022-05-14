@@ -31,6 +31,6 @@ if (move_delay && distance_to_object(obj_player) < 100) {
 }
 
 //checks for death
-if(spiderHealth <= 0) {
+if(objHealth <= 0) {
 	instance_destroy();
 }

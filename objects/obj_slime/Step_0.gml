@@ -117,6 +117,6 @@ if(jumping){
 }
 
 //checks for death
-if(slimeHealth <= 0 && !jumping) {
+if(objHealth <= 0 && !jumping) {
 	instance_destroy();
 }

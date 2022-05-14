@@ -1,5 +1,6 @@
 /// @description
-wolfHealth = 15;
+maxHealth = 30;
+objHealth = maxHealth;
 def_scale = 2;
 
 damage_delay = true;

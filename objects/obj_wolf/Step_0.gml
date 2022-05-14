@@ -30,6 +30,6 @@ if(speed == 0){
 
 
 //checks for death
-if(wolfHealth <= 0) {
+if(objHealth <= 0) {
 	instance_destroy();
 }

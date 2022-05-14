@@ -1,6 +1,6 @@
 /// @description draws health bar
 draw_self();
 
-if(spiderHealth > 0){
-	//draw_healthbar(x, y - 1, x , y - 6, slimeHealth, c_white, c_green, c_red, 1, false, true);
+if(objHealth > 0 && objHealth != maxHealth){
+	draw_healthbar(x - sprite_width/2, y + sprite_height/2 + 2, x + sprite_width/2, y + sprite_height/2 + 4, objHealth/maxHealth * 100, c_black, c_red, c_lime, 0, false, false);
 }

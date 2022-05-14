@@ -1,4 +1,4 @@
-/// @description fades out fire
+/// @description fades out acid
 if (image_alpha > 0) {
 	image_alpha -= 0.003;
 }

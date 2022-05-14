@@ -1,6 +1,7 @@
 /// @description 
 randomize();
-slimeHealth = 15;
+maxHealth = 15;
+objHealth = maxHealth;
 def_scale = 2;
 // randomize sprite color
 image_alpha = 0;

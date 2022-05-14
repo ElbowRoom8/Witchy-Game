@@ -42,7 +42,7 @@ if (inQuest){
 		draw_text(1075, 60, round(def_timer / room_speed));
 	}
 	if(slowness) {
-		draw_sprite_ext(spr_status_slowness, 0,  1135, 45, 2, 2, 0, c_white, 1);
+		draw_sprite_ext(spr_status_slowness, 0,  1155, 45, 2, 2, 0, c_white, 1);
 	}
 	
 	//draws fire effect bar

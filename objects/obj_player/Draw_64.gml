@@ -48,7 +48,8 @@ if (inQuest){
 	//draws fire effect bar
 	if(fireBreath > 0){
 		draw_sprite_ext(spr_status_fire, 0,  1115, 45, 2, 2, 0, c_white, 1);
-		draw_healthbar(1255, 60, 1270, 710, fireBreath, c_black, c_red, c_orange, 3, true, true);
+		draw_healthbar(1245, 60, 1270, 710, fireBreath, c_black, c_red, c_orange, 3, true, true);
+		draw_sprite_ext(spr_healthbar, 0,  1236, 56, 1.3, 17.3, 0, c_white, 1);
 	}
 	
 }

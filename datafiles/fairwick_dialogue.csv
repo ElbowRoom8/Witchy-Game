@@ -34,6 +34,667 @@ Player,The Beginning,Player,Here we are Floofy! Fairwick School of Witchery.
 ,,Player,"Yes, Floofy, you can try the cafeteria food too."
 ,Attempt Courtyard,Player,"(This way leads to the \bCourtyard\w. I can't go yet, they're still getting ready for convocation.)"
 ,Finish Tour,Player,(It's almost time for convocation. I should go to the \bCourtyard\w if I want to make it in time.)
+,Sit at Convocation,Player,(I should take a seat.)
+,Bedroom After Convocation,Player,Whoo! What a room!
+,,Player,"It’s a little plain, but I’m sure I’ll get some cool stuff to put here throughout the year."
+,,Player,I’m pooped. I should go to sleep.
+,,Player,Or should I go to the forest with Lux and Hero for Haverin instead?
+,,Player,"What do you think, Floofy?"
+,,Floofy,Reeooooow
+,,Player,(Floofy seems restless.)
+,,Player,I think I’ll…
+,,Player,\c Sleep \n Get Haverin
+,Sleep 1,Player,I’ve got a big day tomorrow. Some shut-eye will do me good.
+,,Player,
+,,Floofy,
+,,Player,
+,,Floofy,
+,,Player,
+,,Player,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
 ,,,
 ,,,
 ,,,
@@ -158,27 +819,356 @@ Amber,Playtest,Player,"Believe it or not, I'm actually the main character."
 ,,Amber,This is the East Wing. It houses professor Harthemony's potions class.
 ,,Player,I have that class!
 ,,Amber,Good luck. Harthemony is a tough teacher.
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
-,,,
+,,Amber,This is the cafeteria. The food tastes way better here than back home.
+,,Marcus,Really? What do they serve?
+,,Amber," They have all kinds of strange foods here I’d never eaten. You’ll love it, Marcus."
+,,Marcus,"This would be a great place to play slime tag. There’s so much open space, but there are tables for cover, too."
+,,Amber,"Marcus, if you bring so much as a thimble of slime into this room, I will personally wring your neck."
+,,Marcus,"Psh, you could never hurt me, Amber."
+,,Amber,"You’d be surprised how much someone can learn in just one year of professor Yuvei’s combat classes, Marcus."
+,,Marcus,"No way, you can fight now?"
+,,Amber,"Sort of, we fight with potions, but we’re not supposed to use them on other students."
+,,Amber,"That won’t stop me if you get slime in my hair, though."
+,,Marcus,"Your hair, huh? Heh heh…"
+,,Amber, I better stop talking before I give you any fresh ideas.
+,,Amber,"This is the /b potions room \w, where students and faculty come to brew potions."
+,,Amber,It’s important to have a full stock of potions before you head into \b The Wilds \w. You don’t want to run out of potions in the field. Trust me.
+,,Floofy,Meow?
+,,Player,(That was a little cryptic.)
+,,Amber,"Anyway, that’s all the important areas."
+,,Amber,"Oh, snap! we should get to convocation in \b The Courtyard \w. It looks like it’s just about to start."
+,,Marcus,"Perfect timing, Amber. You’re a great guide."
+,,Amber,"Thank you Marcus, that’s really nice to hear. Let’s get going."
+,,Amber,"I’m gonna go in now, but feel free to chat with more students if you aren’t ready yet, \p."
+,,Marcus,"Hey Amber, wait up!"
+,,Player,"What did you think of our new home, Floofy?"
+,,Floofy,Mrrrrow!
+,,Player,"Isn’t it exciting? There are so many new people to meet, too. I should go to convocation once I’m ready."
 Lidia,Playtest,Player,"Incredibly, I'm actually the main character."
+,,Lidia,"Oh wow, you must be important!"
+,,Lidia,Will you help me solve all of my lifes problems?\nI've got a big assignment due soon.
+,,Player,Can I refuse?
+,,Lidia,Sure.
+,,Lidia,If you don't want to see the \d\rTrue Ending\w\s.
+,,Player,darnit
+,Meet Lidia,Player,Hi there! I'm \p.It's nice to meet you.
+,,Lidia,"Oh, sorry. Am I in your way?"
+,,Player,"No, I wanted to say hello! I'm a first year student."
+,,Lidia,"Oh, h-hi! I'm Lidia. How are you liking the campus so far?"
+,,Player,It's really pretty. It's nothing like where I'm from.
+,,Floofy,Mrrrrrowww!
+,,Player,"Right, where we're from. Sorry Floofy."
+,,Lidia,Woah! Is this your cat?
+,,Player,Yeah. Floofy and I are inseparable.
+,,Lidia,"Mmm, I see. I had a cat back home too... I miss him."
+,,Player,It's hard being away from home. Are you a first year too?
+,,Lidia,Yes.
+,,Player,Woah! Maybe we'll have classes together.
+,,Lidia,Maybe.
+,,Player,"I'm gonna look around some more, but let's hang out sometime!"
+,,,
+,,,
+,,,
+,,,
+Ginger,Playtest,Player,"Believe it or not, I'm the main character."
+,,Ginger,No way! I'm a background NPC!
+,,Ginger,I have more dialogue in this demo than I will in the final game!
+Not Player,Playtest,Main Character,"Believe it or not, I'm actually the main character."
+,,Player,"Believe it or not, I-"
+,,Player,Wait what?
+,,Main Character,\dI know what you are \b\p\w.
+Morgan,Meet Morgan,Lux,Where's this coming from? Was he this bad last year too or–
+,,Player,Hi! I'm \p.
+,,Lux,"uh, cool? Good for you. Anyway Hero, I really don't think–"
+,,Player,"Oh, I wasn't trying to intrude. I'm a first year, and I just came to campus. Do you have any advice for fitting in at Fairwick?"
+,,Lux,"Uh, no? Can you please leave?"
+,,Morgan,"Lux, don't be rude. Hi (studentName), I'm Hero. At your service. We're fourth-years. "
+,,Floofy,M-mroar?
+,,Player,"(What, these two are a little intimidating!)"
+,,Player,H-hi? What's Fairwick like?
+,,Lux,Why did you come here? This school blows.
+,,Morgan,"Nah, a couple people just blow. I'll get over it."
+,,Lux,"If you want some real advice, take Flitpaw's class. They don't take attendance so it's easy credit. Classes are a waste of time."
+,,Player,Shouldn't I go to classes so I can learn potion-making?
+,,Lux,"Why? Classes won't actually improve your life. If you want to learn something useful, you're better off exploring the forest. That's what we do."
+,,Morgan,HERO: You can come out with us! We're friends with the school chef. If we find Haverin seeds in the forest he'll make them into Haverin for us.
+,,Lux,Hero! I thought that was our thing...
+,,Player,Haverin?
+,,Morgan,"It's an exotic drink. The school imported Haverin seeds into the forest generations ago, though. Back when the school was still prestigious and influential."
+,,Lux,"Wait, really? Where'd you even learn that?"
+,,Morgan,President Gyre's book
+,,Lux,Oh.
+,,Lux,My.
+,,Lux,GOD.
+,,Lux,"You actually read that dusty old thing? I had no idea you were such a nerd, Hero."
+,,Morgan,"I'm a nerd, huh? Truffle told me he was teaching you how to process Haverin seeds. Now that is some nerd activity right there."
+,,Lux,"That's because I'm addicted, not because I'm interested!"
+,,Morgan,"Anyway, come see us tonight in the Great Hall after convocation if you want to have Haverin. We'll bring extra potions and show you how to handle yourself out there"
+,,Lux,"Hero, why are we babysitting the first year? Let's just go together like last year."
+,,Morgan,"Come on, Lux! It'll be fun to change things up!"
+,,Lux,...
+,,Lux,"uuuugh, okay."
+,,Morgan,Yeah! We'll see you tonight if you feel like joining us.
+,,Lux,"Later, kid."
+James,Meet Big Boy,Player,"Hi, how are you?"
+,,James,"I’m good. My name is James, it’s nice to meet you."
+,,Player," I’m a first year, how about you?"
+,,James,I’m a first year too.
+,,Player,Cool! I wonder if we’ll have any classes together.
+,,James,Maybe. I like plants.
+,,Player, So you’re taking botany classes?
+,,James,Yeah.
+,,Floofy,Mrown.
+,,James,Can I pet your cat?
+,,Player,Sure.
+,,James,"Oooh, so soft… I wonder if the tongue is soft too…"
+,,Player,"Actually, cats have rough tongues."
+,,James,"I can tell you’ve done an excellent job taking care of them, the liver is squishy and healthy."
+,,Player,The liver?
+,,James,"Yeah. This is a healthy cat, I bet the liver is dense with nutrients from all the good food it’s had"
+,,Floofy,mrrrrrrrrrrr…
+,,Player,"Haha, maybe! Bye now."
+,,James,"Bye, I hope we can talk again soon."
+Desmond,Meet Desmond,Jude,"So you’re a bat, huh?"
+,,Jude,That’s pretty metal. I love bats.
+,,Desmond,I’m glad! Bat-racism is a real problem that often goes unaddressed in majority-human communities.
+,,Jude,"Oh, I just meant I like the aesthetic of bats. I’ve never actually met a sentient bat."
+,,Desmond,"Yeah, there’s a lot of cool bat fashion."
+,,Jude,Bat fashion?
+,,Desmond,Bat fashion.
+,,Player,Hey you two! Sorry to snoop. I heard you talking about bat fashion?
+,,Desmond,"Hey, I’m Desmond."
+,,Jude,"I’m Jude, I’m new here."
+,,Desmond,Bat fashion is really cool. Maybe I’ll show off some cool outfits sometime to demonstrate?
+,,Player, You totally should!
+,,Jude,I am so unbelievably hype for bat fashion.
+,,Desmond,"Just don’t go stealing my clothes, alright?"
+,,Jude,… We’ll see.
+Jeremy,Meet Jeremy,Player,What’s up guys? I’m \p.
+,,Jeremy,"What’s up, \p? I’m Jeremy, a third year. We were just catching up after the Summer."
+,,Jeremy,"This is Gerald, he’s a friend of mine from last year."
+,,Jeremy,"Are you a first year, \p?"
+,,Player,Yeah!
+,,Gerald,"Eww, first years. Imagine being a first year."
+,,Jeremy,"All high and mighty now that you’re a second year, huh Gerald?"
+,,Gerald,You better believe it! Things aren’t gonna be like they were last year.
+,,Player, What happened last year?
+,,Gerald,…
+,,Gerald,I miiiiiiiight have been duped into drinking an Olivol potion.
+,,Jeremy,"That was so good. It was nothing personal Gerald, you just get so gullible sometimes."
+,,Gerald, I was oily all week after that…
+,,Gerald,"Watch out, (studentName), Jeremy may seem friendly, but it’s just to lower your guard."
+,,Gerald,She strikes when you’ll least expect it.
+,,Jeremy,"That is absolute slander. I would never lull anyone into a false sense of security except you, Gerald."
+,,Gerald,I thought you said it was nothing personal?
+,,Jeremy,"… Darn, you got me."
+Jove,Convocation,Jove,Ahem!
+,,Player,(I think it’s starting!)
+,,Jove,"Welcome students, to Fairwick School of Witchery!"
+,,Jove,"Each of you, new or returning, have made the best possible choice for your future by attending Fairwick. Before graduation, you will no doubt face many challenges:"
+,,Jove,Mastering century-old knowledge dating back to the birth of this world’s magical arts.
+,,Jove,Facing fearsome monsters.
+,,Jove,And facing more fearsome final exams!
+,,Jove,"But with hard work and determination, I have full confidence that each and every one of you will thrive here."
+,,Jove,"I am Principal Richard Jove, and it is my pleasure to welcome you all to Fairwick’s 185-186 school year!"
+,,Jove,"As the oldest school of magic in the known world, Fairwick bears a legacy of magical innovation and community service."
+,,Jove,Some claim that the school has been in decline as of late…
+,,Jove,Phooey!
+,,Jove,"Our school, and the communities it supports, have never been stronger."
+,,Jove,"Here, you will learn to use the magical art of potion-making to defend yourselves and your communities against the vicious monsters that roam our world."
+,,Jove,Potion making is an honorable profession with a storied history: a history Fairwick is intertwined with.
+,,Jove,"Few are more connected to that history than our Senior Professor of Potions,  professor Harthemony."
+,,Harthemony,"Welcome, students."
+,,Harthemony,"As Principal Jove said, Fairwick is a school that has fostered excellence in its students for generations."
+,,Harthemony,"As such, I expect excellence from each of you."
+,,Harthemony,"It is my innermost desire, my life’s work, to see all of our students contribute to making Fairwick the greatest school it can be."
+,,Harthemony,"In class, I will push you all very hard."
+,,Harthemony,"I will not push you out of contempt, but out of appreciation for your potential."
+,,Harthemony,"If you can endure the challenges awaiting you in my class, and if you share my love for Fairwick, then please join me in my quest to return our school to its former glory."
+,,Harthemony,"When we, the students and staff of Fairwick are united in pursuit of a common aim, there is nothing we cannot accomplish."
+,,Harthemony,I look forward to our time together.
+,,Jove,"Don’t let Harthemony get to you, everyone. If you need to blow off steam after his class, you can always venture into \b the wilds \w for some ingredient collection."
+,,Jove,Fairwick was deliberately constructed near \b the wilds \w — a myriad of natural ecosystems rich in ingredients that can be brewed into potions.
+,,Jove,"While all of your professors may assign you on trips off-campus to combat creatures, few are more experienced in monster-hunting than professor Yuvei."
+,,Yuvei,Hello everyone.
+,,Yuvei,I’m glad to see so many returning faces.
+,,Yuvei,"After last year, I’m surprised that some of your faces aren’t clawed off."
+,,Yuvei,"I’m looking at you, Amber!"
+,,Amber,I told you I’d be more careful!
+,,Yuvei,"Ha, no amount of care could have ripped that thing off of you. You need to get stronger."
+,,Yuvei,"Anyway, as I was saying…"
+,,Yuvei,"More large, highly dangerous monsters have been spotted in the forest this year."
+,,Yuvei,"We don’t know where they’re coming from, or why they’re so big, but they’re here for the foreseeable future. And that means new rules regarding off-campus trips."
+,,Yuvei,"Listen up, because if you don’t, you’re as good as dead!"
+,,Yuvei,NO going into the forest at night.
+,,Yuvei,NO going off-campus without a partner.
+,,Yuvei,and most importantly:
+,,Yuvei,Absolutely NO trips up Mount Ruin.
+,,Yuvei,We’ve been running this place for 185 years without a single student death in the wilds. That’s a track record we will maintain this year.
+,,Yuvei,"If you have a problem with any of these new rules, you have a problem with me."
+,,Yuvei,"Thanks for listening, let's have a good year out there everyone!"
+,,Jove,"Thank you, professor Yuvei."
+,,Jove,"Fairwick takes the safety of its students very seriously. Do not disregard these new rules, or the new monsters on school grounds."
+,,Jove,"Any students who recklessly endanger themselves will be expelled, or worse."
+,,Jove,"On a lighter note, professor Flitpaw had their best year ever last year. Their class is growing more rapidly than any other!"
+,,Jove,"Professor, please tell us what has made your class so successful."
+,,Player,(Is that… a cat?)
+,,Flitpaw,Mewo.
+,,Floofy,Mewo!
+,,Player,"(Aww, I think Floofy likes them.)"
+,,Jove,"Well said, professor Flitpaw. Your succinctness is no doubt one of the reasons you draw in so many students."
+,,Jove,"While most rare potion ingredients are found in The Wilds, botany is an essential skill for growing more… garden variety ingredients."
+,,Jove, …
+,,Jove,I’m here all week.
+,,Jove,"Now, here to tell you more about botany at Fairwick and ingredient growth is professor Ferringway."
+,,Ferringway,"Hello, students."
+,,Ferringway,Botany is a wonderfully complex field which many potions students never fully understand.
+,,Ferringway,"If you are among the select who value the intricacies of botany, though…"
+,,Ferringway,I look forward to uncovering the secrets of flora with you.
+,,Jove,"Thank you, professor."
+,,Jove,"Last, I am pleased to present our oldest professor, the esteemed professor Iglet, head of fungal research."
+,,Iglet,"Hello, little sprouts!"
+,,Iglet,Ho ho ho! How jolly it is seeing so many bright eyed new students in the crowd.
+,,Iglet,Fungus are friendly and helpful! They have been my lifelong companions.
+,,Iglet,Why sprinkle a little growing potion and…
+,,Ferringway,"Iglet, that’s disgusting!"
+,,Iglet,Ho ho ho! Nature is sometimes disgusting.
+,,Iglet,But great beauty and merriment can be found in disgusting places.
+,,Iglet,"Though it is small and reliant on other creatures for sustenance, the humble fungus nourishes the soil."
+,,Iglet,"In the same way, it has rooted itself in my heart and nourished the soil of my spirit."
+,,Iglet,"It has also rooted itself in my stomach! I think you will find many fungi are quite tasty, ho ho ho!"
+,,Iglet,"I cannot wait to see you all grow into an ecosystem of young pupils, learning lessons not only from me, but from your peers and the magical world around you."
+,,Iglet,"Now if you’ll excuse me, I need to find this little bobbins a home!"
+,,Jove,"Mmm, he is a strange one, that Iglet."
+,,Ferringway,He doesn’t know how to do real research.
+,,Jove,"Well, he is tenured, so he is here to stay."
+,,Jove,"Thank you so much, students, for getting to know our faculty."
+,,Jove,We look forward to a wonderful year getting to know all of you.
+,,Jove,"And with that, let me be the first to officially welcome you as students of Fairwick School of Witchery!"
+,,Jove,"Have a wonderful evening, everyone. Sleep well, classes begin tomorrow!"
+,,Player,What an interesting bunch.
+,,Player,"It’s getting late, I should find my new \b dorm room \w."
+,,Player,"Let’s go Floofy, It’s almost bedtime."
+,,Floofy,Rawrrrrr.
+,,Player,"We can explore the campus tomorrow, Let’s get to our room. It looks like it’s upstairs in the \b East Wing \w."
+,,Floofy,grrrrrrr.
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+LidiaD388A330:E378A330:E377D328A330:A330:J419,Playtest,Player,"Incredibly, I'm actually the main character."
 ,,Lidia,"Oh wow, you must be important!"
 ,,Lidia,Will you help me solve all of my lifes problems?\nI've got a big assignment due soon.
 ,,Player,Can I refuse?

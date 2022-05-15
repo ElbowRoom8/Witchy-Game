@@ -34,3 +34,5 @@ if(room = rm_mainhall){
 } else if(room = rm_frontyard){
 	
 }
+obj_floofy.x = obj_player.x;
+obj_floofy.y = obj_player.y;

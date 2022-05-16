@@ -1,6 +1,7 @@
 /// @description
 maxHealth = 10;
 objHealth = maxHealth;
+damageCol = c_white;
 def_scale = 2;
 def_width = sprite_width;
 

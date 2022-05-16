@@ -35,5 +35,3 @@ if(room = rm_frontyard){
 	obj_player.x = 753;
 	obj_player.y = 162;
 }
-obj_floofy.x = obj_player.x;
-obj_floofy.y = obj_player.y;

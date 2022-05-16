@@ -106,7 +106,7 @@ if(jumping){
 	//z = -abs((((target_x - start_x) / 2) + start_x) - x) + abs((target_x - start_x) / 2);
 	#endregion
 	
-//if not jjumping, jiggle randomly
+//if not jumping, jiggle randomly
 } else {
 	speed = 0;
 	if((irandom_range(1, 100) == 1) & ani_delay){

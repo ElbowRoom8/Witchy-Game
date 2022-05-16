@@ -24,5 +24,3 @@ if(room = rm_westhall){
 	obj_player.x = 390;
 	obj_player.y = 610;
 }
-obj_floofy.x = obj_player.x;
-obj_floofy.y = obj_player.y;

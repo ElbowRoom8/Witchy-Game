@@ -51,17 +51,21 @@ globalvar inInventory; //allows for inventory
 inInventory = false;
 globalvar inQuest; //allows for quests
 inQuest = false;
-globalvar backTracked;//stops player if moving backwards in quests
-backTracked = false;
 globalvar brewing; //allows for brewing
 brewing = false;
 
 globalvar playerName;
-playerName = "Elise"; //will change how is set later //easter egg name is "rawr xd"
+playerName = "Rowan"; //will change how is set later //easter egg name is "rawr xd"
 globalvar maxPotions; //maximum number of each potion type you can have on quests
 maxPotions = 6; 
 globalvar defense;
 defense = 1;
+
+globalvar backTracked;//stops player if moving backwards in quests
+backTracked = false;
+globalvar damaged;//allows for i-frames
+damaged = false;
+
 #endregion
 
 #region Set up massive potion reference array
@@ -106,7 +110,7 @@ globalvar inventory; //nine slots for potions you can bring on quests
 inventory[0] = {type : spr_health_potion, vrty : 1, num : 7, t_text : "Health Potion", v_text : "Heals 1 heart"};
 inventory[1] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
 inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
-inventory[3] = {type : spr_fire_potion, vrty : 1, num : 7, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
+inventory[3] = {type : spr_fire_potion, vrty : 1, num : 15, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have
@@ -145,7 +149,7 @@ potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Pot
 
 #region Set up massive item reference array
 globalvar itemRef;
-itemRef = array_create(109, {type : -1, name : -1, tooltip : -1});
+itemRef = array_create(109, {type : -1, t_text : -1, v_text : -1});
 //form: {type, name, tooltip}
 itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "Implies the existence of other types of slime"};
 itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};

@@ -1,6 +1,7 @@
 /// @description
 maxHealth = 30;
 objHealth = maxHealth;
+damageCol = c_white;
 def_scale = 2;
 
 damage_delay = true;

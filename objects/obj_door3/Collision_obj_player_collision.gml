@@ -24,5 +24,3 @@ if(room = rm_mainhall){
 	obj_player.x = 549;
 	obj_player.y = 50;
 }
-obj_floofy.x = obj_player.x;
-obj_floofy.y = obj_player.y;

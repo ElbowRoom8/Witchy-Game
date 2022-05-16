@@ -14,7 +14,7 @@ var animationSpd = 1;
 if(!inDialogue and !inInventory and !brewing){
 	//controls sprinting
 	if keyboard_check(vk_shift){
-		walkSpd = 3.5;
+		walkSpd = 3;
 		animationSpd = 2;
 	} else {
 		walkSpd = 2;

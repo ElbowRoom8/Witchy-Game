@@ -339,7 +339,7 @@ for(var i = 0; i < 4; i++){
 	enemy_list[2] = {object : obj_spider, spawn_rate : 1};
 	
 	for (var i = 0; i < array_length(enemy_list); i++){ // for each enemy in the enemy array
-		show_debug_message(counter * enemy_list[i].spawn_rate);
+		//show_debug_message(counter * enemy_list[i].spawn_rate);
 		for (var j = 0; j < irandom_range(0, counter * enemy_list[i].spawn_rate); j++) { // randomize spawn based on the spawn rate
 			newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, enemy_list[i].object);
 			newObj.image_xscale = 2;

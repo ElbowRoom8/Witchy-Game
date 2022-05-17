@@ -66,6 +66,12 @@ backTracked = false;
 globalvar damaged;//allows for i-frames
 damaged = false;
 
+//story tracking variables
+globalvar story;//used to track certain progresses
+story = -1;
+globalvar track;//used to track certain progresses
+track = -1;
+
 #endregion
 
 #region Set up massive potion reference array

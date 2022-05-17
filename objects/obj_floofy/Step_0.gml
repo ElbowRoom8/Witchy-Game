@@ -1,6 +1,6 @@
 /// @description follow player
 
-show_debug_message(move_delay);
+//show_debug_message(move_delay);
 // move Floofy
 if (move_delay) {// set timer for movement
 	move_delay = false;

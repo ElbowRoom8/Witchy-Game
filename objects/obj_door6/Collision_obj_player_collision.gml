@@ -20,7 +20,14 @@ if(room = rm_westhall){
 	obj_player.x = 200;
 	obj_player.y = 85;
 } else if(room = rm_frontyard){
-	room_goto(rm_mainhall);
-	obj_player.x = 390;
-	obj_player.y = 610;
+	if (story = "Beginning" & track = "Intro"){
+		obj_narrator.index = script_dialogue_scenario(obj_narrator.c_index, "Approach Great Hall");
+		obj_narrator.canSpeak = true;
+		obj_player.y += 15;
+		track = "Meet";
+	} else {
+		room_goto(rm_mainhall);
+		obj_player.x = 390;
+		obj_player.y = 610;
+	}
 }

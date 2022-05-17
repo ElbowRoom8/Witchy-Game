@@ -1,20 +1,22 @@
 ///@description **Hardcode Intereactions Here**
 // Begins interaction
-if(!interaction & !inQuest){
+if(canSpeak & !interaction & !inQuest){
 	interaction = true;
 	inDialogue = true;
 	i = 0; //dialogue line counter
 	
 	//check if c_index is filled yet
 	if(c_index == -1){
-		c_index = script_dialogue_character("Not Player");
+		c_index = script_dialogue_character("Player");
 	}
 	//check conditions and load lines
-	if(!spoken){
-		index = script_dialogue_scenario(c_index, "Playtest");
-		//spoken = true;
-	} else {
-	//	index = script_dialogue_scenario(c_index, "Grab a Bite");
+	if(story == "Beginning"){
+		if(!spoken){
+			index = script_dialogue_scenario(c_index, "The Beginning");
+			spoken = true;
+		} else {
+		//	index = script_dialogue_scenario(c_index, "Grab a Bite");
+		}
 	}
 
 	text = ds_grid_get(global.dialogue, 3, index);

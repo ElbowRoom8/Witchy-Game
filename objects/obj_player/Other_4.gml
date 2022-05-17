@@ -34,7 +34,7 @@ if(inQuest){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 }
-
+/*
 #region music
 switch room{
 	case rm_laboratory : 
@@ -87,4 +87,4 @@ switch room{
 		}
 			
 }
-#endregion
+#endregion*/

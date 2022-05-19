@@ -1,4 +1,4 @@
-/// @description Draw shadow and bullseye
+/// @description Draw shadow, bullseye, and flash red
 if(inQuest){
 	if(inventory[selNum] != -1){
 		if(inventory[selNum].type == spr_acid_potion || inventory[selNum].type == spr_fire_potion){
@@ -17,8 +17,9 @@ if(inQuest){
 draw_sprite_ext(spr_shadow, 0, x + sprite_width / 2, y + sprite_height - 8, image_xscale, image_yscale, 0, c_white, 1);
 
 //flashes red when hit
+/*
 if(damaged){
-	draw_sprite_ext(sprite_index, image_index, x, y, 2, 2, 0, c_red, 1);
+	draw_sprite_ext(sprite_index, image_index, x, y, 2, 2, 0, #7c3a56, 1);
 } else {
-	draw_self();
-}
+*/
+draw_self();

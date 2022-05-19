@@ -86,8 +86,8 @@ potRef[1][1] = {type : spr_door1, index : 0, modifier : spr_door2, vrty : 3, t_t
 
 potRef[2][0] = {type : spr_defense_potion, index : 1, modifier : spr_door5, vrty : 0, t_text : "Defense Potion", v_text : "df +50% \n time -10s"};
 
-potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door5, vrty : 0, t_text : "Potion of Regeneration", v_text : "doesn't actually \ndo anything lol"};
-potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door2, vrty : 1, t_text : "Potion of Regeneration", v_text : "still not \nimplemented"};
+potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door5, vrty : 0, t_text : "Potion of Regeneration", v_text : "doesn't actually do anything lol"};
+potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door2, vrty : 1, t_text : "Potion of Regeneration", v_text : "still not implemented"};
 
 potRef[4][0] = {type : spr_fire_potion, index : 3, modifier : spr_door5, vrty : 0, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
 potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door2, vrty : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
@@ -96,13 +96,13 @@ potRef[4][3] = {type : spr_fire_potion, index : 3, modifier : spr_door4, vrty : 
 
 potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door5, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, \nidk"};
 
-potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door5, vrty : 0, t_text : "Poison Potion", v_text : "Creates a cloud \nof noxious gas"};
+potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door5, vrty : 0, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 
 potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door5, vrty : 0, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 
-potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door5, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh \nsleep now"};
+potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door5, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 
-potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock \nhard lol"};
+potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
 #endregion
 
@@ -115,7 +115,7 @@ globalvar inventory; //nine slots for potions you can bring on quests
 //form: {sprite/type of potion, variety of potion, quantity}
 inventory[0] = {type : spr_health_potion, vrty : 1, num : 7, t_text : "Health Potion", v_text : "Heals 1 heart"};
 inventory[1] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
-inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Poison Potion", v_text : "Creates a cloud \nof noxious gas"};
+inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 inventory[3] = {type : spr_fire_potion, vrty : 1, num : 15, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
 potions = array_create(50, -1); //-1 is default value
@@ -139,17 +139,17 @@ potions[0][1] = {type : spr_health_potion, vrty : 1, num : 8, t_text : "Health P
 
 potions[1][0] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
 
-potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "doesn't actually\n do anything lol"};
+potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "doesn't actually do anything lol"};
 
 //potions[3][0] = {type : spr_fire_potion, vrty : 0, num : 1};
 potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 potions[3][3] = {type : spr_fire_potion, vrty : 3, num : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
-potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion", v_text : "still not \nimplemented"};
-potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Poison Potion", v_text : "Creates a cloud \nof noxious gas"};
-potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my \neyes"};
-potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep \nnow"};
-potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock \nhard lol"};
+potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion", v_text : "still not implemented"};
+potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
+potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
+potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
 #endregion
 

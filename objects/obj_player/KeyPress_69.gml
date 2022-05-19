@@ -31,7 +31,7 @@ if(inInventory){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly

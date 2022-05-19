@@ -17,3 +17,5 @@ color = c_dkgrey; //used to change color
 choosing = false; //used to check if player is making a decision
 
 spoken = false;// temp testing variable
+
+//script_object_collision(1, 50);

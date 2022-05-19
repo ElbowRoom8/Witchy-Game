@@ -29,7 +29,7 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 9; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 10 + 36 * i, cy + 10 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 5; //caclulates array number
 			//reads items array and adds items accordingly
@@ -49,7 +49,7 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 3; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 486 + 36 * i, cy + 10 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 4 + mod_index; //caclulates array number
 			//reads items array and adds items accordingly
@@ -71,7 +71,7 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(obj_player.cx + 270 + 36 * i, obj_player.cy + 170 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			newObj.stored = "autofill";
 			
 			potNum = i + j * 10; //caclulates array number

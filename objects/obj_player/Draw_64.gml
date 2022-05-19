@@ -21,7 +21,7 @@ if (inQuest){
 	
 	//draws item pickup text
 	for(var i = 0; i < array_length(pickup); i++){
-		draw_set_font(fnt_4);
+		draw_set_font(fnt_5);
 		var temp = pickup[i].val;
 		//checks if timed out
 		if(temp >= 200){

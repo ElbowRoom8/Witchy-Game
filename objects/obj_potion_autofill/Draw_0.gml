@@ -1,6 +1,6 @@
 /// @description Draws numbers
 draw_self();
-draw_set_font(fnt_2);
+draw_set_font(fnt_5);
 
 var i = potions[val][vrty].num
 

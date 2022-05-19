@@ -19,9 +19,9 @@ if(!mouseUsed and !inQuest){
 			relWidth = ceil(string_width(v_text) / (str_width + 15));
 		}
 		var str_height = string_height(t_text) + 0.70 * relWidth * string_height(v_text);
-		draw_sprite_ext(spr_tooltip, 0, xx + 5, yy, str_width / 40, str_height / 40, 0, c_white, 1);
-		draw_set_font(fnt_2);
-		draw_text_transformed(xx + 10, yy + 3, t_text, 0.7, 0.7, 0);
-		draw_text_ext_transformed(xx + 15, yy + 25, v_text, -1, str_width + 50, 0.6, 0.6, 0);
+		draw_sprite_ext(spr_tooltip, 0, xx + 5, yy, str_width / 40, str_height / 35, 0, c_white, 1);
+		draw_set_font(fnt_5);
+		draw_text_transformed(xx + 10, yy + 3, t_text, 1, 1, 0);
+		draw_text_ext_transformed(xx + 15, yy + 25, v_text, -1, str_width + 50, 1, 1, 0);
 	}
 }

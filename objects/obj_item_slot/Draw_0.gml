@@ -180,7 +180,7 @@ draw_set_alpha(1);
 draw_self();
 
 //draws numbers
-draw_set_font(fnt_2);
+draw_set_font(fnt_5);
 draw_set_color(c_white);
 if (stored == "brewing" || stored == "m_brewing"){
 	//if type "brewing", reference inventory array

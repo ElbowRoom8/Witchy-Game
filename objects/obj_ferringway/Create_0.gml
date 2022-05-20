@@ -18,4 +18,6 @@ choosing = false; //used to check if player is making a decision
 
 spoken = false;// temp testing variable
 
-//script_object_collision(1, 50);
+newObj = instance_create_depth(x + 4, y + sprite_height/2 + 16, 75, obj_wall);
+newObj.image_xscale = 3;
+newObj.image_yscale = 2;

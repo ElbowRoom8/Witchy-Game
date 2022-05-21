@@ -106,6 +106,7 @@
     {"id":{"name":"spr_table","path":"sprites/spr_table/spr_table.yy",},"order":19,},
     {"id":{"name":"spr_flower2","path":"sprites/spr_flower2/spr_flower2.yy",},"order":9,},
     {"id":{"name":"rm_base","path":"rooms/rm_base/rm_base.yy",},"order":3,},
+    {"id":{"name":"spr_fire3","path":"sprites/spr_fire3/spr_fire3.yy",},"order":25,},
     {"id":{"name":"rm_kitchen","path":"rooms/rm_kitchen/rm_kitchen.yy",},"order":3,},
     {"id":{"name":"script_npc_code","path":"scripts/script_npc_code/script_npc_code.yy",},"order":9,},
     {"id":{"name":"spr_item_wolf_pelt","path":"sprites/spr_item_wolf_pelt/spr_item_wolf_pelt.yy",},"order":4,},

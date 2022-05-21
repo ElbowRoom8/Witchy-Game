@@ -1,5 +1,8 @@
 /// @description makes wall at delay
 depth = room_height - (y + 5 + image_yscale * sprite_height / 2);
+if (depth < 1){
+	depth = 1;
+}
 
 if(sprite_index = spr_rock6){
 	newObj = instance_create_depth(x + 3, y + sprite_height/2, 75, obj_wall);

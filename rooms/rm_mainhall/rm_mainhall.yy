@@ -41,6 +41,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_stool","path":"objects/obj_stool/obj_stool.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":528.0,"resourceVersion":"1.0","name":"inst_51707EEE","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_torch","path":"objects/obj_torch/obj_torch.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":804.0,"y":304.0,"resourceVersion":"1.0","name":"inst_1253CEC2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_table","path":"objects/obj_table/obj_table.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":656.0,"y":496.0,"resourceVersion":"1.0","name":"inst_F0B0FCE","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_bulletin_board","path":"objects/obj_bulletin_board/obj_bulletin_board.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":416.0,"resourceVersion":"1.0","name":"inst_5780DCC1","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Decors","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":46.4999962,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":222.0,"y":119.0,"resourceVersion":"1.0","name":"inst_2F75FC9A","tags":[],"resourceType":"GMRInstance",},
@@ -123,6 +124,7 @@
     {"name":"inst_F0B0FCE","path":"rooms/rm_mainhall/rm_mainhall.yy",},
     {"name":"inst_4503EB8E","path":"rooms/rm_mainhall/rm_mainhall.yy",},
     {"name":"inst_6C4BAF59","path":"rooms/rm_mainhall/rm_mainhall.yy",},
+    {"name":"inst_5780DCC1","path":"rooms/rm_mainhall/rm_mainhall.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

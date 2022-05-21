@@ -35,6 +35,7 @@ choice = -1; //used for selction options in dialogue
 chooseMax = -1;
 gap = true; //used to prevent holding of potions
 old_x = 0; //used to place player in correct spot leaving clearings
+clearing_reset = false; //used to check when to spawn new mushrooms in 
 throw_x = 0; //used for throwing potions
 throw_y = 0;
 
@@ -104,6 +105,16 @@ potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door5, vrty :
 
 potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
 
+potRef[10][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
+//potRef[11][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
+//potRef[12][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
+//potRef[13][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
+//potRef[15][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
 #endregion
 
 #region Set up inventory
@@ -150,6 +161,7 @@ potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Poison Pot
 potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potions[11][0] = {type : spr_growth_potion, vrty : 0, num : 12, t_text : "Growth Potion", v_text : "touch grass lmao"};
 
 #endregion
 

@@ -1,7 +1,9 @@
-/// @description closes inventory
+/// @description closes UI screens
 if(inMenu){
 	//close menu
-	
+	instance_destroy(obj_dim);
+	instance_destroy(obj_mute);
+	inMenu = false;
 }else if(inInventory){
 	//close inventory
 	instance_destroy(obj_inventory);		
@@ -20,7 +22,10 @@ if(inMenu){
 	instance_destroy(obj_brew);
 	instance_destroy(obj_dim);
 	brewing = false;
-} else {
+} else if (!inDialogue){
 	//open menu
-	
+	newObj = instance_create_depth(cx + 0, cy + 0, -1, obj_dim);
+	newObj.image_alpha = 0.6;
+	newObj = instance_create_depth(cx + 100, cy + 100, -2, obj_mute);
+	inMenu = true;
 }

@@ -1,5 +1,5 @@
 /// @description use potion effects
-if(fireBreath > 0){
+if(fireBreath > 0 and !inMenu){
 	fireBreath -= 0.4;
 	var fireDepth = depth + 1;
 	if (sprite_index == spr_player_walkdown){

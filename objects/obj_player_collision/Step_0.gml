@@ -12,7 +12,7 @@ var walkSpd = 0;
 //speed of walking animation, varies for sprinting
 var animationSpd;
 //checks for cutscene
-if(!inDialogue and !inInventory and !brewing){
+if(!inDialogue and !inInventory and !brewing and !inMenu){
 	//controls sprinting
 	if keyboard_check(vk_shift){
 		walkSpd = 4;
@@ -107,7 +107,7 @@ obj_player.y = obj_player.y + vSpd;
 if hSpd == 0 and vSpd == 0 {
 	obj_player.image_speed = 0;
 	obj_player.image_index = 0;
-	//prevents player from stopping in running sprites
+	//prevents player from humping stuf lmao
 	if(obj_player.sprite_index == spr_player_runleft){
 		obj_player.sprite_index = spr_player_walkleft;
 	}else if(obj_player.sprite_index == spr_player_runright){

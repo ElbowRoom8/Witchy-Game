@@ -1,6 +1,6 @@
 /// @description Checks for interactions
 //checks diraction facing, and creates a pinger object in that direction
-if(!inDialogue & !inInventory & !brewing){
+if(!inDialogue & !inInventory & !brewing & !inMenu){
 	if(sprite_index = spr_player_walkleft || sprite_index = spr_player_runleft){
 		instance_create_depth(x - 10, y + sprite_height / 2, depth, obj_pinger);
 	

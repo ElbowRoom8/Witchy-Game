@@ -1,6 +1,5 @@
 /// @description follow player
 
-//show_debug_message(move_delay);
 // move Floofy
 if (move_delay) {// set timer for movement
 	move_delay = false;
@@ -11,7 +10,6 @@ if (move_delay) {// set timer for movement
 }
 
 if (point_distance(x,y,follow_x,follow_y) > follow_dist){
-	depth = room_height - (y + sprite_height / 2);
 	move_towards_point(follow_x, follow_y, 3);
 	image_speed = 1.2;
 } else {
@@ -26,5 +24,7 @@ if (direction > 90) && (direction < 270) {
 } else {
    image_xscale = -def_scale;
 }
+
+depth = room_height - (y + sprite_height / 2);
 
 script_object_movement();

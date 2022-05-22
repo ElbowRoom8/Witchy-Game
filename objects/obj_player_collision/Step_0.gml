@@ -8,7 +8,7 @@ var rightSpd = 0;
 var upSpd = 0;
 var downSpd = 0;
 //movement speed, varies for sprinting
-var walkSpd;
+var walkSpd = 0;
 //speed of walking animation, varies for sprinting
 var animationSpd;
 //checks for cutscene
@@ -107,6 +107,16 @@ obj_player.y = obj_player.y + vSpd;
 if hSpd == 0 and vSpd == 0 {
 	obj_player.image_speed = 0;
 	obj_player.image_index = 0;
+	//prevents player from stopping in running sprites
+	if(obj_player.sprite_index == spr_player_runleft){
+		obj_player.sprite_index = spr_player_walkleft;
+	}else if(obj_player.sprite_index == spr_player_runright){
+		obj_player.sprite_index = spr_player_walkright;
+	}else if(obj_player.sprite_index == spr_player_runup){
+		obj_player.sprite_index = spr_player_walkup;
+	}else if(obj_player.sprite_index == spr_player_rundown){
+		obj_player.sprite_index = spr_player_walkdown;
+	}
 }
 
 //moves to players feet

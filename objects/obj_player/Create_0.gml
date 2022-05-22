@@ -54,6 +54,8 @@ globalvar inQuest; //allows for quests
 inQuest = false;
 globalvar brewing; //allows for brewing
 brewing = false;
+globalvar inMenu; //allows for pause menu
+inMenu = false;
 
 globalvar playerName;
 playerName = "Rowan"; //will change how is set later //easter egg name is "rawr xd"
@@ -95,25 +97,47 @@ potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door2, vrty : 
 potRef[4][2] = {type : spr_fire_potion, index : 3, modifier : spr_door3, vrty : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist -25% \nqty + 30%"};
 potRef[4][3] = {type : spr_fire_potion, index : 3, modifier : spr_door4, vrty : 3, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist +25% \nqty - 30%"};
 
-potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door5, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, \nidk"};
+potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door5, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
 
 potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door5, vrty : 0, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 
 potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door5, vrty : 0, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 
 potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door5, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potRef[8][1] = {type : spr_sleep_potion, index : 7, modifier : spr_door2, vrty : 1, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potRef[8][2] = {type : spr_sleep_potion, index : 7, modifier : spr_door3, vrty : 2, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 
-potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potRef[9][0] = {type : spr_stone_potion, index : 8, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "I've been advised not to include this joke"};
 
-potRef[10][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][0] = {type : spr_growth_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][1] = {type : spr_growth_potion, index : 9, modifier : spr_door2, vrty : 1, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][2] = {type : spr_growth_potion, index : 9, modifier : spr_door3, vrty : 2, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][3] = {type : spr_growth_potion, index : 9, modifier : spr_door4, vrty : 3, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][4] = {type : spr_growth_potion, index : 9, modifier : spr_door6, vrty : 4, t_text : "Growth Potion", v_text : "touch grass lmao"};
 
-//potRef[11][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[11][0] = {type : spr_bubble_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Bubble Potion", v_text : "tbd"};
 
-//potRef[12][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[12][0] = {type : spr_darkness_potion, index : 11, modifier : spr_door5, vrty : 0, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potRef[12][1] = {type : spr_darkness_potion, index : 11, modifier : spr_door2, vrty : 1, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potRef[12][2] = {type : spr_darkness_potion, index : 11, modifier : spr_door3, vrty : 2, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
 
-//potRef[13][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[13][0] = {type : spr_explosive_potion, index : 12, modifier : spr_door5, vrty : 0, t_text : "Explosion Potion", v_text : "i'm a creeper, minecrafts' grim reaper"};
 
-//potRef[15][0] = {type : spr_growth_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[14][0] = {type : spr_door2, index : 12, modifier : spr_door5, vrty : 1, t_text : "Explosion Potion", v_text : "i'm a creeper, minecraft's grim reaper"};
+
+potRef[15][0] = {type : spr_lightning_potion, index : 13, modifier : spr_door5, vrty : 0, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+potRef[15][1] = {type : spr_lightning_potion, index : 13, modifier : spr_door2, vrty : 1, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+
+potRef[16][0] = {type : spr_oil, index : 14, modifier : spr_door5, vrty : 0, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][1] = {type : spr_oil, index : 14, modifier : spr_door2, vrty : 1, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][2] = {type : spr_oil, index : 14, modifier : spr_door3, vrty : 2, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][3] = {type : spr_oil, index : 14, modifier : spr_door4, vrty : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][4] = {type : spr_oil, index : 14, modifier : spr_door6, vrty : 4, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][5] = {type : spr_oil, index : 14, modifier : spr_door7, vrty : 5, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][6] = {type : spr_oil, index : 14, modifier : spr_door8, vrty : 6, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][7] = {type : spr_oil, index : 14, modifier : spr_door1, vrty : 7, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+
+potRef[17][0] = {type : spr_vortex_potion, index : 15, modifier : spr_door5, vrty : 0, t_text : "Vortex Potion", v_text : "tbd"};
 
 #endregion
 
@@ -152,7 +176,6 @@ potions[1][0] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense
 
 potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "doesn't actually do anything lol"};
 
-//potions[3][0] = {type : spr_fire_potion, vrty : 0, num : 1};
 potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 potions[3][3] = {type : spr_fire_potion, vrty : 3, num : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
@@ -160,8 +183,22 @@ potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion"
 potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
-potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
-potions[11][0] = {type : spr_growth_potion, vrty : 0, num : 12, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potions[8][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potions[9][0] = {type : spr_growth_potion, vrty : 0, num : 12, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potions[10][0] = {type : spr_bubble_potion, vrty : 0, num : 1, t_text : "Bubble Potion", v_text : "tbd"};
+
+potions[11][0] = {type : spr_darkness_potion, vrty : 0, num : 0, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potions[11][1] = {type : spr_darkness_potion, vrty : 1, num : 6, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+
+potions[12][0] = {type : spr_explosive_potion, vrty : 0, num : 3, t_text : "Explosion Potion", v_text : "i'm a creeper, minecraft's grim reaper"};
+
+potions[13][0] = {type : spr_lightning_potion, vrty : 1, num : 1, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+
+potions[14][0] = {type : spr_oil, vrty : 0, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potions[14][1] = {type : spr_oil, vrty : 1, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potions[14][2] = {type : spr_oil, vrty : 2, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+
+potions[15][0] = {type : spr_vortex_potion, vrty : 0, num : 3, t_text : "Vortex Potion", v_text : "tbd"};
 
 #endregion
 

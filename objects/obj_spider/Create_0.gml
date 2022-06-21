@@ -1,14 +1,15 @@
-/// @description 
-randomize();
-spiderHealth = 15;
-def_scale = 1;
+/// @description
+maxHealth = 10;
+objHealth = maxHealth;
+damageCol = c_white;
+def_scale = 2;
+def_width = sprite_width;
 
-jump_delay = true; //stops constant jumping
-move_delay = true; //stops contant scuttling
-damage_delay = true; //stops constant damage
-jumping = false; //status var
+damage_delay = true;
+move_delay = true; //stops constant stepping
+attack_delay = true; //stops constant attack
 
-target_x = 0; //used for jump target
-target_y = 0; //used for jump target
+target_x = 0; //used for tracking target
+target_y = 0; //used for tracking target
 
 image_speed = 0;

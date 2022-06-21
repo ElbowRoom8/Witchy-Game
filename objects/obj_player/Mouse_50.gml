@@ -1,5 +1,5 @@
 /// @description use potion
-if(gap & inQuest){
+if(gap & inQuest & !inMenu){
 	if(inventory[selNum] != -1){
 		if(inventory[selNum].type = spr_health_potion){
 			if(health > 8){

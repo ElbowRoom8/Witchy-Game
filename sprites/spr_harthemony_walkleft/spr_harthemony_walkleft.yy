@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Harthemony",
-    "path": "folders/Sprites/Harthemony.yy",
+    "path": "folders/Sprites/Characters/Harthemony.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_harthemony_walkleft",

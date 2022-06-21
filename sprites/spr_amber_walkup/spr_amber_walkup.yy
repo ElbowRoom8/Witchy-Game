@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Amber",
-    "path": "folders/Sprites/Amber.yy",
+    "path": "folders/Sprites/Characters/Amber.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_amber_walkup",

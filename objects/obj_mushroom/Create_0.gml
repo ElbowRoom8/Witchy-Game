@@ -3,8 +3,14 @@ image_xscale = 2;
 image_yscale = image_xscale;
 index = -1;
 dropNum = 1;
-type = sprite_index;
 collectTimer = room_speed * 0.5;
+
+if(room = rm_forest_clearing){
+	var chance = irandom_range(0, 4);
+	if (chance){
+		sprite_index = spr_mushroom3;
+	}
+}
 
 alarm[0] = 10;
 

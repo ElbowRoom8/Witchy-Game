@@ -68,7 +68,6 @@ if((abs(x - target_x) < 3) && (abs(y - target_y) < 3)){
 	jumping = false;
 	//resets sprite
 	sprite_index = sprRef;
-	image_alpha = 1;
 	image_xscale = def_scale;
 	image_yscale = image_xscale;
 }
@@ -93,13 +92,6 @@ if(jumping){
 	    }
 	}
 	
-	//switches to shadow sprite
-	sprite_index = spr_shadow;
-	image_alpha = 0.6;
-	//scales shadow based on height and size
-	image_xscale = 35 * def_scale / (z + 70);
-	image_yscale = image_xscale;
-	
 	#region //fancy stuff that doesn't work but might be useful
 	//this is fancy math that doesn't work
 	//k = start_y - distance_y - 50;
@@ -114,10 +106,10 @@ if(jumping){
 	//z = -abs((((target_x - start_x) / 2) + start_x) - x) + abs((target_x - start_x) / 2);
 	#endregion
 	
-//if not jjumping, jiggle randomly
+//if not jumping, jiggle randomly
 } else {
 	speed = 0;
-	if((irandom_range(1, 200) == 1) & ani_delay){
+	if((irandom_range(1, 100) == 1) & ani_delay){
 		image_speed = 1;
 		ani_delay = false;
 		alarm[0] = irandom_range(25, 50);
@@ -125,6 +117,6 @@ if(jumping){
 }
 
 //checks for death
-if(slimeHealth <= 0 && !jumping) {
+if(objHealth <= 0 && !jumping) {
 	instance_destroy();
 }

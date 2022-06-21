@@ -1,7 +1,19 @@
 /// @description 
 randomize();
-slimeHealth = 15;
-def_scale = 1;
+maxHealth = 15;
+objHealth = maxHealth;
+damageCol = c_white;
+def_scale = 2;
+// randomize sprite color
+image_alpha = 0;
+color = irandom_range(-2, 2);
+if (color < 1) {
+	sprite_index = spr_slime_green;
+} else if (color == 1) {
+	sprite_index = spr_slime_brown;
+} else if (color == 2) {
+	sprite_index = spr_slime_pink;
+}
 sprRef = sprite_index;
 
 ani_delay = true; //random jiggle

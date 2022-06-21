@@ -1,5 +1,4 @@
 /// @description Sets variables
-
 #region Setup cameras clamp variables
 
 min_view_x = 0;
@@ -7,9 +6,21 @@ min_view_y = 0;
 max_view_x = room_width - camera_get_view_width(view_camera[0]);
 max_view_y = room_height - camera_get_view_height(view_camera[0]);
 
+//for draw_GUI
+//grab the width and height of view
+var cw = camera_get_view_width(view_camera);
+var ch = camera_get_view_height(view_camera);
+//set some variables to hold the value and div that by width and height
+display_scalex = display_get_gui_width() / cw;
+display_scaley = display_get_gui_height() / ch;
+
 #endregion
 
-//audio_play_sound(snd_main_theme, 1, false);
+audio_group_load(Music);
+global.school = audio_create_sync_group(true);
+audio_stop_sync_group(global.school);
+alarm[0] = 30;
+mute = false;
 
 #region Set up local variables
 image_speed = 0;
@@ -18,16 +29,21 @@ image_xscale = 2;
 image_yscale = 2;
 
 health = 10; //holds player health
-def_timer = 0; //defense buff timer
 pickup = [];
 
 selNum = 0; //used to pick the correct spot in inventory
+choice = -1; //used for selction options in dialogue
+chooseMax = -1;
 gap = true; //used to prevent holding of potions
 old_x = 0; //used to place player in correct spot leaving clearings
+clearing_reset = false; //used to check when to spawn new mushrooms in 
 throw_x = 0; //used for throwing potions
 throw_y = 0;
 
+// status effects
 fireBreath = 0; //used to count amount of firebreath left
+def_timer = 0; //defense buff timer
+slowness = false;
 #endregion
 
 #region Set up global status variables
@@ -37,48 +53,92 @@ globalvar inInventory; //allows for inventory
 inInventory = false;
 globalvar inQuest; //allows for quests
 inQuest = false;
-globalvar backTracked;//stops player if moving backwards in quests
-backTracked = false;
 globalvar brewing; //allows for brewing
 brewing = false;
+globalvar inMenu; //allows for pause menu
+inMenu = false;
 
 globalvar playerName;
-playerName = "rawr xd"; //will change how is set later
+playerName = "Rowan"; //will change how is set later //easter egg name is "rawr xd"
 globalvar maxPotions; //maximum number of each potion type you can have on quests
-maxPotions = 3; 
+maxPotions = 6; 
 globalvar defense;
 defense = 1;
+
+globalvar backTracked;//stops player if moving backwards in quests
+backTracked = false;
+globalvar damaged;//allows for i-frames
+damaged = false;
+
+//story tracking variables
+globalvar story;//used to track certain progresses
+story = -1;
+globalvar track;//used to track certain progresses
+track = -1;
+
 #endregion
 
 #region Set up massive potion reference array
 
 globalvar potRef;
 //form: {type/sprite, index (for potions array), modifier/sprite, vrty for that modifier}
-potRef[0][0] = {type : spr_health_potion, index : 0, modifier : spr_door7, vrty : 0, t_text : "Health Potion", v_text : "idk lol hi mom"};
-potRef[0][1] = {type : spr_health_potion, index : 0, modifier : spr_door8, vrty : 1, t_text : "Health Potion", v_text : "idk lol hi dad"};
+potRef[0][0] = {type : spr_health_potion, index : 0, modifier : spr_door5, vrty : 0, t_text : "Health Potion", v_text : "Heals 1 heart"};
+potRef[0][1] = {type : spr_health_potion, index : 0, modifier : spr_door2, vrty : 1, t_text : "Health Potion", v_text : "Heals 1 heart"};
 
-potRef[1][0] = {type : spr_door1, index : 0, modifier : spr_door7, vrty : 2, t_text : "Health Potion", v_text : "idk lol hi no one"};
-potRef[1][1] = {type : spr_door1, index : 0, modifier : spr_door8, vrty : 3, t_text : "Health Potion", v_text : "idk lol hi everyone"};
+potRef[1][0] = {type : spr_door1, index : 0, modifier : spr_door5, vrty : 2, t_text : "Health Potion", v_text : "idk lol hi no one"};
+potRef[1][1] = {type : spr_door1, index : 0, modifier : spr_door2, vrty : 3, t_text : "Health Potion", v_text : "idk lol hi everyone"};
 
-potRef[2][0] = {type : spr_defense_potion, index : 1, modifier : spr_door7, vrty : 0, t_text : "Defense Potion", v_text : "df +50% \n time -10s"};
+potRef[2][0] = {type : spr_defense_potion, index : 1, modifier : spr_door5, vrty : 0, t_text : "Defense Potion", v_text : "df +50% \n time -10s"};
 
-potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door7, vrty : 0, t_text : "Potion of Regeneration", v_text : "poopity scoop"};
-potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door8, vrty : 1, t_text : "Potion of Regeneration", v_text : "scoopity wooop"};
+potRef[3][0] = {type : spr_regen_potion, index : 2, modifier : spr_door5, vrty : 0, t_text : "Potion of Regeneration", v_text : "doesn't actually do anything lol"};
+potRef[3][1] = {type : spr_regen_potion, index : 2, modifier : spr_door2, vrty : 1, t_text : "Potion of Regeneration", v_text : "still not implemented"};
 
-potRef[4][0] = {type : spr_fire_potion, index : 3, modifier : spr_door7, vrty : 0, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
-potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door8, vrty : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
+potRef[4][0] = {type : spr_fire_potion, index : 3, modifier : spr_door5, vrty : 0, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
+potRef[4][1] = {type : spr_fire_potion, index : 3, modifier : spr_door2, vrty : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 potRef[4][2] = {type : spr_fire_potion, index : 3, modifier : spr_door3, vrty : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist -25% \nqty + 30%"};
 potRef[4][3] = {type : spr_fire_potion, index : 3, modifier : spr_door4, vrty : 3, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist +25% \nqty - 30%"};
 
-potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door7, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
+potRef[5][0] = {type : spr_ice_potion, index : 4, modifier : spr_door5, vrty : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
 
-potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door7, vrty : 0, t_text : "Acid Potion", v_text : "it's a trip bro"};
+potRef[6][0] = {type : spr_acid_potion, index : 5, modifier : spr_door5, vrty : 0, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 
-potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door7, vrty : 0, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
+potRef[7][0] = {type : spr_light_potion, index : 6, modifier : spr_door5, vrty : 0, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 
-potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door7, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potRef[8][0] = {type : spr_sleep_potion, index : 7, modifier : spr_door5, vrty : 0, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potRef[8][1] = {type : spr_sleep_potion, index : 7, modifier : spr_door2, vrty : 1, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
+potRef[8][2] = {type : spr_sleep_potion, index : 7, modifier : spr_door3, vrty : 2, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
 
-potRef[9][0] = {type : spr_stone_potion, index : 9, modifier : spr_door7, vrty : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potRef[9][0] = {type : spr_stone_potion, index : 8, modifier : spr_door5, vrty : 0, t_text : "Stone Potion", v_text : "I've been advised not to include this joke"};
+
+potRef[10][0] = {type : spr_growth_potion, index : 9, modifier : spr_door5, vrty : 0, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][1] = {type : spr_growth_potion, index : 9, modifier : spr_door2, vrty : 1, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][2] = {type : spr_growth_potion, index : 9, modifier : spr_door3, vrty : 2, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][3] = {type : spr_growth_potion, index : 9, modifier : spr_door4, vrty : 3, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potRef[10][4] = {type : spr_growth_potion, index : 9, modifier : spr_door6, vrty : 4, t_text : "Growth Potion", v_text : "touch grass lmao"};
+
+potRef[11][0] = {type : spr_bubble_potion, index : 10, modifier : spr_door5, vrty : 0, t_text : "Bubble Potion", v_text : "tbd"};
+
+potRef[12][0] = {type : spr_darkness_potion, index : 11, modifier : spr_door5, vrty : 0, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potRef[12][1] = {type : spr_darkness_potion, index : 11, modifier : spr_door2, vrty : 1, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potRef[12][2] = {type : spr_darkness_potion, index : 11, modifier : spr_door3, vrty : 2, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+
+potRef[13][0] = {type : spr_explosive_potion, index : 12, modifier : spr_door5, vrty : 0, t_text : "Explosion Potion", v_text : "i'm a creeper, minecrafts' grim reaper"};
+
+potRef[14][0] = {type : spr_door2, index : 12, modifier : spr_door5, vrty : 1, t_text : "Explosion Potion", v_text : "i'm a creeper, minecraft's grim reaper"};
+
+potRef[15][0] = {type : spr_lightning_potion, index : 13, modifier : spr_door5, vrty : 0, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+potRef[15][1] = {type : spr_lightning_potion, index : 13, modifier : spr_door2, vrty : 1, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+
+potRef[16][0] = {type : spr_oil, index : 14, modifier : spr_door5, vrty : 0, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][1] = {type : spr_oil, index : 14, modifier : spr_door2, vrty : 1, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][2] = {type : spr_oil, index : 14, modifier : spr_door3, vrty : 2, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][3] = {type : spr_oil, index : 14, modifier : spr_door4, vrty : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][4] = {type : spr_oil, index : 14, modifier : spr_door6, vrty : 4, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][5] = {type : spr_oil, index : 14, modifier : spr_door7, vrty : 5, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][6] = {type : spr_oil, index : 14, modifier : spr_door8, vrty : 6, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potRef[16][7] = {type : spr_oil, index : 14, modifier : spr_door1, vrty : 7, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+
+potRef[17][0] = {type : spr_vortex_potion, index : 15, modifier : spr_door5, vrty : 0, t_text : "Vortex Potion", v_text : "tbd"};
 
 #endregion
 
@@ -89,10 +149,10 @@ tabType = -1;
 inventory = array_create(9, -1); //-1 is default value
 globalvar inventory; //nine slots for potions you can bring on quests
 //form: {sprite/type of potion, variety of potion, quantity}
-inventory[0] = {type : spr_health_potion, vrty : 1, num : 7, t_text : "Health Potion", v_text : "idk lol hi dad"};
+inventory[0] = {type : spr_health_potion, vrty : 1, num : 7, t_text : "Health Potion", v_text : "Heals 1 heart"};
 inventory[1] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
-inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Acid Potion", v_text : "it's a trip bro"};
-inventory[3] = {type : spr_fire_potion, vrty : 1, num : 7, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
+inventory[2] = {type : spr_acid_potion, vrty : 0, num : 7, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
+inventory[3] = {type : spr_fire_potion, vrty : 1, num : 15, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
 potions = array_create(50, -1); //-1 is default value
 globalvar potions; //storage for all potions you have
@@ -110,37 +170,53 @@ for(var i = 0; i < array_length(potRef); i++){
 }
 
 //form: {sprite/type of potion, variety of potion, quantity}
-potions[0][0] = {type : spr_health_potion, vrty : 0, num : 8, t_text : "Health Potion", v_text : "idk lol hi mom"};
-potions[0][1] = {type : spr_health_potion, vrty : 1, num : 8, t_text : "Health Potion", v_text : "idk lol hi dad"};
+potions[0][0] = {type : spr_health_potion, vrty : 0, num : 8, t_text : "Health Potion", v_text : "Heals 1 heart"};
+potions[0][1] = {type : spr_health_potion, vrty : 1, num : 8, t_text : "Health Potion", v_text : "Heals 1 heart"};
 
 potions[1][0] = {type : spr_defense_potion, vrty : 0, num : 3, t_text : "Defense Potion", v_text : "df +50% \ntime -10s"};
 
-potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "poopity scoop"};
+potions[2][0] = {type : spr_regen_potion, vrty : 0, num : 2, t_text : "Potion of Regeneration", v_text : "doesn't actually do anything lol"};
 
-//potions[3][0] = {type : spr_fire_potion, vrty : 0, num : 1};
-potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2, t_text : "Fire Breathing Potion", v_text : "damage +25% \ndist -25% \nqty - 30%"};
+potions[3][1] = {type : spr_fire_potion, vrty : 1, num : 2, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 potions[3][3] = {type : spr_fire_potion, vrty : 3, num : 1, t_text : "Fire Breathing Potion", v_text : "damage -25% \ndist +25% \nqty - 30%"};
 
-potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion", v_text : "does the ice, idk"};
-potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Acid Potion", v_text : "it's a trip bro"};
+potions[4][0] = {type : spr_ice_potion, vrty : 0, num : 0, t_text : "Ice Potion", v_text : "still not implemented"};
+potions[5][0] = {type : spr_acid_potion, vrty : 0, num : 2, t_text : "Poison Potion", v_text : "Creates a cloud of noxious gas"};
 potions[6][0] = {type : spr_light_potion, vrty : 0, num : 1, t_text : "Potion of Light", v_text : "AAAAAAAAA my eyes"};
 potions[7][0] = {type : spr_sleep_potion, vrty : 0, num : 6, t_text : "Potion of Slumber", v_text : "ssssssshhh sleep now"};
-potions[9][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potions[8][0] = {type : spr_stone_potion, vrty : 0, num : 0, t_text : "Stone Potion", v_text : "gets you rock hard lol"};
+potions[9][0] = {type : spr_growth_potion, vrty : 0, num : 12, t_text : "Growth Potion", v_text : "touch grass lmao"};
+potions[10][0] = {type : spr_bubble_potion, vrty : 0, num : 1, t_text : "Bubble Potion", v_text : "tbd"};
+
+potions[11][0] = {type : spr_darkness_potion, vrty : 0, num : 0, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+potions[11][1] = {type : spr_darkness_potion, vrty : 1, num : 6, t_text : "Darkness Potion", v_text : "Casts a shadow over the battlefield"};
+
+potions[12][0] = {type : spr_explosive_potion, vrty : 0, num : 3, t_text : "Explosion Potion", v_text : "i'm a creeper, minecraft's grim reaper"};
+
+potions[13][0] = {type : spr_lightning_potion, vrty : 1, num : 1, t_text : "Lightning Potion", v_text : "summons a lightning bolt to smite your enemies"};
+
+potions[14][0] = {type : spr_oil, vrty : 0, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potions[14][1] = {type : spr_oil, vrty : 1, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+potions[14][2] = {type : spr_oil, vrty : 2, num : 3, t_text : "Olive Oil", v_text : "Olive oil\nOlive oil\nOlive oil\nOlive oil\nOlive oil"};
+
+potions[15][0] = {type : spr_vortex_potion, vrty : 0, num : 3, t_text : "Vortex Potion", v_text : "tbd"};
 
 #endregion
 
 #region Set up massive item reference array
 globalvar itemRef;
+itemRef = array_create(109, {type : -1, t_text : -1, v_text : -1});
 //form: {type, name, tooltip}
-itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "It's sorta sticky"};
+itemRef[0] = {type : spr_item_slime, t_text : "Slime Slime", v_text : "Implies the existence of other types of slime"};
 itemRef[1] = {type : spr_oil, t_text : "Olive Oil", v_text : "OOOOOLLIIIIIIVVVVVVEEE OOOOOOIIIIIILLLLLLLLL!!!!!!!"};
 itemRef[2] = {type : spr_item_silk, t_text : "Spider Silk", v_text : "Has bugs stuck in it"};
 itemRef[3] = {type : spr_item_spider_teeth, t_text : "Spider Tooth", v_text : "Feels sharp"};
-itemRef[4] = {type : spr_door4, t_text : "Dreamroot", v_text : "You kind of want to lick it"};
+itemRef[4] = {type : spr_door1, t_text : "Red Mushroom", v_text : "You kind of want to lick it"};
+itemRef[5] = {type : spr_wall, t_text : "Yellow Mushroom", v_text : "Used to relieve fever"};
 itemRef[7] = {type : spr_item_wolf_pelt, t_text : "Wolf Pelt", v_text : "Surprisingly soft"};
 itemRef[8] = {type : spr_item_wolf_claw, t_text : "Wolf Claw", v_text : "Infused with the thrill of the hunt"};
-itemRef[108] = {type : spr_door7, t_text : "Damesflower", v_text : "Used to relieve fever"};
-itemRef[109] = {type : spr_door8, t_text : "Tallowroot", v_text : "Feels greasy"};
+itemRef[108] = {type : spr_door5, t_text : "Purple Mushroom", v_text : "Amplifies damage"};
+itemRef[109] = {type : spr_door2, t_text : "Tallowroot", v_text : "Feels greasy"};
 #endregion
 
 #region Set up items
@@ -151,14 +227,14 @@ globalvar items; //bulk storage of all items you have
 items[0] = {type : spr_item_slime, num : 50};
 items[2] = {type : spr_item_silk, num : 0};
 items[3] = {type : spr_item_spider_teeth, num : 69};
-items[4] = {type : spr_door4, num : 114001};
+items[4] = {type : spr_door1, num : 2};
 items[7] = {type : spr_item_wolf_pelt, num : 420};
 items[8] = {type : spr_item_wolf_claw, num : 1500};
 //store modifiers at end of array
 globalvar mod_index;
 mod_index = 108;//gives start of modifiers
-items[108] = {type : spr_door7, num : 33};
-items[109] = {type : spr_door8, num : 46};
+items[108] = {type : spr_door5, num : 10};
+items[109] = {type : spr_door2, num : 46};
 
 brew_slots = array_create(4, -1);
 globalvar brew_slots;
@@ -169,12 +245,10 @@ globalvar brew_slots;
 
 globalvar recipes;
 //form: {ingredient 1, 2, 3, sprite/type of potion}
-recipes[0] = {ing1 : spr_item_slime, ing2 : spr_item_silk, ing3 : spr_item_spider_teeth, res : spr_health_potion};
-recipes[1] = {ing1 : spr_item_silk, ing2 : spr_item_slime, ing3 : spr_item_wolf_claw, res : spr_fire_potion};
-recipes[2] = {ing1 : spr_item_slime, ing2 : spr_item_wolf_claw, ing3 : spr_item_spider_teeth, res : spr_regen_potion};
-
-
-
+recipes[0] = {ing1 : spr_item_slime, ing2 : spr_door1, ing3 : spr_item_spider_teeth, res : spr_health_potion};
+recipes[1] = {ing1 : spr_wall, ing2 : spr_item_slime, ing3 : spr_item_wolf_claw, res : spr_fire_potion};
+recipes[2] = {ing1 : spr_door1, ing2 : spr_item_wolf_pelt, ing3 : spr_item_spider_teeth, res : spr_defense_potion};
+recipes[3] = {ing1 : spr_wall, ing2 : spr_door1, ing3 : spr_item_wolf_claw, res : spr_acid_potion};
 #endregion
 
 #region Set up dialogue ds_grid
@@ -184,4 +258,8 @@ global.dialogue = load_csv("fairwick_dialogue.csv");
 if(!ds_exists(global.dialogue, ds_type_grid)){
 	show_error("Error: Failed to load dialogue file", true);
 }
+#endregion
+
+#region For spawning objects
+instance_create_depth(x, y, depth, obj_floofy);
 #endregion

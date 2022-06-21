@@ -1,10 +1,16 @@
 /// @description moves to given room
-if(room = rm_mainhall){
-	room_goto(rm_forest);
-	obj_player.x = 100;
-	obj_player.y = 160;
-	inQuest = true;
-	obj_player.selNum = 0;
+if(room = rm_frontyard){
+	if (story == "Beginning"){
+		obj_narrator.index = script_dialogue_scenario(obj_narrator.c_index, "Approach Forest");
+		obj_narrator.canSpeak = true;
+		obj_player.y -= 15;
+	} else {
+		room_goto(rm_forest);
+		obj_player.x = 100;
+		obj_player.y = 160;
+		inQuest = true;
+		obj_player.selNum = 0;
+	}
 }else if(room= rm_forest){
 	room_goto(rm_mainhall);
 	obj_player.x = 390;
@@ -24,6 +30,8 @@ if(room = rm_mainhall){
 	obj_player.y = 420;
 } else if(room = rm_easthall){
 	room_goto(rm_courtyard);
+	obj_player.x = 640;
+	obj_player.y = 64;
 } else if(room = rm_cafeteria){
 	room_goto(rm_kitchen);
 	obj_player.x = 24;

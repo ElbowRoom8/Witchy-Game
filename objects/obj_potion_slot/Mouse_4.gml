@@ -22,7 +22,7 @@ if(tabType != val){
 	for(var i = 0; i < max_v; i++){
 		//creates inventory objects
 		newObj = instance_create_depth(cx + xx + 36 * i, cy + 131, depth + 1, obj_inventory);
-		newObj.image_alpha = 0.85
+		newObj.image_alpha = 0.90;
 		newObj.val = val;
 		newObj.stored = sto;
 	

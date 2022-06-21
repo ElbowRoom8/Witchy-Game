@@ -2,14 +2,15 @@
 
 depth = room_height - (y + image_yscale * sprite_height / 2);
 
-
+// potion effects
 if(def_timer > 0){
 	def_timer--;
 } else {
 	defense = 1;
 }
+slowness = false;
 
-// change selNum
+// change selected inventory slot
 if keyboard_check(ord(1)){
 	selNum = 0;
 } else if keyboard_check(ord(2)){
@@ -30,12 +31,14 @@ if keyboard_check(ord(1)){
 	selNum = 8;
 }
 
+//death on quest
 if(health <= 0){
 	room_persistent = false;
-	room_goto(rm_mainhall);
-	obj_player.x = 160;
-	obj_player.y = 168;
+	room_goto(rm_player_room);
+	obj_player.x = 80;
+	obj_player.y = 250;
 	inQuest = false;
+	damaged = false;
 	health = 10;
 	fireBreath = 0;
 	defense = 1;

@@ -139,7 +139,7 @@ if ((x < 3) & (!tiled)){
 #region //adds background trees and walls
 	if(counter % 3 == 0){
 		//chance of getting a clearing
-		var opening = 0;//irandom_range(0, 6);
+		var opening = 0;//irandom_range(0, 3);
 		
 		for(var i = 0; i < 11; i++){
 			if(i == 7 && !opening){
@@ -176,7 +176,7 @@ if ((x < 3) & (!tiled)){
 				newObj.moveable = true;
 			}
 			//door to clearing
-			newObj = instance_create_depth(x + 640 + 1394, 50, 100, obj_door1);
+			newObj = instance_create_depth(x + 640 + 1394, 80, 100, obj_door1);
 			newObj.image_xscale = 94 / newObj.sprite_height;
 			newObj.moveable = true;
 			//creates opening
@@ -193,10 +193,13 @@ if ((x < 3) & (!tiled)){
 			newObj = instance_create_depth(x + 640 + 1486, 0, 100, obj_wall);
 			newObj.image_yscale = 128 / newObj.sprite_height;
 			newObj.moveable = true;
+			
+			//resets clearing room
+			obj_player.clearing_reset = true;
 		}else{
 			//if not opening, create 3 walls
 			for(var i = 1; i <= 3; i++){
-				//newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
+				newObj = instance_create_depth(x + 640 * i, 120, 100, obj_wall);
 				newObj.image_xscale = 640 / newObj.sprite_width;
 				newObj.moveable = true;
 			}
@@ -241,7 +244,7 @@ for(var i = 0; i < 4; i++){
 	//trees
 	for(var i = 0; i <= 10; i++){
 		var place_x = irandom_range(640, 1280);
-		var place_y = irandom_range(130, 360);
+		var place_y = irandom_range(130, 359);
 		
 		if(place_y < pathMax || place_y > pathMin){
 			newObj = instance_create_depth(place_x, place_y - 128, 75, obj_tree);
@@ -256,54 +259,62 @@ for(var i = 0; i < 4; i++){
 	//boulders
 	for(var i = 0; i <= 3; i++){
 		var place_x = irandom_range(640, 1280);
-		var place_y = irandom_range(130, 360);
+		var place_y = irandom_range(130, 359);
 		
-		if(place_y < pathMax || place_y > pathMin){
-			newObj = instance_create_depth(place_x, place_y - 32, 75, obj_rock);
-			var type = irandom_range(0,4);
+		//picks sprite
+		var type = irandom_range(0,4);
+		var spr;
 			switch type{
 				case 0:
 					if(irandom_range(0,1)){
-						newObj.sprite_index = spr_rock5;
+						spr = spr_rock5;
 					} else {
-						newObj.sprite_index = spr_rock6;
+						spr = spr_rock6;
 					}
 					break;
-				case 1: newObj.sprite_index = spr_rock1;
+				case 1: spr = spr_rock1;
 				break;
-				case 2: newObj.sprite_index = spr_rock2;
+				case 2: spr = spr_rock2;
 				break;
-				case 3: newObj.sprite_index = spr_rock3;
+				case 3: spr = spr_rock3;
 				break;
-				case 4: newObj.sprite_index = spr_rock4;
+				case 4: spr = spr_rock4;
 				break;
 			}
+		if(place_y < pathMax || place_y > pathMin){
+			newObj = instance_create_depth(place_x, place_y - 2 * sprite_get_height(spr), 75, obj_rock);
+			newObj.sprite_index = spr;
+			
 		}
 	}
 	
 	//bush
 	for(var i = 0; i <= 3; i++){
 		var place_x = irandom_range(640, 1280);
-		var place_y = irandom_range(130, 360);
+		var place_y = irandom_range(130, 359);
 		
-		newObj = instance_create_depth(place_x, place_y - 32, 75, obj_bush);
+		//picks spriteDD
 		var type = irandom_range(0,3);
+		var spr;
 		switch type{
-			case 0: newObj.sprite_index = spr_bush_large;
+			case 0: spr = spr_bush_large;
 			break;
-			case 1: newObj.sprite_index = spr_bush_small1;
+			case 1: spr = spr_bush_small1;
 			break;
-			case 2: newObj.sprite_index = spr_bush_small2;
+			case 2: spr = spr_bush_small2;
 			break;
-			case 3: newObj.sprite_index = spr_bush_tall;
+			case 3: spr = spr_bush_tall;
 			break;
 		}
+		
+		newObj = instance_create_depth(place_x, place_y - 2 * sprite_get_height(spr), 75, obj_bush);
+		newObj.sprite_index = spr;
 	}
 	
 	//flowers
 	for(var i = 0; i <= 3; i++){
 		var place_x = irandom_range(640, 1280);
-		var place_y = irandom_range(130, 360);
+		var place_y = irandom_range(130, 359);
 		
 		if(place_y < pathMax || place_y > pathMin){
 			newObj = instance_create_depth(place_x, place_y - 32, room_height - 4, obj_flower);
@@ -318,7 +329,7 @@ for(var i = 0; i < 4; i++){
 	//mushrooms
 	for(var i = 0; i <= 3; i++){
 		var place_x = irandom_range(640, 1280);
-		var place_y = irandom_range(130, 360);
+		var place_y = irandom_range(130, 359);
 		
 		if(place_y < pathMax + 16 || place_y > pathMin - 16){
 			newObj = instance_create_depth(place_x, place_y - 32, room_height - 4, obj_mushroom);
@@ -332,10 +343,19 @@ for(var i = 0; i < 4; i++){
 
 #endregion
 	
-	//creates enemies
-	for (var i = 0; i <= irandom_range(0, counter); i++){
-		newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, obj_slime);
-		newObj.image_xscale = 2;
-		newObj.image_yscale = newObj.image_xscale;
-	}
+	//enemy array
+	var enemy_list;
+	enemy_list[0] = {object : obj_slime, spawn_rate : 1};
+	enemy_list[1] = {object : obj_wolf, spawn_rate : 1};
+	enemy_list[2] = {object : obj_spider, spawn_rate : 1};
+	/*
+	for (var i = 0; i < array_length(enemy_list); i++){ // for each enemy in the enemy array
+		//show_debug_message(counter * enemy_list[i].spawn_rate);
+		for (var j = 0; j < irandom_range(0, counter * enemy_list[i].spawn_rate); j++) { // randomize spawn based on the spawn rate
+			newObj = instance_create_depth(640 + irandom_range(50, 600), irandom_range(150, 330), 100, enemy_list[i].object);
+			newObj.image_xscale = 2;
+			newObj.image_yscale = newObj.image_xscale;
+		}
+	}*/
+	
 }

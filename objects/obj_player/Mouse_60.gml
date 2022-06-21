@@ -1,5 +1,7 @@
 /// @description decrement selNum
-selNum--;
-if (selNum < 0){
-	selNum = 8;
+if(!inMenu){
+	selNum--;
+	if (selNum < 0){
+		selNum = 8;
+	}
 }

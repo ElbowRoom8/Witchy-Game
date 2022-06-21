@@ -6,6 +6,12 @@ function escape_char(_char, _text, _j){
 	} else if(_char == "n"){ //inserts newline
 		_text = string_delete(_text, _j, 2);
 		_text = string_insert("\n", _text, _j);
+	} else if(_char == "q"){ //inserts newline
+		_text = string_delete(_text, _j, 2);
+		_text = string_insert("\"", _text, _j);
+	}else if (_char == "c"){ //player choice
+		choosing = true; //lol guess I'm allowed to do this huh
+		_text = string_delete(_text, _j, 2);
 	} else {
 		return 0;
 	}
@@ -20,8 +26,16 @@ function escape_color(_char){
 		color = c_red;
 	} else if(_char == "g"){ //green
 		color = c_green;
-	} else if(_char == "q"){ //normal
-		color = c_dkgray;
+	}else if(_char == "b"){ //blue
+		color = c_blue;
+	}else if(_char =="m"){//marroon
+		color = c_maroon;
+	} else if(_char == "w"){ //normal
+		if(choosing){
+			color = c_lime;
+		} else {
+			color = c_dkgray;
+		}
 	} else if (_char == "d"){ //shaky text
 		color = 1;
 	} else if (_char == "s"){ //still text

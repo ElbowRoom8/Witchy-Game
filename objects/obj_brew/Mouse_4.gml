@@ -1,11 +1,13 @@
 /// @description brews potion
 
+image_speed = 1;
 //checks if any of the slots are empty
 var full_slots = true;
 var lowest_num = -1;
 for(var i = 0; i < 4; i++){
 	if(brew_slots[i] == -1){
 		full_slots = false;
+		sprite_index = spr_brew_button_shake;
 		break;
 	} else {
 		//grabs lowest quantity being used in brewer
@@ -16,7 +18,7 @@ for(var i = 0; i < 4; i++){
 }
 
 if(full_slots){
-	//compares to recpie book
+	//compares to recipe book
 	var potion = compare_recipe(brew_slots[0].type, brew_slots[1].type, brew_slots[2].type)
 		
 	//aaaaaaaaaaaaaaaaaaa

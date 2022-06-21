@@ -3,12 +3,12 @@ depth = room_height - (y + image_yscale * sprite_height / 2);
 
 switch sprite_index{
 	case spr_mushroom1: 
-		index = 0;
+		index = 4;
 		break;
 	case spr_mushroom2:
-		index = 2;
+		index = 5;
 		break;
 	case spr_mushroom3:
-		index = 3;
+		index = 108;
 		break;
 }

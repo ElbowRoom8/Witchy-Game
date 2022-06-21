@@ -1,2 +1,2 @@
-/// @description deletes fire
+/// @description destroy fire
 instance_destroy();

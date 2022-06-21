@@ -29,12 +29,12 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 9; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 10 + 36 * i, cy + 10 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 5; //caclulates array number
 			//reads items array and adds items accordingly
 			if(items[potNum] != -1){
-				newObj = instance_create_depth(cx + 11 + 36 * i, cy + 11 + 36 * j, -3, obj_item_slot);
+				newObj = instance_create_depth(cx + 12 + 36 * i, cy + 12 + 36 * j, -3, obj_item_slot);
 				newObj.val = potNum;
 				newObj.t_text = itemRef[potNum].t_text;
 				newObj.v_text = itemRef[potNum].v_text;
@@ -49,12 +49,12 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 3; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 486 + 36 * i, cy + 10 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 4 + mod_index; //caclulates array number
 			//reads items array and adds items accordingly
 			if(items[potNum] != -1){
-				newObj = instance_create_depth(cx + 487 + 36 * i, cy + 11 + 36 * j, -3, obj_item_slot);
+				newObj = instance_create_depth(cx + 488 + 36 * i, cy + 12 + 36 * j, -3, obj_item_slot);
 				newObj.val = potNum;
 				newObj.t_text = itemRef[potNum].t_text;
 				newObj.v_text = itemRef[potNum].v_text;
@@ -71,7 +71,7 @@ if(!inDialogue & !inQuest & !inInventory){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(obj_player.cx + 270 + 36 * i, obj_player.cy + 170 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			newObj.stored = "autofill";
 			
 			potNum = i + j * 10; //caclulates array number
@@ -85,7 +85,7 @@ if(!inDialogue & !inQuest & !inInventory){
 					}
 				}
 				if(filled){
-					newObj = instance_create_depth(obj_player.cx + 271 + 36 * i, obj_player.cy + 171 + 36 * j, -3, obj_potion_slot);
+					newObj = instance_create_depth(obj_player.cx + 272 + 36 * i, obj_player.cy + 170 + 36 * j, -3, obj_potion_slot);
 					newObj.val = potNum;
 					newObj.stored = "autofill";
 					if(potions[potNum][0] != -1){

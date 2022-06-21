@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Iglet",
-    "path": "folders/Sprites/Iglet.yy",
+    "path": "folders/Sprites/Characters/Iglet.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_iglet_walkright",

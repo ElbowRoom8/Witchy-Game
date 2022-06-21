@@ -1,5 +1,7 @@
 /// @description increment selNum
-selNum++;
-if (selNum > 8){
-	selNum = 0;
+if(!inMenu){
+	selNum++;
+	if (selNum > 8){
+		selNum = 0;
+	}
 }

@@ -8,9 +8,9 @@ if(place_meeting(x, y, obj_player) && keyboard_check(vk_space)){
 			if(items[index] != -1){
 				items[index].num += dropNum;
 			} else {
-				items[index] = {type : type, num : dropNum}
+				items[index] = {type : itemRef[index].type, num : dropNum}
 			}
-			//array_insert(obj_player.pickup, 0, "+1  
+			array_insert(obj_player.pickup, 0, {text : "+1 " + itemRef[index].t_text, val : 0});
 			instance_destroy();
 		}
 	}

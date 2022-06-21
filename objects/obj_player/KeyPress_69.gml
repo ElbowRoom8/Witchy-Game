@@ -1,6 +1,6 @@
 /// @description Opens inventory
 //inverts inInventory if not in dialouge;
-if(!inDialogue & !inQuest & !brewing){
+if(!inDialogue & !inQuest & !brewing & !inMenu){
 	inInventory = !inInventory;
 }
 
@@ -15,7 +15,7 @@ if(inInventory){
 		newObj.slotNum = i; //sets slotnum
 		//reads inventory array and adds potions accordingly
 		if(inventory[i] != -1){
-			newObj = instance_create_depth(cx + 5, cy + 3 + 4 * (i + 1) + 35 * i, -3, obj_potion);
+			newObj = instance_create_depth(cx + 6, cy + 3 + 4 * (i + 1) + 35 * i, -3, obj_potion);
 			newObj.val = i;
 			newObj.vrty = inventory[i].vrty;
 			newObj.t_text = inventory[i].t_text;
@@ -31,7 +31,7 @@ if(inInventory){
 		for(var j = 0; j < 5; j++){
 			//creates inventory objects
 			newObj = instance_create_depth(cx + 55 + 36 * i, cy + 170 + 36 * j, -2, obj_inventory);
-			newObj.image_alpha = 0.85
+			newObj.image_alpha = 0.90;
 			
 			potNum = i + j * 10; //caclulates array number
 			//reads potions array and adds potions accordingly
@@ -44,7 +44,7 @@ if(inInventory){
 					}
 				}
 				if(filled){
-					newObj = instance_create_depth(cx + 56 + 36 * i, cy + 171 + 36 * j, -3, obj_potion_slot);
+					newObj = instance_create_depth(cx + 57 + 36 * i, cy + 170 + 36 * j, -3, obj_potion_slot);
 					newObj.val = potNum;
 					if(potions[potNum][0] != -1){
 						newObj.sprite_index = potions[potNum][0].type;
@@ -70,7 +70,7 @@ if(inInventory){
 	newObj.image_alpha = 0.6;
 	
 //deletes all of the inventory objects if inventory is closed
-} else if (!inQuest && !brewing){
+} else if (!inQuest & !brewing & !inMenu){
 	instance_destroy(obj_inventory);
 	instance_destroy(obj_potion);
 	instance_destroy(obj_potion_slot);

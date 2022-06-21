@@ -190,7 +190,7 @@
     {"id":{"name":"spr_torch","path":"sprites/spr_torch/spr_torch.yy",},"order":0,},
     {"id":{"name":"spr_rock4","path":"sprites/spr_rock4/spr_rock4.yy",},"order":27,},
     {"id":{"name":"spr_inventory","path":"sprites/spr_inventory/spr_inventory.yy",},"order":1,},
-    {"id":{"name":"spr_doorframe2","path":"sprites/spr_doorframe2/spr_doorframe2.yy",},"order":2,},
+    {"id":{"name":"spr_doorframe2","path":"sprites/spr_doorframe2/spr_doorframe2.yy",},"order":4,},
     {"id":{"name":"spr_door8","path":"sprites/spr_door8/spr_door8.yy",},"order":7,},
     {"id":{"name":"light_left_cropped","path":"sprites/light_left_cropped/light_left_cropped.yy",},"order":16,},
     {"id":{"name":"spr_stool","path":"sprites/spr_stool/spr_stool.yy",},"order":11,},

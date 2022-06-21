@@ -22,8 +22,8 @@ if(room = rm_frontyard){
 	obj_player.y = 424;
 } else if(room = rm_classroom3){
 	room_goto(rm_westhall);
-	obj_player.x = 645;
-	obj_player.y = 50;
+	obj_player.x = 40;
+	obj_player.y = 375;
 } else if(room = rm_courtyard){
 	room_goto(rm_easthall);
 	obj_player.x = 177;

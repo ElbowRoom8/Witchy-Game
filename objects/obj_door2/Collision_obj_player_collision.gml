@@ -12,7 +12,7 @@ if(room = rm_mainhall){
 } else if(room = rm_tower1){
 	room_goto(rm_westhall);
 	obj_player.x = 100;
-	obj_player.y = 50;
+	obj_player.y = 875;
 } else if(room = rm_easthall){
 	room_goto(rm_classroom6);
 	obj_player.x = 166;

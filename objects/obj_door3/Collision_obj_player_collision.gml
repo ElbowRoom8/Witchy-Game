@@ -13,8 +13,8 @@ if(room = rm_mainhall){
 	obj_player.y = 424;
 } else if(room = rm_classroom1){
 	room_goto(rm_westhall);
-	obj_player.x = 325;
-	obj_player.y = 50;
+	obj_player.x = 40;
+	obj_player.y = 750;
 } else if(room = rm_easthall){
 	room_goto(rm_classroom7);
 	obj_player.x = 166;

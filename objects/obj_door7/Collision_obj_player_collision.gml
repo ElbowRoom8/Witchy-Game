@@ -5,8 +5,8 @@ if(room = rm_westhall){
 	obj_player.y = 355;
 } else if(room = rm_cafeteria){
 	room_goto(rm_westhall);
-	obj_player.x = 774;
-	obj_player.y = 295;
+	obj_player.x = 400;
+	obj_player.y = 220;
 }else if(room = rm_easthall){
 	room_goto(rm_laboratory);
 	obj_player.x = 241;

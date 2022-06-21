@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "West Hall",
-    "path": "folders/Sprites/Backgrounds/West Hall.yy",
+    "name": "Cafeteria",
+    "path": "folders/Sprites/Backgrounds/Cafeteria.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_doorframe2",

@@ -1,8 +1,8 @@
 /// @description Moves to given room
 if(room = rm_mainhall){
 	room_goto(rm_westhall);
-	obj_player.x = 24;
-	obj_player.y = 196;
+	obj_player.x = 330;
+	obj_player.y = 875;
 } else if(room = rm_westhall){
 	room_goto(rm_mainhall);
 	obj_player.x = 131;

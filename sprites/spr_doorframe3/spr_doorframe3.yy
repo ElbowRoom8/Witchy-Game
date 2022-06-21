@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "East Hall",
-    "path": "folders/Sprites/Backgrounds/East Hall.yy",
+    "name": "Kitchen",
+    "path": "folders/Sprites/Backgrounds/Kitchen.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_doorframe3",

@@ -1,16 +1,16 @@
 /// @description moves to given room
 if(room = rm_westhall){
 	room_goto(rm_classroom4);
-	obj_player.x = 166;
-	obj_player.y = 424;
+	obj_player.x = 560;
+	obj_player.y = 200;
 } else if(room = rm_classroom4){
 	room_goto(rm_westhall);
-	obj_player.x = 805;
-	obj_player.y = 50;
+	obj_player.x = 40;
+	obj_player.y = 175;
 } else if(room = rm_cafeteria){
 	room_goto(rm_easthall);
-	obj_player.x = 100;
-	obj_player.y = 520;
+	obj_player.x = 30;
+	obj_player.y = 190;
 } else if(room = rm_easthall){
 	room_goto(rm_cafeteria);
 	obj_player.x = 753;

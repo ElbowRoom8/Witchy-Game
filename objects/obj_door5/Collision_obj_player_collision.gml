@@ -18,16 +18,16 @@ if(room = rm_frontyard){
 	inQuest = false;
 } else if(room = rm_westhall){
 	room_goto(rm_classroom3);
-	obj_player.x = 166;
-	obj_player.y = 424;
+	obj_player.x = 560;
+	obj_player.y = 200;
 } else if(room = rm_classroom3){
 	room_goto(rm_westhall);
-	obj_player.x = 645;
-	obj_player.y = 50;
+	obj_player.x = 40;
+	obj_player.y = 375;
 } else if(room = rm_courtyard){
 	room_goto(rm_easthall);
-	obj_player.x = 177;
-	obj_player.y = 420;
+	obj_player.x = 100;
+	obj_player.y = 270;
 } else if(room = rm_easthall){
 	room_goto(rm_courtyard);
 	obj_player.x = 640;

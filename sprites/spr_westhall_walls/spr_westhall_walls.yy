@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 12,
-  "bbox_right": 443,
-  "bbox_top": 126,
-  "bbox_bottom": 191,
+  "bbox_left": 0,
+  "bbox_right": 231,
+  "bbox_top": 25,
+  "bbox_bottom": 479,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 456,
-  "height": 192,
+  "width": 232,
+  "height": 480,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"557f08db-367c-4757-9e3b-8b17d9c20357","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"557f08db-367c-4757-9e3b-8b17d9c20357","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"LayerId":{"name":"dbad7c99-c3df-445c-bc1b-a1221c76bcae","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_westhall_walls","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","name":"557f08db-367c-4757-9e3b-8b17d9c20357","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"748d5b2f-64c0-48cd-a740-975d413f09fa","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"748d5b2f-64c0-48cd-a740-975d413f09fa","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"LayerId":{"name":"a92b9f7c-c638-4c35-8299-6ebd6117fae9","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_westhall_walls","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","name":"748d5b2f-64c0-48cd-a740-975d413f09fa","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_westhall_walls","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6c42047a-b5d5-406f-8477-cfa00f881caa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"557f08db-367c-4757-9e3b-8b17d9c20357","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8241d462-7be8-4ec1-99c6-cdf23151b8a1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"748d5b2f-64c0-48cd-a740-975d413f09fa","path":"sprites/spr_westhall_walls/spr_westhall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,9 +65,33 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dbad7c99-c3df-445c-bc1b-a1221c76bcae","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a92b9f7c-c638-4c35-8299-6ebd6117fae9","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
+  "nineSlice": {
+    "left": 0,
+    "top": 0,
+    "right": 0,
+    "bottom": 0,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015,
+    ],
+    "highlightColour": 1728023040,
+    "highlightStyle": 0,
+    "enabled": false,
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+  },
   "parent": {
     "name": "West Hall",
     "path": "folders/Sprites/Backgrounds/West Hall.yy",

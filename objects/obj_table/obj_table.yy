@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_acid_particle",
-    "path": "sprites/spr_acid_particle/spr_acid_particle.yy",
+    "name": "spr_table",
+    "path": "sprites/spr_table/spr_table.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,18 +22,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_wolf","path":"objects/obj_wolf/obj_wolf.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Decors",
+    "path": "folders/Objects/Decors.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_acid",
+  "name": "obj_table",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 12,
-  "bbox_right": 299,
-  "bbox_top": 190,
+  "bbox_left": 0,
+  "bbox_right": 311,
+  "bbox_top": 0,
   "bbox_bottom": 255,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c57fbda5-a070-47f4-9952-d1a2e5bf751e","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c57fbda5-a070-47f4-9952-d1a2e5bf751e","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"LayerId":{"name":"00a1ccd9-aa41-4a1c-8864-05e529dec442","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_classroom_walls1","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"resourceVersion":"1.0","name":"c57fbda5-a070-47f4-9952-d1a2e5bf751e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f1687050-c91e-42ea-bdcb-1031ca63aa72","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f1687050-c91e-42ea-bdcb-1031ca63aa72","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},"LayerId":{"name":"70eab9f5-d59d-4b35-89f5-7ff3f279ecfc","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_west_classroom","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},"resourceVersion":"1.0","name":"f1687050-c91e-42ea-bdcb-1031ca63aa72","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_classroom_walls1","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},
+    "spriteId": {"name":"spr_west_classroom","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"31645df3-5e14-4f50-be9e-b7d665d8c59c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c57fbda5-a070-47f4-9952-d1a2e5bf751e","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"ed58ce8e-fddd-4c41-ae55-651fc7b344f1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f1687050-c91e-42ea-bdcb-1031ca63aa72","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_classroom_walls1","path":"sprites/spr_classroom_walls1/spr_classroom_walls1.yy",},
+    "parent": {"name":"spr_west_classroom","path":"sprites/spr_west_classroom/spr_west_classroom.yy",},
     "resourceVersion": "1.4",
-    "name": "spr_classroom_walls1",
+    "name": "spr_west_classroom",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"00a1ccd9-aa41-4a1c-8864-05e529dec442","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"70eab9f5-d59d-4b35-89f5-7ff3f279ecfc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Backgrounds/Classrooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_classroom_walls1",
+  "name": "spr_west_classroom",
   "tags": [],
   "resourceType": "GMSprite",
 }

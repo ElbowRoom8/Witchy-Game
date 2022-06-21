@@ -9,8 +9,8 @@ if(room = rm_mainhall){
 	obj_player.y = 387;
 } else if(room = rm_westhall){
 	room_goto(rm_classroom2);
-	obj_player.x = 166;
-	obj_player.y = 424;
+	obj_player.x = 560;
+	obj_player.y = 200;
 } else if(room = rm_classroom2){
 	room_goto(rm_westhall);
 	obj_player.x = 40;
@@ -25,8 +25,8 @@ if(room = rm_mainhall){
 	obj_player.y = 64;
 } else if(room = rm_easthall){
 	room_goto(rm_classroom8);
-	obj_player.x = 166;
-	obj_player.y = 424;
+	obj_player.x = 30;
+	obj_player.y = 200;
 } else if(room = rm_classroom8){
 	room_goto(rm_easthall);
 	obj_player.x = 580;

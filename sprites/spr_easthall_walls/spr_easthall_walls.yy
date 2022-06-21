@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 120,
-  "bbox_right": 443,
-  "bbox_top": 127,
-  "bbox_bottom": 193,
+  "bbox_left": 0,
+  "bbox_right": 319,
+  "bbox_top": 25,
+  "bbox_bottom": 479,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 456,
-  "height": 304,
+  "width": 320,
+  "height": 480,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"57d56bd4-9607-43d3-96f6-fe11f164f0ad","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57d56bd4-9607-43d3-96f6-fe11f164f0ad","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"LayerId":{"name":"419f98ae-7469-442b-a4b3-a8a12c50ffd5","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_easthall_walls","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","name":"57d56bd4-9607-43d3-96f6-fe11f164f0ad","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"51eed4ff-5ffe-402b-bced-53e7092d3295","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"51eed4ff-5ffe-402b-bced-53e7092d3295","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"LayerId":{"name":"8ccb400e-4e0e-41e0-85d4-645ebd532fd6","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_easthall_walls","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","name":"51eed4ff-5ffe-402b-bced-53e7092d3295","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_easthall_walls","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5cf58588-d78f-40cd-8459-739f8a0017d7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"57d56bd4-9607-43d3-96f6-fe11f164f0ad","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7c7671e6-74d5-47b0-82b9-00f6264bc92c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"51eed4ff-5ffe-402b-bced-53e7092d3295","path":"sprites/spr_easthall_walls/spr_easthall_walls.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"419f98ae-7469-442b-a4b3-a8a12c50ffd5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8ccb400e-4e0e-41e0-85d4-645ebd532fd6","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

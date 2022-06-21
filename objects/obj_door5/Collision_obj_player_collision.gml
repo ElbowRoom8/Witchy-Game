@@ -26,8 +26,8 @@ if(room = rm_frontyard){
 	obj_player.y = 375;
 } else if(room = rm_courtyard){
 	room_goto(rm_easthall);
-	obj_player.x = 177;
-	obj_player.y = 420;
+	obj_player.x = 100;
+	obj_player.y = 270;
 } else if(room = rm_easthall){
 	room_goto(rm_courtyard);
 	obj_player.x = 640;
